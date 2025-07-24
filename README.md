@@ -12,7 +12,7 @@ This take-home coding challenge is designed to simulate that work on a smaller s
 
 ## 📌 Your Task
 ### Part 1 - Backend
-Set up an API service using [FastAPI](https://fastapi.tiangolo.com) and [Uvicorn](https://www.uvicorn.org). This service should only have a single endpoint which takes in a PDF file returns its parsed contents in JSON format. You have to parse out the content verbatim from the PDF, with no rephrasing, summaries or omissions. 
+Set up an API service using [FastAPI](https://fastapi.tiangolo.com) and [Uvicorn](https://www.uvicorn.org). This service should only have a single endpoint which takes in a PDF file returns its parsed contents in JSON format. You have to parse out the content verbatim from the PDF, with no rephrasing, summaries or omissions. Though you should ignore headers, footers, text on cover pages and other miscellaneous metadata.
 
 You are expected to use Gemini. An API key will be provided to you separately. **DO NOT** commit the API key.
 
@@ -21,7 +21,7 @@ You are given 4 PDFs in the documents folder to test your code, with one of the 
 Your code should be generalizable. We will evaluate your code on more specifications written in MasterFormat.
 
 ### Part 2 - Frontend
-Set up a [Next.js](https://nextjs.org/docs) frontend that connects to your backend. Present a simple webpage that will accept a PDF file. Then your backend should be called to fetch its JSON representation. Pretty print the JSON on the webpage.
+Set up a [Next.js](https://nextjs.org/docs) frontend that connects to your backend. Present a simple webpage that will accept a PDF file. Then your backend should be called to fetch the specification's JSON representation. Pretty print the JSON on the webpage. Pay no attention to the stying of the webpage.
 
 ---
 
