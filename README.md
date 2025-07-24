@@ -16,7 +16,7 @@ Set up an API service using [FastAPI](https://fastapi.tiangolo.com) and [Uvicorn
 
 You are expected to use Gemini. An API key will be provided to you separately. **DO NOT** commit the API key.
 
-You are given 4 PDFs in the documents folder to test your code, with one of the PDF already parsed into JSON. You must follow the JSON schema exactly (same JSON property names, same JSON value types). 
+You are given 4 PDFs in the documents folder to test your code, with one of the specification PDFs already parsed into JSON. You must follow the JSON schema exactly (same JSON property names, same JSON value types). 
 
 Your code should be generalizable. We will evaluate your code on more specifications written in MasterFormat.
 
