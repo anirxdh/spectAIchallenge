@@ -87,7 +87,7 @@ def extract_pages_from_pdf(pdf_path: str) -> List[str]:
 
 # --- Chunking Logic ---
 
-def make_chunks(pages: List[str], chunk_size: int = 8, overlap: int = 1) -> List[List[str]]:
+def make_chunks(pages: List[str], chunk_size: int = 5, overlap: int = 1) -> List[List[str]]:
     """
     Splits list of pages into overlapping chunks.
     """
@@ -164,6 +164,86 @@ Your job is to extract the technical content from the following PDF text and out
     }}
     }}
 
+**Brief Sample Output:**
+(Note: Section names, indices, and content will change for each document. This is just an example.)
+
+{{
+"section": "238243",
+"name": "ELECTRIC HEATERS",
+"part1": {{
+    "partItems": [
+    {{
+        "index": "1.01",
+        "text": "SUMMARY",
+        "children": [
+        {{
+            "index": "A.",
+            "text": "Section includes requirements for electric heaters...",
+            "children": null
+        }},
+        {{
+            "index": "B.",
+            "text": "This section includes requirements for LEED Certification...",
+            "children": null
+        }}
+        ]
+    }},
+    {{
+        "index": "1.02",
+        "text": "REFERENCES",
+        "children": [
+        {{
+            "index": "A.",
+            "text": "This Section incorporates by reference the latest revisions of the following documents.",
+            "children": [
+            {{
+                "index": "1.",
+                "text": "National Fire Protection Agency (NFPA)",
+                "children": [
+                {{
+                    "index": "a.",
+                    "text": "NFPA 70 National Electrical Code",
+                    "children": null
+                }}
+                ]
+            }}
+            ]
+        }}
+        ]
+    }}
+    ]
+}},
+"part2": {{
+    "partItems": [
+    {{
+        "index": "2.01",
+        "text": "ACCEPTABLE MANUFACTURERS:",
+        "children": [
+        {{
+            "index": "A.",
+            "text": "Berko Electric Heating; a division of Marley Engineered Products",
+            "children": null
+        }}
+        ]
+    }}
+    ]
+}},
+"part3": {{
+    "partItems": [
+    {{
+        "index": "3.01",
+        "text": "INSTALLATION",
+        "children": [
+        {{
+            "index": "A.",
+            "text": "Install in conformance with the approved heater installation drawing, NFPA 70, UL listing, and manufacturer's instructions.",
+            "children": null
+        }}
+        ]
+    }}
+    ]
+}}
+}}
 
 **Instructions for Output:**
 - Only return the JSON object matching the schema pattern above. Do **NOT** include any extra commentary, explanation, or markdown formatting.
@@ -280,7 +360,7 @@ def merge_json_chunks(chunks: List[Dict[str, Any]]) -> Dict[str, Any]:
 
 # --- Main Entry Point for FastAPI ---
 
-def parse_pdf_to_json_chunked(pdf_path: str, chunk_size: int = 8, overlap: int = 1) -> Dict[str, Any]:
+def parse_pdf_to_json_chunked(pdf_path: str, chunk_size: int = 5, overlap: int = 1) -> Dict[str, Any]:
     """
     Main pipeline: extract pages, chunk, process each chunk, merge, return output.
     """
