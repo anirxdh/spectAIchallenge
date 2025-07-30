@@ -1,0 +1,48 @@
+{
+  "version": 1.1,
+  "atDirectives": [
+    {
+      "name": "@import",
+      "description": "Import external stylesheets or Tailwind CSS modules"
+    },
+    {
+      "name": "@tailwind",
+      "description": "Inject Tailwind's base, components, or utilities styles"
+    },
+    {
+      "name": "@apply",
+      "description": "Apply existing utility classes inline"
+    },
+    {
+      "name": "@layer",
+      "description": "Define custom CSS within Tailwind's layers"
+    },
+    {
+      "name": "@responsive",
+      "description": "Generate responsive variants of utilities"
+    },
+    {
+      "name": "@screen",
+      "description": "Create media queries for named breakpoints"
+    },
+    {
+      "name": "@variants",
+      "description": "Generate variant versions of utilities"
+    },
+    {
+      "name": "@custom-variant",
+      "description": "Define custom variants in Tailwind CSS v4"
+    },
+    {
+      "name": "@theme",
+      "description": "Define theme configuration inline in Tailwind CSS v4"
+    },
+    {
+      "name": "@config",
+      "description": "Define configuration options in Tailwind CSS v4"
+    }
+  ],
+  "properties": [],
+  "pseudoClasses": [],
+  "pseudoElements": []
+} 

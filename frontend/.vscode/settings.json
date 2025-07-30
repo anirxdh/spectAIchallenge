@@ -1,0 +1,32 @@
+{
+  "css.validate": false,
+  "scss.validate": false,
+  "less.validate": false,
+  "css.lint.unknownAtRules": "ignore",
+  "scss.lint.unknownAtRules": "ignore",
+  "css.lint.unknownProperties": "ignore",
+  "scss.lint.unknownProperties": "ignore",
+  "css.customData": [".vscode/css_custom_data.json"],
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ],
+  "tailwindCSS.includeLanguages": {
+    "typescript": "typescript",
+    "javascript": "javascript",
+    "typescriptreact": "typescriptreact",
+    "javascriptreact": "javascriptreact"
+  },
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "tailwindCSS.validate": true,
+  "tailwindCSS.lint.cssConflict": "warning",
+  "tailwindCSS.lint.invalidApply": "error",
+  "tailwindCSS.lint.invalidConfigPath": "error",
+  "tailwindCSS.lint.invalidTailwindDirective": "error",
+  "tailwindCSS.lint.recommendedVariantOrder": "warning"
+} 
