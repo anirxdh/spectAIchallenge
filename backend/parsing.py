@@ -1,32 +1,22 @@
 import os
 import json
 import google.generativeai as genai
-from PyPDF2 import PdfReader
+import fitz  # PyMuPDF
+import re
 from typing import Dict, Any, List
 
-# Configure Gemini API - get from environment variable
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
-import fitz  # PyMuPDF
-
-def extract_text_from_pdf(pdf_path: str) -> str:
-    try:
-        doc = fitz.open(pdf_path)
-        text = ""
-        for page in doc:
-            page_text = page.get_text()
-            if page_text:
-                text += page_text + "\n"
-        return text.strip()
-    except Exception as e:
-        raise Exception(f"Error extracting text from PDF: {str(e)}")
+# --- Utility Functions ---
 
 def normalize_quotes(text):
+    """Normalize different types of quotes to standard quotes"""
     if not isinstance(text, str):
         return text
     return text.replace("’", "'").replace("‘", "'") \
                .replace("“", '"').replace("”", '"')
 def normalize_json_quotes(obj):
+    """Recursively normalize quotes in JSON object"""
     if isinstance(obj, dict):
         return {k: normalize_json_quotes(v) for k, v in obj.items()}
     elif isinstance(obj, list):
@@ -35,21 +25,6 @@ def normalize_json_quotes(obj):
         return normalize_quotes(obj)
     else:
         return obj
-import re
-
-def fix_common_json_issues(json_text):
-    """Fix common JSON issues that LLMs produce"""
-    if not json_text:
-        return json_text
-    
-    # Remove trailing commas before closing braces/brackets
-    json_text = re.sub(r',(\s*[}\]])', r'\1', json_text)
-    
-    # Only fix property names that are NOT already quoted
-    # This regex looks for property names that don't start with a quote
-    json_text = re.sub(r'(\s*)([a-zA-Z_][a-zA-Z0-9_]*)(\s*):(?=\s*["{\[])', r'\1"\2"\3:', json_text)
-    
-    return json_text
 
 def clean_llm_response(text):
     """Clean and extract JSON from LLM response"""
@@ -86,46 +61,66 @@ def clean_llm_response(text):
     # Extract the JSON part
     json_text = text[start_idx:end_idx]
     
-    print(f"Extracted JSON length: {len(json_text)}")
-    print(f"Extracted JSON preview: {json_text[:200]}...")
-    
     # Additional cleaning for common LLM issues
     json_text = re.sub(r',\s*}', '}', json_text)  # Remove trailing commas
     json_text = re.sub(r',\s*]', ']', json_text)  # Remove trailing commas in arrays
     
     return json_text.strip()
-def parse_pdf_to_json(pdf_path: str) -> Dict[str, Any]:
+
+# --- Text Extraction ---
+
+def extract_pages_from_pdf(pdf_path: str) -> List[str]:
     """
-    Parse a MasterFormat PDF and convert it to structured JSON using Gemini LLM.
-    
-    Args:
-        pdf_path: Path to the PDF file
-        
-    Returns:
-        Structured JSON data
+    Extract text for each page in the PDF as a list.
     """
+    try:
+        doc = fitz.open(pdf_path)
+        pages = []
+        for page in doc:
+            page_text = page.get_text()
+            if page_text:
+                pages.append(page_text.strip())
+        doc.close()
+        return pages
+    except Exception as e:
+        raise Exception(f"Error extracting pages from PDF: {str(e)}")
 
-    if not GEMINI_API_KEY:
-        raise Exception("GEMINI_API_KEY environment variable is not set")
-    
-    # Configure Gemini
-    genai.configure(api_key=GEMINI_API_KEY)
-    model = genai.GenerativeModel('gemini-1.5-pro')
-    
-    # Extract text from PDF
-    pdf_text = extract_text_from_pdf(pdf_path)
+# --- Chunking Logic ---
 
-    prompt = f"""
-    You are an expert at parsing construction specifications formatted in MasterFormat.
+def make_chunks(pages: List[str], chunk_size: int = 5, overlap: int = 1) -> List[List[str]]:
+    """
+    Splits list of pages into overlapping chunks.
+    """
+    chunks = []
+    n = len(pages)
+    i = 0
+    while i < n:
+        chunk = pages[i : min(i + chunk_size, n)]
+        chunks.append(chunk)
+        if i + chunk_size >= n:
+            break
+        i += chunk_size - overlap
+    return chunks
 
-    Your job is to extract the technical content from the following PDF text and output it as structured JSON using the schema and nesting pattern provided below. This schema is an example only—the pattern applies to any MasterFormat specification document.
+# --- LLM Prompt Construction ---
 
-    **Critical Instructions:**
-    - Extract all content **verbatim** from the PDF. Do **NOT** summarize, rephrase, or omit any technical content.
-    - **Ignore** all headers, footers, cover page text, and miscellaneous metadata.
-    - **Generalize:** The output should follow the schema pattern exactly, but section numbers, part names, indices, and headings may vary in each document. Handle any number or label as found in the text, and include any section, part, or subitem you find, regardless of names or order.
-    - If a part or section is missing in the document, output it as an empty array or `null` as appropriate.
-    - Only output valid JSON, with no explanations, markdown, or extra text.
+def build_prompt(chunk_text: str, chunk_num: int, total_chunks: int) -> str:
+    """
+    Builds the LLM prompt for a given chunk.
+    """
+    return f"""
+You are an expert at parsing construction specifications formatted in MasterFormat.
+
+This is chunk {chunk_num} of {total_chunks}. Only extract and output content present in this chunk. Do not anticipate or repeat content from other chunks.
+
+Your job is to extract the technical content from the following PDF text and output it as structured JSON using the schema and nesting pattern provided below. This schema is an example only—the pattern applies to any MasterFormat specification document.
+
+**Critical Instructions:**
+- Extract all content **verbatim** from the PDF. Do **NOT** summarize, rephrase, or omit any technical content.
+- **Ignore** all headers, footers, cover page text, and miscellaneous metadata.
+- **Generalize:** The output should follow the schema pattern exactly, but section numbers, part names, indices, and headings may vary in each document. Handle any number or label as found in the text, and include any section, part, or subitem you find, regardless of names or order.
+- If a part or section is missing in the document, output it as an empty array or `null` as appropriate.
+- Only output valid JSON, with no explanations, markdown, or extra text.
 
 
     **Schema Example:**
@@ -166,168 +161,250 @@ def parse_pdf_to_json(pdf_path: str) -> Dict[str, Any]:
     }}
     }}
 
-    **Brief Sample Output:**
-    (Note: Section names, indices, and content will change for each document. This is just an example.)
+**Brief Sample Output:**
+(Note: Section names, indices, and content will change for each document. This is just an example.)
 
+{{
+"section": "238243",
+"name": "ELECTRIC HEATERS",
+"part1": {{
+    "partItems": [
     {{
-    "section": "238243",
-    "name": "ELECTRIC HEATERS",
-    "part1": {{
-        "partItems": [
+        "index": "1.01",
+        "text": "SUMMARY",
+        "children": [
         {{
-            "index": "1.01",
-            "text": "SUMMARY",
-            "children": [
-            {{
-                "index": "A.",
-                "text": "Section includes requirements for electric heaters...",
-                "children": null
-            }},
-            {{
-                "index": "B.",
-                "text": "This section includes requirements for LEED Certification...",
-                "children": null
-            }}
-            ]
+            "index": "A.",
+            "text": "Section includes requirements for electric heaters...",
+            "children": null
         }},
         {{
-            "index": "1.02",
-            "text": "REFERENCES",
+            "index": "B.",
+            "text": "This section includes requirements for LEED Certification...",
+            "children": null
+        }}
+        ]
+    }},
+    {{
+        "index": "1.02",
+        "text": "REFERENCES",
+        "children": [
+        {{
+            "index": "A.",
+            "text": "This Section incorporates by reference the latest revisions of the following documents.",
             "children": [
             {{
-                "index": "A.",
-                "text": "This Section incorporates by reference the latest revisions of the following documents.",
+                "index": "1.",
+                "text": "National Fire Protection Agency (NFPA)",
                 "children": [
                 {{
-                    "index": "1.",
-                    "text": "National Fire Protection Agency (NFPA)",
-                    "children": [
-                    {{
-                        "index": "a.",
-                        "text": "NFPA 70 National Electrical Code",
-                        "children": null
-                    }}
-                    ]
+                    "index": "a.",
+                    "text": "NFPA 70 National Electrical Code",
+                    "children": null
                 }}
                 ]
             }}
             ]
         }}
         ]
-    }},
-    "part2": {{
-        "partItems": [
+    }}
+    ]
+}},
+"part2": {{
+    "partItems": [
+    {{
+        "index": "2.01",
+        "text": "ACCEPTABLE MANUFACTURERS:",
+        "children": [
         {{
-            "index": "2.01",
-            "text": "ACCEPTABLE MANUFACTURERS:",
-            "children": [
-            {{
-                "index": "A.",
-                "text": "Berko Electric Heating; a division of Marley Engineered Products",
-                "children": null
-            }}
-            ]
-        }}
-        ]
-    }},
-    "part3": {{
-        "partItems": [
-        {{
-            "index": "3.01",
-            "text": "INSTALLATION",
-            "children": [
-            {{
-                "index": "A.",
-                "text": "Install in conformance with the approved heater installation drawing, NFPA 70, UL listing, and manufacturer's instructions.",
-                "children": null
-            }}
-            ]
+            "index": "A.",
+            "text": "Berko Electric Heating; a division of Marley Engineered Products",
+            "children": null
         }}
         ]
     }}
+    ]
+}},
+"part3": {{
+    "partItems": [
+    {{
+        "index": "3.01",
+        "text": "INSTALLATION",
+        "children": [
+        {{
+            "index": "A.",
+            "text": "Install in conformance with the approved heater installation drawing, NFPA 70, UL listing, and manufacturer's instructions.",
+            "children": null
+        }}
+        ]
     }}
+    ]
+}}
+}}
 
-    **Instructions for Output:**
-    - Only return the JSON object matching the schema pattern above. Do **NOT** include any extra commentary, explanation, or markdown formatting.
-    - For all "children", if there are no further sub-items, set the field to `null`.
-    - If a section, part, or child does not exist in the document, output an empty array or `null` as appropriate.
-    - Remove all unnecessary line breaks (`\\n`) that do not indicate a new list item, bullet, or paragraph.
-    - Do **not** introduce extra spaces after periods or between words. Use a single space after each period.
-    - Preserve paragraph separation only where a real new item/section begins (such as bullets, numbered lists, or headings).
-    - Output all text fields as continuous, clean sentences, not split with `\\n` unless a new item/bullet is starting.
+**Instructions for Output:**
+- Only return the JSON object matching the schema pattern above. Do **NOT** include any extra commentary, explanation, or markdown formatting.
+- For all "children", if there are no further sub-items, set the field to `null`.
+- If a section, part, or child does not exist in the document, output an empty array or `null` as appropriate.
+- Remove all unnecessary line breaks (`\\n`) that do not indicate a new list item, bullet, or paragraph.
+- Do **not** introduce extra spaces after periods or between words. Use a single space after each period.
+- Preserve paragraph separation only where a real new item/section begins (such as bullets, numbered lists, or headings).
+- Output all text fields as continuous, clean sentences, not split with `\\n` unless a new item/bullet is starting.
 
-    PDF Text:
-    {pdf_text}
+PDF Text (Chunk {chunk_num} of {total_chunks}):
+\"\"\"
+{chunk_text}
+\"\"\"
+"""
+
+# --- LLM Call + JSON Parsing for One Chunk ---
+
+def parse_chunk_with_gemini(prompt: str) -> Dict[str, Any]:
     """
+    Sends prompt to Gemini, cleans and parses response, handles errors.
+    """
+    if not GEMINI_API_KEY:
+        raise Exception("GEMINI_API_KEY environment variable is not set")
+    
+    genai.configure(api_key=GEMINI_API_KEY)
+    model = genai.GenerativeModel('gemini-1.5-pro')
     
     try:
-        # Generate response from Gemini
         response = model.generate_content(prompt)
-
-        # Debug: Print the raw response
-        print(f"Raw LLM response length: {len(response.text)}")
-        print(f"Raw LLM response preview: {response.text[:500]}...")
-
-        # Clean the response text
+        response_text = clean_llm_response(response.text)
+        
         try:
-            response_text = clean_llm_response(response.text)
-            print(f"Cleaned response length: {len(response_text)}")
-            print(f"Cleaned response preview: {response_text[:500]}...")
-        except ValueError as e:
-            return {
-                "success": False,
-                "data": None,
-                "error": f"Failed to clean LLM response: {str(e)}. Raw response: {response.text[:200]}..."
-            }
-
-        # Parse the JSON response
-        try:
-            # Try parsing the cleaned response directly first
-            print(f"Attempting to parse cleaned response: {response_text[:200]}...")
             result = json.loads(response_text)
             result = normalize_json_quotes(result)
+            return result
         except json.JSONDecodeError as e:
-            print(f"First JSON parse attempt failed: {str(e)}")
-            # If that fails, try with the fix function
-            try:
-                fixed_response = fix_common_json_issues(response_text)
-                print(f"Attempting to parse fixed response: {fixed_response[:200]}...")
-                result = json.loads(fixed_response)
-                result = normalize_json_quotes(result)
-            except json.JSONDecodeError as e2:
-                # If JSON parsing fails, return error with the cleaned response
-                print(f"JSON Parse Error: {str(e2)}")
-                print(f"Error at line {e2.lineno}, column {e2.colno}")
-                print(f"Error message: {e2.msg}")
-                
-                # Show the problematic area
-                lines = response_text.split('\n')
-                if e2.lineno <= len(lines):
-                    print(f"Line {e2.lineno}: {lines[e2.lineno-1]}")
-                    if e2.lineno > 1:
-                        print(f"Line {e2.lineno-1}: {lines[e2.lineno-2]}")
-                    if e2.lineno < len(lines):
-                        print(f"Line {e2.lineno+1}: {lines[e2.lineno]}")
-                
-                return {
-                    "success": False,
-                    "data": None,
-                    "error": f"Failed to parse LLM response as JSON: {str(e2)}. Raw response: {response_text[:500]}..."
-                }
+            print(f"JSON parsing error in chunk: {str(e)}")
+            print(f"Raw response: {response_text[:200]}...")
+            # Return empty structure instead of failing
+            return {
+                "section": "",
+                "name": "",
+                "part1": {"partItems": []},
+                "part2": {"partItems": []},
+                "part3": {"partItems": []}
+            }
+    except Exception as e:
+        print(f"Error processing chunk with Gemini: {str(e)}")
+        # Return empty structure instead of failing
+        return {
+            "section": "",
+            "name": "",
+            "part1": {"partItems": []},
+            "part2": {"partItems": []},
+            "part3": {"partItems": []}
+        }
+
+# --- Merge and Deduplicate ---
+
+def deduplicate_items(items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """
+    Remove duplicate items based on index and text.
+    """
+    seen = set()
+    result = []
+    for item in items:
+        identifier = (item.get('index'), item.get('text'))
+        if identifier not in seen:
+            result.append(item)
+            seen.add(identifier)
+    return result
+
+def merge_json_chunks(chunks: List[Dict[str, Any]]) -> Dict[str, Any]:
+    """
+    Merges the partItems arrays and deduplicates across chunks.
+    """
+    if not chunks:
+        return {
+            "section": "",
+            "name": "",
+            "part1": {"partItems": []},
+            "part2": {"partItems": []},
+            "part3": {"partItems": []}
+        }
+    
+    # Use first non-empty chunk as base
+    merged = None
+    for chunk in chunks:
+        if chunk.get('section') or chunk.get('name'):
+            merged = chunk.copy()
+            break
+    
+    if merged is None:
+        merged = chunks[0].copy()
+    
+    # Merge partItems for each part
+    for part in ['part1', 'part2', 'part3']:
+        all_items = []
+        for chunk in chunks:
+            if part in chunk and isinstance(chunk[part], dict):
+                part_items = chunk[part].get('partItems', [])
+                all_items.extend(part_items)
         
-        # Validate the structure
-        if not isinstance(result, dict):
-            raise Exception("Invalid JSON structure returned from LLM")
+        # Ensure part exists in merged result
+        if part not in merged:
+            merged[part] = {"partItems": []}
+        elif not isinstance(merged[part], dict):
+            merged[part] = {"partItems": []}
             
+        merged[part]['partItems'] = deduplicate_items(all_items)
+    
+    return merged
+
+# --- Main Entry Point for FastAPI ---
+
+def parse_pdf_to_json_chunked(pdf_path: str, chunk_size: int = 5, overlap: int = 1) -> Dict[str, Any]:
+    """
+    Main pipeline: extract pages, chunk, process each chunk, merge, return output.
+    """
+    try:
+        print(f"Starting chunked PDF parsing with chunk_size={chunk_size}, overlap={overlap}")
+        
+        # 1. Extract pages from PDF
+        pages = extract_pages_from_pdf(pdf_path)
+        print(f"Extracted {len(pages)} pages from PDF")
+        
+        # 2. Make overlapping chunks
+        chunks = make_chunks(pages, chunk_size, overlap)
+        total_chunks = len(chunks)
+        print(f"Created {total_chunks} chunks")
+        
+        # 3. Process each chunk
+        results = []
+        for idx, chunk_pages in enumerate(chunks):
+            print(f"Processing chunk {idx+1}/{total_chunks}")
+            chunk_text = "\n".join(chunk_pages)
+            prompt = build_prompt(chunk_text, idx+1, total_chunks)
+            chunk_json = parse_chunk_with_gemini(prompt)
+            results.append(chunk_json)
+        
+        # 4. Merge and deduplicate outputs
+        print("Merging chunks...")
+        merged = merge_json_chunks(results)
+        
+        # 5. Return the final result
         return {
             "success": True,
-            "data": result,
+            "data": merged,
             "error": None
         }
         
     except Exception as e:
+        print(f"Error in chunked parsing: {str(e)}")
         return {
             "success": False,
             "data": None,
             "error": f"Error processing PDF: {str(e)}"
         }
+
+# --- Backward Compatibility ---
+
+def parse_pdf_to_json(pdf_path: str) -> Dict[str, Any]:
+    """
+    Legacy function for backward compatibility - now uses chunked approach.
+    """
+    return parse_pdf_to_json_chunked(pdf_path)

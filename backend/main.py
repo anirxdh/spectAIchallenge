@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from typing import Any
 import os
 import tempfile
-from parsing import parse_pdf_to_json  # You'll create this function in parsing.py
+from parsing import parse_pdf_to_json_chunked  
 
 api_key = os.getenv("GEMINI_API_KEY")
 if api_key:
@@ -38,7 +38,7 @@ async def parse_endpoint(file: UploadFile = File(...)) -> Any:
             tmp_path = tmp.name
 
         # Call your parsing function (LLM logic goes in parsing.py)
-        result_json = parse_pdf_to_json(tmp_path)
+        result_json = parse_pdf_to_json_chunked(tmp_path)
 
         # Optionally validate the output here
 
