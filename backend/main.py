@@ -5,7 +5,6 @@ import os
 import tempfile
 from parsing import parse_pdf_to_json  # You'll create this function in parsing.py
 
-# Check if API key is loaded from environment
 api_key = os.getenv("GEMINI_API_KEY")
 if api_key:
     print(f"✅ API key loaded from environment: {api_key[:20]}...")
@@ -18,7 +17,6 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# Enable CORS for local Next.js frontend
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:3000", "http://localhost:3001"],

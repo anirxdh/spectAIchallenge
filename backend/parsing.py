@@ -37,19 +37,63 @@ def normalize_json_quotes(obj):
         return obj
 import re
 
+def fix_common_json_issues(json_text):
+    """Fix common JSON issues that LLMs produce"""
+    if not json_text:
+        return json_text
+    
+    # Remove trailing commas before closing braces/brackets
+    json_text = re.sub(r',(\s*[}\]])', r'\1', json_text)
+    
+    # Only fix property names that are NOT already quoted
+    # This regex looks for property names that don't start with a quote
+    json_text = re.sub(r'(\s*)([a-zA-Z_][a-zA-Z0-9_]*)(\s*):(?=\s*["{\[])', r'\1"\2"\3:', json_text)
+    
+    return json_text
+
 def clean_llm_response(text):
+    """Clean and extract JSON from LLM response"""
+    if not text:
+        return ""
+    
     # Remove all code block markers
     text = text.strip()
     text = re.sub(r"^```json\s*", "", text)
     text = re.sub(r"^```", "", text)
     text = re.sub(r"```$", "", text)
-    # Remove all text before the first curly brace
-    text = re.sub(r'^[^\{]*({.*)', r'\1', text, flags=re.DOTALL)
-    # Remove everything after the last closing curly brace
-    match = re.search(r'(\{.*\})', text, flags=re.DOTALL)
-    if match:
-        text = match.group(1)
-    return text.strip()
+    
+    # Find the first opening brace
+    start_idx = text.find('{')
+    if start_idx == -1:
+        raise ValueError("No JSON object found in response")
+    
+    # Find the matching closing brace
+    brace_count = 0
+    end_idx = -1
+    
+    for i in range(start_idx, len(text)):
+        if text[i] == '{':
+            brace_count += 1
+        elif text[i] == '}':
+            brace_count -= 1
+            if brace_count == 0:
+                end_idx = i + 1
+                break
+    
+    if end_idx == -1:
+        raise ValueError("Unmatched braces in JSON response")
+    
+    # Extract the JSON part
+    json_text = text[start_idx:end_idx]
+    
+    print(f"Extracted JSON length: {len(json_text)}")
+    print(f"Extracted JSON preview: {json_text[:200]}...")
+    
+    # Additional cleaning for common LLM issues
+    json_text = re.sub(r',\s*}', '}', json_text)  # Remove trailing commas
+    json_text = re.sub(r',\s*]', ']', json_text)  # Remove trailing commas in arrays
+    
+    return json_text.strip()
 def parse_pdf_to_json(pdf_path: str) -> Dict[str, Any]:
     """
     Parse a MasterFormat PDF and convert it to structured JSON using Gemini LLM.
@@ -221,15 +265,56 @@ def parse_pdf_to_json(pdf_path: str) -> Dict[str, Any]:
         response = model.generate_content(prompt)
 
         # Debug: Print the raw response
-        print(f"Raw LLM response: {response.text}")
+        print(f"Raw LLM response length: {len(response.text)}")
+        print(f"Raw LLM response preview: {response.text[:500]}...")
 
-        # Clean the response text (NEW LOGIC)
-        response_text = clean_llm_response(response.text)
+        # Clean the response text
+        try:
+            response_text = clean_llm_response(response.text)
+            print(f"Cleaned response length: {len(response_text)}")
+            print(f"Cleaned response preview: {response_text[:500]}...")
+        except ValueError as e:
+            return {
+                "success": False,
+                "data": None,
+                "error": f"Failed to clean LLM response: {str(e)}. Raw response: {response.text[:200]}..."
+            }
 
         # Parse the JSON response
-        result = json.loads(response_text)
-        result = normalize_json_quotes(result)
-        # Validate the structure as before     
+        try:
+            # Try parsing the cleaned response directly first
+            print(f"Attempting to parse cleaned response: {response_text[:200]}...")
+            result = json.loads(response_text)
+            result = normalize_json_quotes(result)
+        except json.JSONDecodeError as e:
+            print(f"First JSON parse attempt failed: {str(e)}")
+            # If that fails, try with the fix function
+            try:
+                fixed_response = fix_common_json_issues(response_text)
+                print(f"Attempting to parse fixed response: {fixed_response[:200]}...")
+                result = json.loads(fixed_response)
+                result = normalize_json_quotes(result)
+            except json.JSONDecodeError as e2:
+                # If JSON parsing fails, return error with the cleaned response
+                print(f"JSON Parse Error: {str(e2)}")
+                print(f"Error at line {e2.lineno}, column {e2.colno}")
+                print(f"Error message: {e2.msg}")
+                
+                # Show the problematic area
+                lines = response_text.split('\n')
+                if e2.lineno <= len(lines):
+                    print(f"Line {e2.lineno}: {lines[e2.lineno-1]}")
+                    if e2.lineno > 1:
+                        print(f"Line {e2.lineno-1}: {lines[e2.lineno-2]}")
+                    if e2.lineno < len(lines):
+                        print(f"Line {e2.lineno+1}: {lines[e2.lineno]}")
+                
+                return {
+                    "success": False,
+                    "data": None,
+                    "error": f"Failed to parse LLM response as JSON: {str(e2)}. Raw response: {response_text[:500]}..."
+                }
+        
         # Validate the structure
         if not isinstance(result, dict):
             raise Exception("Invalid JSON structure returned from LLM")
@@ -240,311 +325,9 @@ def parse_pdf_to_json(pdf_path: str) -> Dict[str, Any]:
             "error": None
         }
         
-    except json.JSONDecodeError as e:
-        # If JSON parsing fails, return error with the raw response
-        return {
-            "success": False,
-            "data": None,
-            "error": f"Failed to parse LLM response as JSON: {str(e)}. Raw response: {response.text[:200]}..."
-        }
     except Exception as e:
         return {
             "success": False,
             "data": None,
             "error": f"Error processing PDF: {str(e)}"
         }
-
-def extract_text_chunks_from_pdf(pdf_path: str, pages_per_chunk: int = 2) -> List[str]:
-    """
-    Extract text from PDF in chunks of specified number of pages.
-    
-    Args:
-        pdf_path: Path to the PDF file
-        pages_per_chunk: Number of pages per chunk
-        
-    Returns:
-        List of text chunks
-    """
-    try:
-        doc = fitz.open(pdf_path)
-        chunks = []
-        current_chunk = ""
-        page_count = 0
-        
-        for page_num in range(len(doc)):
-            page = doc[page_num]
-            page_text = page.get_text()
-            
-            if page_text:
-                current_chunk += page_text + "\n"
-                page_count += 1
-                
-                # Create chunk when we reach the page limit or at the end
-                if page_count >= pages_per_chunk or page_num == len(doc) - 1:
-                    if current_chunk.strip():
-                        chunks.append(current_chunk.strip())
-                    current_chunk = ""
-                    page_count = 0
-        
-        return chunks
-    except Exception as e:
-        raise Exception(f"Error extracting text chunks from PDF: {str(e)}")
-
-def process_chunk_with_gemini(chunk_text: str, chunk_num: int, total_chunks: int) -> Dict[str, Any]:
-    """
-    Process a single text chunk with Gemini LLM.
-    
-    Args:
-        chunk_text: Text content of the chunk
-        chunk_num: Current chunk number (1-based)
-        total_chunks: Total number of chunks
-        
-    Returns:
-        Parsed JSON response
-    """
-
-    if not GEMINI_API_KEY:
-        raise Exception("GEMINI_API_KEY environment variable is not set")
-    
-    # Configure Gemini
-    genai.configure(api_key=GEMINI_API_KEY)
-    model = genai.GenerativeModel('gemini-1.5-pro')
-    
-    # Create chunk-specific prompt
-    chunk_prompt = f"""
-    You are an expert at parsing construction specifications formatted in MasterFormat.
-
-    Your job is to extract the technical content from the following PDF text and output it as structured JSON using the schema and nesting pattern provided below. This schema is an example only—the pattern applies to any MasterFormat specification document.
-
-    **IMPORTANT: This is chunk {chunk_num} of {total_chunks} from a longer document.**
-    - Extract content from this chunk only
-    - Do not try to complete sections that span multiple chunks
-    - Focus on the content present in this specific chunk
-
-    **Critical Instructions:**
-    - Extract all content **verbatim** from the PDF. Do **NOT** summarize, rephrase, or omit any technical content.
-    - **Ignore** all headers, footers, cover page text, and miscellaneous metadata.
-    - **Generalize:** The output should follow the schema pattern exactly, but section numbers, part names, indices, and headings may vary in each document. Handle any number or label as found in the text, and include any section, part, or subitem you find, regardless of names or order.
-    - If a part or section is missing in the document, output it as an empty array or `null` as appropriate.
-    - Only output valid JSON, with no explanations, markdown, or extra text.
-
-    **Schema Example:**
-    {{
-    "section": "string",      // MasterFormat section number (e.g., "238243")
-    "name": "string",         // Section name/title (e.g., "ELECTRIC HEATERS")
-    "part1": {{
-        "partItems": [
-        {{
-            "index": "string",    // Section/part index (e.g., "1.01")
-            "text": "string",     // Title or description (e.g., "SUMMARY")
-            "children": [
-            {{
-                "index": "string",
-                "text": "string",
-                "children": [
-                {{
-                    "index": "string",
-                    "text": "string",
-                    "children": null
-                }}
-                ]
-            }},
-            // ... (can be further nested, or null if none)
-            ]
-        }}
-        ]
-    }},
-    "part2": {{
-        "partItems": [
-        // ... repeat same structure as part1
-        ]
-    }},
-    "part3": {{
-        "partItems": [
-        // ... repeat same structure as part1
-        ]
-    }}
-    }}
-
-    **Brief Sample Output:**
-    (Note: Section names, indices, and content will change for each document. This is just an example.)
-
-    {{
-    "section": "238243",
-    "name": "ELECTRIC HEATERS",
-    "part1": {{
-        "partItems": [
-        {{
-            "index": "1.01",
-            "text": "SUMMARY",
-            "children": [
-            {{
-                "index": "A.",
-                "text": "Section includes requirements for electric heaters...",
-                "children": null
-            }},
-            {{
-                "index": "B.",
-                "text": "This section includes requirements for LEED Certification...",
-                "children": null
-            }}
-            ]
-        }},
-        {{
-            "index": "1.02",
-            "text": "REFERENCES",
-            "children": [
-            {{
-                "index": "A.",
-                "text": "This Section incorporates by reference the latest revisions of the following documents.",
-                "children": [
-                {{
-                    "index": "1.",
-                    "text": "National Fire Protection Agency (NFPA)",
-                    "children": [
-                    {{
-                        "index": "a.",
-                        "text": "NFPA 70 National Electrical Code",
-                        "children": null
-                    }}
-                    ]
-                }}
-                ]
-            }}
-            ]
-        }}
-        ]
-    }},
-    "part2": {{
-        "partItems": [
-        {{
-            "index": "2.01",
-            "text": "ACCEPTABLE MANUFACTURERS:",
-            "children": [
-            {{
-                "index": "A.",
-                "text": "Berko Electric Heating; a division of Marley Engineered Products",
-                "children": null
-            }}
-            ]
-        }}
-        ]
-    }},
-    "part3": {{
-        "partItems": [
-        {{
-            "index": "3.01",
-            "text": "INSTALLATION",
-            "children": [
-            {{
-                "index": "A.",
-                "text": "Install in conformance with the approved heater installation drawing, NFPA 70, UL listing, and manufacturer's instructions.",
-                "children": null
-            }}
-            ]
-        }}
-        ]
-    }}
-    }}
-
-    **Instructions for Output:**
-    - Only return the JSON object matching the schema pattern above. Do **NOT** include any extra commentary, explanation, or markdown formatting.
-    - For all "children", if there are no further sub-items, set the field to `null`.
-    - If a section, part, or child does not exist in the document, output an empty array or `null` as appropriate.
-    - Remove all unnecessary line breaks (`\\n`) that do not indicate a new list item, bullet, or paragraph.
-    - Do **not** introduce extra spaces after periods or between words. Use a single space after each period.
-    - Preserve paragraph separation only where a real new item/section begins (such as bullets, numbered lists, or headings).
-    - Output all text fields as continuous, clean sentences, not split with `\\n` unless a new item/bullet is starting.
-
-    PDF Text (Chunk {chunk_num} of {total_chunks}):
-    {chunk_text}
-    """
-    
-    try:
-        # Generate response from Gemini
-        response = model.generate_content(chunk_prompt)
-        
-        # Clean the response text using the new robust cleaning function
-        response_text = clean_llm_response(response.text)
-        
-        # Parse and normalize JSON
-        result = json.loads(response_text)
-        normalized_result = normalize_json_quotes(result)
-        
-        return normalized_result
-        
-    except json.JSONDecodeError as e:
-        raise Exception(f"Failed to parse LLM response as JSON: {str(e)}. Raw response: {response.text[:200]}...")
-    except Exception as e:
-        raise Exception(f"Error processing chunk {chunk_num}: {str(e)}")
-
-def merge_json_responses(responses: List[Dict[str, Any]]) -> Dict[str, Any]:
-    """
-    Merge multiple JSON responses by combining partItems arrays.
-    
-    Args:
-        responses: List of JSON responses from chunks
-        
-    Returns:
-        Merged JSON response
-    """
-    if not responses:
-        raise Exception("No responses to merge")
-    
-    # Use the first response as the base structure
-    merged = responses[0].copy()
-    
-    # Merge partItems for each part
-    for part_name in ["part1", "part2", "part3"]:
-        if part_name in merged:
-            merged_part_items = merged[part_name].get("partItems", [])
-            
-            # Add partItems from other responses
-            for response in responses[1:]:
-                if part_name in response and "partItems" in response[part_name]:
-                    merged_part_items.extend(response[part_name]["partItems"])
-            
-            # Update the merged response
-            merged[part_name]["partItems"] = merged_part_items
-    
-    return merged
-
-def parse_pdf_to_json_chunked(pdf_path: str, pages_per_chunk: int = 2) -> Dict[str, Any]:
-    """
-    Parse a MasterFormat PDF in chunks and merge the results.
-    
-    Args:
-        pdf_path: Path to the PDF file
-        pages_per_chunk: Number of pages per chunk
-        
-    Returns:
-        Merged structured JSON data
-    """
-    try:
-        # Extract text chunks
-        text_chunks = extract_text_chunks_from_pdf(pdf_path, pages_per_chunk)
-        
-        if not text_chunks:
-            raise Exception("No text content extracted from PDF")
-        
-        # Process each chunk with Gemini
-        responses = []
-        for i, chunk_text in enumerate(text_chunks, 1):
-            response = process_chunk_with_gemini(chunk_text, i, len(text_chunks))
-            responses.append(response)
-        
-        # Merge all responses
-        merged_result = merge_json_responses(responses)
-        
-        return {
-            "success": True,
-            "data": merged_result,
-            "error": None
-        }
-        
-    except Exception as e:
-        return {
-            "success": False,
-            "data": None,
-            "error": f"Error processing PDF: {str(e)}"
-        } 
