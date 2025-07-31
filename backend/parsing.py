@@ -3,6 +3,7 @@ import json
 import google.generativeai as genai
 import fitz  # PyMuPDF
 import re
+import pdfplumber
 from typing import Dict, Any, List
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
@@ -69,27 +70,50 @@ def clean_llm_response(text):
 
 # --- Text Extraction ---
 
-def extract_pages_from_pdf(pdf_path: str) -> List[str]:
+def extract_pages_and_tables(pdf_path: str):
+    # Extract page text with fitz
+    doc = fitz.open(pdf_path)
+    pages = [page.get_text().strip() for page in doc]
+    doc.close()
+    
+    # Extract tables with pdfplumber
+    tables_per_page = extract_tables_by_page(pdf_path)
+    
+    # Combine: returns a list of dicts per page
+    result = []
+    for idx, page_text in enumerate(pages):
+        entry = {
+            "text": page_text,
+            "tables": tables_per_page[idx] if idx < len(tables_per_page) else []
+        }
+        result.append(entry)
+    return result
+
+def extract_tables_by_page(pdf_path: str) -> List[List[dict]]:
     """
-    Extract text for each page in the PDF as a list.
+    Extract tables for each page as a list (indexed by page number).
     """
-    try:
-        doc = fitz.open(pdf_path)
-        pages = []
-        for page in doc:
-            page_text = page.get_text()
-            if page_text:
-                pages.append(page_text.strip())
-        doc.close()
-        return pages
-    except Exception as e:
-        raise Exception(f"Error extracting pages from PDF: {str(e)}")
+    tables_per_page = []
+    with pdfplumber.open(pdf_path) as pdf:
+        for page in pdf.pages:
+            tables = []
+            for tbl in page.extract_tables():
+                if not tbl or not tbl[0]:
+                    continue
+                headers = tbl[0]
+                rows = tbl[1:]
+                tables.append({
+                    "headers": headers,
+                    "rows": rows
+                })
+            tables_per_page.append(tables)
+    return tables_per_page
 
 # --- Chunking Logic ---
 
-def make_chunks(pages: List[str], chunk_size: int = 8, overlap: int = 1) -> List[List[str]]:
+def make_chunks(pages: List[dict], chunk_size: int = 3, overlap: int = 1) -> List[List[dict]]:
     """
-    Splits list of pages into overlapping chunks.
+    Splits list of page dicts (each with 'text' and 'tables') into overlapping chunks.
     """
     chunks = []
     n = len(pages)
@@ -107,23 +131,36 @@ def make_chunks(pages: List[str], chunk_size: int = 8, overlap: int = 1) -> List
 
 # --- LLM Prompt Construction ---
 
-def build_prompt(chunk_text: str, chunk_num: int, total_chunks: int) -> str:
+def build_prompt(chunk_pages: List[dict], chunk_num: int, total_chunks: int) -> str:
     """
     Builds the LLM prompt for a given chunk.
     """
+    # Join all text and tables in this chunk
+    text_blocks = []
+    for page in chunk_pages:
+        text_blocks.append(page['text'])
+        # Add tables as markdown, so Gemini can "see" them in the chunk
+        for tbl in page.get('tables', []):
+            headers = " | ".join(str(h) for h in tbl['headers'])
+            separator = " | ".join(['---'] * len(tbl['headers']))
+            rows = "\n".join(" | ".join(str(cell) for cell in row) for row in tbl['rows'])
+            table_md = f"\nTABLE:\n| {headers} |\n| {separator} |\n{rows}\n"
+            text_blocks.append(table_md)
+    chunk_text = "\n".join(text_blocks)
+    
     return f"""
-You are an expert at parsing construction specifications formatted in MasterFormat.
+    You are an expert at parsing construction specifications formatted in MasterFormat.
 
-This is chunk {chunk_num} of {total_chunks}. Only extract and output content present in this chunk. Do not anticipate or repeat content from other chunks.
+    This is chunk {chunk_num} of {total_chunks}. Only extract and output content present in this chunk. Do not anticipate or repeat content from other chunks.
 
-Your job is to extract the technical content from the following PDF text and output it as structured JSON using the schema and nesting pattern provided below. This schema is an example only—the pattern applies to any MasterFormat specification document.
+    Your job is to extract the technical content from the following PDF text and output it as structured JSON using the schema and nesting pattern provided below. This schema is an example only—the pattern applies to any MasterFormat specification document.
 
-**Critical Instructions:**
-- Extract all content **verbatim** from the PDF. Do **NOT** summarize, rephrase, or omit any technical content.
-- **Ignore** all headers, footers, cover page text, and miscellaneous metadata.
-- **Generalize:** The output should follow the schema pattern exactly, but section numbers, part names, indices, and headings may vary in each document. Handle any number or label as found in the text, and include any section, part, or subitem you find, regardless of names or order.
-- If a part or section is missing in the document, output it as an empty array or `null` as appropriate.
-- Only output valid JSON, with no explanations, markdown, or extra text.
+    **Critical Instructions:**
+    - Extract all content **verbatim** from the PDF. Do **NOT** summarize, rephrase, or omit any technical content.
+    - **Ignore** all headers, footers, cover page text, and miscellaneous metadata.
+    - **Generalize:** The output should follow the schema pattern exactly, but section numbers, part names, indices, and headings may vary in each document. Handle any number or label as found in the text, and include any section, part, or subitem you find, regardless of names or order.
+    - If a part or section is missing in the document, output it as an empty array or `null` as appropriate.
+    - Only output valid JSON, with no explanations, markdown, or extra text.
 
 
     **Schema Example:**
@@ -164,21 +201,41 @@ Your job is to extract the technical content from the following PDF text and out
     }}
     }}
 
+    - If there are any tables present, add them as a "tables" field (see schema below). Use the headers and rows as shown. Do not omit or summarize tables.
+    - If a table is related to a heading or subsection (e.g., “2.1 HORIZONTAL CABLE”), place the tables array inside the same object as “index”: “2.1”.
+	- Do not attach all tables at the root. Only attach a table to the nearest relevant section/subsection. Use the following format for each table:
 
-**Instructions for Output:**
-- Only return the JSON object matching the schema pattern above. Do **NOT** include any extra commentary, explanation, or markdown formatting.
-- For all "children", if there are no further sub-items, set the field to `null`.
-- If a section, part, or child does not exist in the document, output an empty array or `null` as appropriate.
-- Remove all unnecessary line breaks (`\\n`) that do not indicate a new list item, bullet, or paragraph.
-- Do **not** introduce extra spaces after periods or between words. Use a single space after each period.
-- Preserve paragraph separation only where a real new item/section begins (such as bullets, numbered lists, or headings).
-- Output all text fields as continuous, clean sentences, not split with `\\n` unless a new item/bullet is starting.
+    **Table Example:**
 
-PDF Text (Chunk {chunk_num} of {total_chunks}):
-\"\"\"
-{chunk_text}
-\"\"\"
-"""
+    {{
+    "index": "2.1",
+    "text": "HORIZONTAL CABLE",
+    "tables": [
+        {{
+        "title": "Test Parameter Table 1",
+        "headers": ["Test Parameter", "100 MHz", "250 MHz"],
+        "rows": [
+            ["Attenuation:", "22.0 dB", "36.9 dB"],
+            ["NEXT:", "35.3 dB", "31.3 dB"]
+        ]
+        }}
+    ]
+    }}
+    **Instructions for Output:**
+    - Only return the JSON object matching the schema pattern above. Do **NOT** include any extra commentary, explanation, or markdown formatting.
+    - For all "children", if there are no further sub-items, set the field to `null`.
+    - If a section, part, or child does not exist in the document, output an empty array or `null` as appropriate.
+    - Remove all unnecessary line breaks (`\\n`) that do not indicate a new list item, bullet, or paragraph.
+    - Do **not** introduce extra spaces after periods or between words. Use a single space after each period.
+    - Preserve paragraph separation only where a real new item/section begins (such as bullets, numbered lists, or headings).
+    - Output all text fields as continuous, clean sentences, not split with `\\n` unless a new item/bullet is starting.
+    - When a major bullet or section (like ‘7.’ or ‘8.’) is immediately followed by sub-bullets (like ‘a.’, ‘b.’), output the main bullet as an object with a ‘children’ array, each sub-bullet as its own child. Never flatten sub-bullets into the parent text. Show this with an explicit example in the prompt.
+
+    PDF Text (Chunk {chunk_num} of {total_chunks}):
+    \"\"\"
+    {chunk_text}
+    \"\"\"
+    """
 
 # --- LLM Call + JSON Parsing for One Chunk ---
 
@@ -224,6 +281,30 @@ def parse_chunk_with_gemini(prompt: str) -> Dict[str, Any]:
 
 # --- Merge and Deduplicate ---
 
+def table_hash(tbl):
+    """Create a hash for table deduplication"""
+    # Use tuple of all rows for hash
+    return (tuple(tbl['headers']), tuple(tuple(row) for row in tbl['rows']))
+
+def dedupe_tables(node, seen_tables=None):
+    """Recursively deduplicate tables in the JSON structure"""
+    if seen_tables is None:
+        seen_tables = set()
+    # Dedupe tables at this node
+    if 'tables' in node:
+        unique_tables = []
+        for tbl in node['tables']:
+            thash = table_hash(tbl)
+            if thash not in seen_tables:
+                unique_tables.append(tbl)
+                seen_tables.add(thash)
+        node['tables'] = unique_tables
+    # Recurse to children
+    for k in ['children', 'partItems']:
+        if k in node and node[k]:
+            for child in node[k]:
+                dedupe_tables(child, seen_tables)
+
 def deduplicate_items(items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     """
     Remove duplicate items based on index and text.
@@ -238,49 +319,45 @@ def deduplicate_items(items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     return result
 
 def merge_json_chunks(chunks: List[Dict[str, Any]]) -> Dict[str, Any]:
-    """
-    Merges the partItems arrays and deduplicates across chunks.
-    """
-    if not chunks:
-        return {
-            "section": "",
-            "name": "",
-            "part1": {"partItems": []},
-            "part2": {"partItems": []},
-            "part3": {"partItems": []}
-        }
+    def merge_part_items(all_items):
+        seen = {}
+        for item in all_items:
+            idx = item.get('index')
+            # Prefer item with more children, then longer text
+            if idx in seen:
+                prev = seen[idx]
+                prev_children = prev.get('children') or []
+                curr_children = item.get('children') or []
+                if len(str(curr_children)) > len(str(prev_children)):
+                    seen[idx] = item
+                elif len(str(curr_children)) == len(str(prev_children)):
+                    # Fall back to longer text
+                    if len(str(item.get('text', ''))) > len(str(prev.get('text', ''))):
+                        seen[idx] = item
+            else:
+                seen[idx] = item
+        return list(seen.values())
     
-    # Use first non-empty chunk as base
+    # Merge as before, but use new merge_part_items
     merged = None
     for chunk in chunks:
         if chunk.get('section') or chunk.get('name'):
             merged = chunk.copy()
             break
-    
     if merged is None:
         merged = chunks[0].copy()
-    
-    # Merge partItems for each part
     for part in ['part1', 'part2', 'part3']:
         all_items = []
         for chunk in chunks:
             if part in chunk and isinstance(chunk[part], dict):
                 part_items = chunk[part].get('partItems', [])
                 all_items.extend(part_items)
-        
-        # Ensure part exists in merged result
-        if part not in merged:
-            merged[part] = {"partItems": []}
-        elif not isinstance(merged[part], dict):
-            merged[part] = {"partItems": []}
-            
-        merged[part]['partItems'] = deduplicate_items(all_items)
-    
+        merged[part]['partItems'] = merge_part_items(all_items)
     return merged
 
 # --- Main Entry Point for FastAPI ---
 
-def parse_pdf_to_json_chunked(pdf_path: str, chunk_size: int = 8, overlap: int = 1) -> Dict[str, Any]:
+def parse_pdf_to_json_chunked(pdf_path: str, chunk_size: int = 3, overlap: int = 1) -> Dict[str, Any]:
     """
     Main pipeline: extract pages, chunk, process each chunk, merge, return output.
     """
@@ -288,7 +365,7 @@ def parse_pdf_to_json_chunked(pdf_path: str, chunk_size: int = 8, overlap: int =
         print(f"Starting chunked PDF parsing with chunk_size={chunk_size}, overlap={overlap}")
         
         # 1. Extract pages from PDF
-        pages = extract_pages_from_pdf(pdf_path)
+        pages = extract_pages_and_tables(pdf_path)
         print(f"Extracted {len(pages)} pages from PDF")
         
         # 2. Make overlapping chunks
@@ -300,8 +377,7 @@ def parse_pdf_to_json_chunked(pdf_path: str, chunk_size: int = 8, overlap: int =
         results = []
         for idx, chunk_pages in enumerate(chunks):
             print(f"Processing chunk {idx+1}/{total_chunks}")
-            chunk_text = "\n".join(chunk_pages)
-            prompt = build_prompt(chunk_text, idx+1, total_chunks)
+            prompt = build_prompt(chunk_pages, idx+1, total_chunks)
             chunk_json = parse_chunk_with_gemini(prompt)
             results.append(chunk_json)
         
@@ -309,7 +385,11 @@ def parse_pdf_to_json_chunked(pdf_path: str, chunk_size: int = 8, overlap: int =
         print("Merging chunks...")
         merged = merge_json_chunks(results)
         
-        # 5. Return the final result
+        # 5. Deduplicate tables across the entire structure
+        print("Deduplicating tables...")
+        dedupe_tables(merged)
+        
+        # 6. Return the final result
         return {
             "success": True,
             "data": merged,
