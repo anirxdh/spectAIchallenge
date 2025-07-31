@@ -1,0 +1,194 @@
+{
+  "section": "22 08 00",
+  "name": "COMMISSIONING OF PLUMBING",
+  "part1": {
+    "partItems": [
+      {
+        "index": "1.1",
+        "text": "SECTION INCLUDES",
+        "children": [
+          {
+            "index": "A.",
+            "text": "Description",
+            "children": null
+          },
+          {
+            "index": "B.",
+            "text": "Responsibilities",
+            "children": null
+          },
+          {
+            "index": "C.",
+            "text": "Related Work",
+            "children": null
+          },
+          {
+            "index": "D.",
+            "text": "Test Equipment",
+            "children": null
+          }
+        ]
+      },
+      {
+        "index": "1.2",
+        "text": "DESCRIPTION",
+        "children": [
+          {
+            "index": "A.",
+            "text": "The purpose of this section is to specify Division 22 responsibilities in the commissioning process.",
+            "children": null
+          },
+          {
+            "index": "B.",
+            "text": "The systems to be commissioned are listed in Section 01 91 00.",
+            "children": null
+          },
+          {
+            "index": "C.",
+            "text": "Commissioning requires the participation of the Division 22 Contractor to ensure that all systems are operating in a manner consistent with the Contract Documents. The general commissioning requirements and coordination are detailed in Section 01 91 00. Division 22 Contractor shall be familiar with all parts of Section 01 91 00 and shall execute all commissioning responsibilities assigned to them in the Contract Documents.",
+            "children": null
+          }
+        ]
+      },
+      {
+        "index": "1.3",
+        "text": "RESPONSIBILITIES",
+        "children": [
+          {
+            "index": "A.",
+            "text": "Refer to Section 01 91 00.",
+            "children": null
+          }
+        ]
+      },
+      {
+        "index": "1.4",
+        "text": "RELATED WORK",
+        "children": [
+          {
+            "index": "A.",
+            "text": "Specific commissioning requirements are given in the following sections of these specifications. All the following sections apply to the Work of this section.",
+            "children": [
+              {
+                "index": "1.",
+                "text": "Section 01 78 23 - Operations and Maintenance",
+                "children": null
+              },
+              {
+                "index": "2.",
+                "text": "Section 01 79 00 - Demonstration and Training",
+                "children": null
+              },
+              {
+                "index": "3.",
+                "text": "Section 01 91 00 - Commissioning",
+                "children": null
+              },
+              {
+                "index": "4.",
+                "text": "Section 21 08 00 - Commissioning of Fire Suppression",
+                "children": null
+              },
+              {
+                "index": "5.",
+                "text": "Section 23 08 00 - Commissioning of HVAC",
+                "children": null
+              },
+              {
+                "index": "6.",
+                "text": "Section 26 08 00 - Commissioning of Electrical",
+                "children": null
+              },
+              {
+                "index": "7.",
+                "text": "Section 27 08 00 - Commissioning of Communications",
+                "children": null
+              },
+              {
+                "index": "8.",
+                "text": "Section 28 08 00 - Commissioning of Electronic Safety and Security",
+                "children": null
+              },
+              {
+                "index": "9.",
+                "text": "Section [XX XX XX]",
+                "children": null
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "part2": {
+    "partItems": [
+      {
+        "index": "2.1",
+        "text": "TEST EQUIPMENT",
+        "children": [
+          {
+            "index": "A.",
+            "text": "The Contractor shall provide all test equipment necessary to fulfill the testing requirements of this Division. This equipment includes, but is not limited to, the following:",
+            "children": [
+              {
+                "index": "1.",
+                "text": "Handheld temperature and relative humidity meter.",
+                "children": null
+              },
+              {
+                "index": "2.",
+                "text": "Infrared thermometer gun.",
+                "children": null
+              },
+              {
+                "index": "3.",
+                "text": "Analog differential pressure gauge and associated tubing.",
+                "children": null
+              },
+              {
+                "index": "4.",
+                "text": "Portable computer with access to the building automation system.",
+                "children": null
+              }
+            ]
+          },
+          {
+            "index": "B.",
+            "text": "All testing equipment shall be of sufficient quality and accuracy to test and/or measure system performance with the tolerances specified in the related specifications. If not otherwise noted, the following minimum requirements apply:",
+            "children": [
+              {
+                "index": "1.",
+                "text": "Temperature sensors and digital thermometers shall have a certified calibration within the past year to an accuracy of 0.5°F and a resolution of +/- 0.1°F.",
+                "children": null
+              },
+              {
+                "index": "2.",
+                "text": "Pressure sensors shall have an accuracy of +/- 2.0% of the value range being measured (not full range of meter) and have been calibrated within the last year.",
+                "children": null
+              },
+              {
+                "index": "3.",
+                "text": "All equipment shall be calibrated according to the manufacturer's recommended intervals and when dropped or damaged. Calibration tags shall be affixed or certificates readily available.",
+                "children": null
+              }
+            ]
+          },
+          {
+            "index": "C.",
+            "text": "Refer to Section 01 91 00 for additional Division 22 requirements.",
+            "children": null
+          }
+        ]
+      }
+    ]
+  },
+  "part3": {
+    "partItems": [
+      {
+        "index": "A.",
+        "text": "Refer to Section 01 91 00.",
+        "children": null
+      }
+    ]
+  }
+}

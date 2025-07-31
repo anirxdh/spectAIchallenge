@@ -1,0 +1,2785 @@
+{
+    "section": "23 30 00",
+    "name": "HVAC AIR DISTRIBUTION",
+    "part1": {
+      "partItems": [
+        {
+          "index": "1.01",
+          "text": "RELATED DOCUMENTS",
+          "children": [
+            {
+              "index": "A.",
+              "text": "Comply with Division 1 - General Requirements and referenced documents.",
+              "children": null
+            },
+            {
+              "index": "B.",
+              "text": "Comply with all other Division 23 Sections as applicable. Refer to other Divisions for coordination of work with other portions of work.",
+              "children": null
+            }
+          ]
+        },
+        {
+          "index": "1.02",
+          "text": "SYSTEM DESCRIPTION",
+          "children": [
+            {
+              "index": "A.",
+              "text": "The scope shall include the furnishing and installation of all ductwork as shown on the Drawings; acoustical and thermal linings; flexible ducts and connections; combination smoke and fire dampers, smoke dampers, and fire dampers; duct access doors; intermittent and constant fan powered, single duct, and dual duct variable, or constant, air volume terminal units and controls; air diffusers, grilles and registers; air volume control devices; hangers and supports; plenums and casings; turning vanes; heating coils; air filters; installation of temperature control dampers, and other appurtenances necessary for a complete and operational system.",
+              "children": null
+            },
+            {
+              "index": "B.",
+              "text": "All work shall be preceded by taking measurements at the job site, fully coordinating all work with other trades, verifying available spaces for ductwork, and developing Shop Drawings illustrating such.",
+              "children": null
+            },
+            {
+              "index": "C.",
+              "text": "Test all medium and high pressure ductwork systems (constructed to 3.0 inches water gauge and higher) for leaks and repair leaks to limit leakage rate to that as specified.",
+              "children": null
+            }
+          ]
+        },
+        {
+          "index": "1.03",
+          "text": "QUALITY ASSURANCE",
+          "children": [
+            {
+              "index": "A.",
+              "text": "All equipment and materials shall be new and of the quality as specified herein. All work shall comply with the most recent Local Building Code, Mechanical Code, Fire Code, and all other applicable National, State and Local Codes or ordinances.",
+              "children": null
+            },
+            {
+              "index": "B.",
+              "text": "All equipment and materials shall be installed in a workmanlike manner by trained and experienced sheet metal technicians and mechanics as recommended by the manufacturers of the products installed.",
+              "children": null
+            },
+            {
+              "index": "C.",
+              "text": "Where the standards and requirements of this specification exceed those of the Sheet Metal and Air Conditioning Contractors National Association (SMACNA) the requirements herein shall govern. As a minimum all ductwork shall be constructed to meet all functional criteria defined in Section 11 of the 2005 SMACNA \"HVAC Duct Construction Standards, Metal and Flexible,\" Third Edition. However, all ductwork shall comply with all code requirements noted above to include meeting deflection limits established in the local Mechanical code.",
+              "children": null
+            },
+            {
+              "index": "D.",
+              "text": "The work shall be guaranteed for a period of one (1) year from and after the date of acceptance of the job, \"Substantial Completion\", against noise, chatter, whistling, or vibration, and free from pulsation under all conditions of operation. After the system is in operation, should these defects occur, they shall either be removed and replaced or reinforced as directed by the Owner's Representative.",
+              "children": null
+            },
+            {
+              "index": "E.",
+              "text": "Air quantities shown on the Drawings, or specified, are based on air at 75 Deg.F. dry bulb, 50 percent relative humidity, and 29.92 inches H.G. barometric pressure.",
+              "children": null
+            },
+            {
+              "index": "F.",
+              "text": "Except where specified otherwise, all sheet metal used shall be constructed from prime galvanized steel sheets or coils up to 60 inches in width. Each sheet shall be stenciled with manufacturer's name and gauge. Coils of sheet steel shall be stenciled throughout on 10 foot centers (fabricate with stencils to the outside of the ductwork so they are visible when installed) with manufacturer's name and gauge tolerances in inches:",
+              "children": null,
+              "tables": [
+                {
+                  "title": null,
+                  "headers": [
+                    "Gauge\nNo.",
+                    "Nominal\nThickness",
+                    "Minimum\nThickness"
+                  ],
+                  "rows": [
+                    [
+                      "26",
+                      "0.0217",
+                      "0.0187"
+                    ],
+                    [
+                      "24",
+                      "0.0276",
+                      "0.0236"
+                    ],
+                    [
+                      "22",
+                      "0.0336",
+                      "0.0296"
+                    ],
+                    [
+                      "20",
+                      "0.0396",
+                      "0.0356"
+                    ],
+                    [
+                      "18",
+                      "0.0516",
+                      "0.0466"
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "index": "G.",
+              "text": "Contractor shall comply with this specification section in its entirety. If during a field observation, the engineer of record finds changes have been made without prior written approval, the contractor shall make the applicable changes to comply with this specification at the contractor's expense.",
+              "children": null
+            },
+            {
+              "index": "H.",
+              "text": "At the discretion of the Engineer of Record, sheet metal gauges and reinforcing may be randomly checked to verify all duct construction is in compliance with this is specification section.",
+              "children": null
+            },
+            {
+              "index": "I.",
+              "text": "All ductwork and fittings shall have a computer generated label affixed to each section detailing all applicable information including the duct dimensions, gage, reinforcement type/class, and connector type of the systems manufacturer. In addition, galvanizing thickness and country of origin shall be clearly stenciled on each duct section.",
+              "children": null
+            }
+          ]
+        },
+        {
+          "index": "1.04",
+          "text": "SUBMITTALS",
+          "children": [
+            {
+              "index": "A.",
+              "text": "Product Data: Submit manufacturer's descriptive literature and installation instructions in all items specified herein in accordance with Section 23 05 00.",
+              "children": null
+            },
+            {
+              "index": "B.",
+              "text": "Shop Drawings shall be submitted on all items of sheet metal work specified herein. Shop drawings of ductwork shall be submitted at a minimum scale of 1/4\" equal to one foot except that the Congested Areas and all Air Handling Unit Mechanical Rooms shall be submitted at a minimum scale of 1/2\" = 1'-0\". Provide sections for all Congested Areas and Mechanical Room Plans.",
+              "children": null
+            },
+            {
+              "index": "C.",
+              "text": "Shop Drawings shall include the reflected ceiling plan, screened back, overlaid onto the floor plan indicating the proposed installation of all light fixtures; ductwork layout; duct fittings; duct connection details; offsets; bottom of duct elevations; all sheet metal dimensions (sizes); overall air device sizes, air device neck sizes, air device air flow quantities, and device type; duct pressure classifications; all mechanical piping; any conflicts discovered and unresolved through the use of transitions and offsets in the available space; turning vanes; manual volume dampers; automatic control dampers; smoke and fire dampers; duct access doors; flexible connections; and all mechanical fans and equipment.",
+              "children": null
+            },
+            {
+              "index": "D.",
+              "text": "Sheet metal shop drawings shall be overlaid on piping shop drawings and other shop drawings for other portions of work specified in other sections of these specifications for complete coordination of all work prior to commencing with any installation. These Shop Drawings shall not be prepared directly on the Shop Drawings of other trades; they will be separate from all other shop drawings. Coordination Drawings shall be prepared in accordance with Specification Sections 01 31 00 and 01 33 00.",
+              "children": null
+            },
+            {
+              "index": "E.",
+              "text": "Shop Drawings shall be based on actual field measurements taken at the job site and shall take into consideration all obstacles and be fully coordinated with all piping, conduits, structure, equipment, and general construction features.",
+              "children": null
+            },
+            {
+              "index": "F.",
+              "text": "Shop Drawings shall be generated by a computer aided design and drafting (CADD) system as a CADD drawing. CADD files with Architectural Backgrounds and Mechanical design drawing files will only be provided when requested, if this privilege has not been previously abused, after a Release of Liability Form has been completed and the Contractor agrees to pay a fee associated with the cost to furnish these files, typically a minimum $100.00 fee, up to $500.00, depending on file size. The fee on this project for HVAC ductwork and piping CADD files will be $250.00.",
+              "children": null
+            },
+            {
+              "index": "G.",
+              "text": "Include a brochure, with individually assembled cut sheets, and details of all sheet metal fittings, duct construction standards proposed for each system, air volume control devices, and other accessories proposed to be used for job duct construction standards. This shall be done prior to submission or preparation of any sheet metal shop drawings.",
+              "children": null
+            },
+            {
+              "index": "H.",
+              "text": "Should any ductwork installation commence without approved ductwork shop drawings or written approval by the Engineer of Record, the Contractor assumes all liability, to include all costs, in revising any portion of the sheet metal work that is deemed unacceptable by the Owner's Representative to include any conflicts discovered in installation that could have been resolved through the Shop Drawing process.",
+              "children": null
+            }
+          ]
+        },
+        {
+          "index": "1.05",
+          "text": "GUARANTEE",
+          "children": [
+            {
+              "index": "A.",
+              "text": "The work shall be guaranteed for a period of one (1) year from and after the date of acceptance of the job, \"Substantial Completion\", against noise, chatter, whistling, or vibration, and be free from pulsation under all conditions of operation. This guarantee shall include defects in material, equipment and workmanship.",
+              "children": null
+            },
+            {
+              "index": "B.",
+              "text": "After the system is in operation, should these defects occur, they shall either be removed and replaced or reinforced as directed by the Owner's Representative. This shall include repair of damages to building materials related to these deficiencies.",
+              "children": null
+            }
+          ]
+        },
+        {
+          "index": "1.06",
+          "text": "PRODUCT HANDLING",
+          "children": [
+            {
+              "index": "A.",
+              "text": "Cover and protect material in transit and at site. Material not properly protected and stored, which has been damaged or defaced, or which has gotten wet during storage or construction shall be rejected.",
+              "children": null
+            },
+            {
+              "index": "B.",
+              "text": "All ductwork shipped to the job site shall be stored in trailers or storage buildings or under roof decking or solid floors located above the floor. All open ends of ductwork shall be wrapped in 3 MIL plastic and supported on stands to keep the ductwork a minimum of four inches (4\") above the support surface below.",
+              "children": null
+            },
+            {
+              "index": "C.",
+              "text": "No ductwork shall be installed until the roof system, or the floor above the ductwork, is installed more than ten feet (10'-0\") beyond the further extent of where the ductwork will be installed.",
+              "children": null
+            },
+            {
+              "index": "D.",
+              "text": "All openings in all ducts shall be completely covered with minimum three (3) MIL thick plastic during construction. All open ends, where opened to allow further installation of new ducts, shall be covered with this same plastic at the end of each day.",
+              "children": null
+            },
+            {
+              "index": "E.",
+              "text": "Whenever duct systems are operated during construction, all open ends of the ductwork shall be covered with flexible filter media equivalent to MERV 11 filter media. These filters shall not be removed except to make final duct tie-ins and only with the building envelope completely enclosed.",
+              "children": null
+            },
+            {
+              "index": "F.",
+              "text": "Storage and protection of materials shall be in accordance with Section 23 05 00.",
+              "children": null
+            }
+          ]
+        },
+        {
+          "index": "3",
+          "text": "Sealant (MMM EC-800, Hardcast \"Iron-Grip 601\", Childers CP-146, Foster 32-18, or Polymer Adhesive Sealant Systems, Inc. \"Air Seal No. 11\") shall be used at all joints on rectangular or round ducts in shop and field fabrication and shall be installed:",
+          "children": [
+            {
+              "index": "a.",
+              "text": "In the joint prior to closing to provide a positive seal for slide-on round or oval joints.",
+              "children": null
+            },
+            {
+              "index": "b.",
+              "text": "Externally seal all longitudinal and transverse duct joints after these joints are closed.",
+              "children": null
+            },
+            {
+              "index": "c.",
+              "text": "Where \"Ductmate\" joints are used seal external to joints after the joint is closed as needed to repair all audible leaks and to comply with the leakage test requirements. Use double sealant at corners of these joints.",
+              "children": null
+            },
+            {
+              "index": "d.",
+              "text": "All sealants shall be U.L. listed and labeled in accordance with U.L. 181 for duct sealant.",
+              "children": null
+            }
+          ]
+        },
+        {
+          "index": "4",
+          "text": "Round medium pressure duct construction, gauges and reinforcing shall be in accordance with Section 3 of the most recent edition of SMACNA \"HVAC Duct Construction Standards Manual, Metal and Flexible\". Straight ducts and fittings shall be of the same manufacturer. Spiral wound ducts shall be used up to 48\" in diameter and shall be as manufactured by United Sheet Metal Company or approved equals. Joints shall be joined by approved couplings secured by sheet metal screws and sealant. Ninety degree branch take-offs shall be made with conical tees. Take-off fittings shall be welded to fittings or to the main duct. All welds shall be cleaned and coated with rust-inhibiting paint. Elbows shall be stamped smooth type, or 5 or 3 piece gore type, with either type having a center line radius of 1-1/2 times the duct diameter. Ducts shall be constructed with four-ply reinforcing spiral lock seams. Fittings shall be as manufactured by United Sheet Metal Company, Ward, or approved equals only.",
+          "children": null
+        },
+        {
+          "index": "5",
+          "text": "Low Pressure Duct Supports:",
+          "children": [
+            {
+              "index": "a.",
+              "text": "All horizontal ducts up to and including 40 inches in their greater dimension shall be supported by means of No. 18 U.S. gauge band iron hangers attached to the ducts by means of screws, rivets or clamps, and fastened above to inserts, toggle bolts, beam clamps or other approved means. Duct shall have at least one pair of supports 8'-0\" on centers. Clamps shall be used to fasten hangers to reinforcing on sealed ducts.",
+              "children": null
+            },
+            {
+              "index": "b.",
+              "text": "Horizontal ducts larger than 40 inches in their greatest dimension shall be supported by means of hanger rods bolted to angle iron trapeze hangers. Duct shall have at least one pair of supports 8'-0\" on centers according to the following:",
+              "children": null,
+              "tables": [
+                {
+                  "title": null,
+                  "headers": [
+                    "Largest Dimension of Duct",
+                    "U.S. Gauge of Metal",
+                    "Maximum Reinforcement Spacing"
+                  ],
+                  "rows": [
+                    [
+                      "Up to 36\"",
+                      "26",
+                      "5'-0\""
+                    ],
+                    [
+                      "37\" to 48\"",
+                      "24",
+                      "5'-0\""
+                    ],
+                    [
+                      "49\" to 60\"",
+                      "24",
+                      "4'-0\""
+                    ],
+                    [
+                      "61\" to 72\"",
+                      "22",
+                      "4'-0\""
+                    ],
+                    [
+                      "73\" to 84\"",
+                      "20",
+                      "4'-0\""
+                    ],
+                    [
+                      "85\" to 96\"",
+                      "18",
+                      "4'-0\""
+                    ],
+                    [
+                      "Over 96\"",
+                      "18",
+                      "2'-6\""
+                    ]
+                  ]
+                },
+                {
+                  "title": null,
+                  "headers": [
+                    "Angle\nLength",
+                    "Angle",
+                    "Rod\nDiameter"
+                  ],
+                  "rows": [
+                    [
+                      "4'-0\"",
+                      "1-1/2\" x 1-1/2\" x 1/8\"",
+                      "1/4\""
+                    ],
+                    [
+                      "6'-0\"",
+                      "1-1/2\" x 1-1/2\" x 1/8\"",
+                      "1/4\""
+                    ],
+                    [
+                      "8'-0\"",
+                      "2\" x 2\" x 1/8\"",
+                      "5/16\""
+                    ],
+                    [
+                      "10'-0\"",
+                      "3\" x 3\" x 1/8\"",
+                      "3/8\""
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "index": "c.",
+              "text": "Vertical ducts shall be supported where they pass through the floor line with 1-1/2\" X 1-1/2\" X 1/4\" angles for ducts up to 60\". Above 60\" the angles must be increased in strength and sized on an individual basis considering space requirements.",
+              "children": null
+            }
+          ]
+        },
+        {
+          "index": "6",
+          "text": "Medium pressure duct supports:",
+          "children": [
+            {
+              "index": "a.",
+              "text": "All horizontal medium pressure rectangular ducts shall have duct hanger requirements as follows:",
+              "tables": [
+                {
+                  "title": null,
+                  "headers": [
+                    "Minor Axis of Duct",
+                    "Gauge of Metal"
+                  ],
+                  "rows": [
+                    [
+                      "6\" to 10\"",
+                      "24"
+                    ],
+                    [
+                      "11\" to 16\"",
+                      "22"
+                    ],
+                    [
+                      "17\" to 24\"",
+                      "20"
+                    ],
+                    [
+                      "25\" to 36\"",
+                      "18"
+                    ],
+                    [
+                      "37\" and Up",
+                      "16"
+                    ]
+                  ]
+                },
+                {
+                  "title": null,
+                  "headers": [
+                    "Maximum\nDuct\nDimension",
+                    "Minimum\nHanger\nSize",
+                    "Hanger Size\nGalv. Steel\nStrap Width",
+                    "Maximum\nSpacing",
+                    "No.\nHangers",
+                    "Minimum\nTrapeze\nSize"
+                  ],
+                  "rows": [
+                    [
+                      "Up thru 18\"",
+                      "---",
+                      "1\" x 16 Ga.",
+                      "10'",
+                      "2",
+                      "----"
+                    ],
+                    [
+                      "19\" to 36\"",
+                      "---",
+                      "1\" x 16 Ga.",
+                      "10'",
+                      "2",
+                      "----"
+                    ],
+                    [
+                      "37\" to 60\"",
+                      "3/8\"",
+                      "1\" x 16 Ga.",
+                      "8'",
+                      "2",
+                      "2 x 2 x 1/4"
+                    ],
+                    [
+                      "61\" to 120\"",
+                      "3/8\"",
+                      "1-1/2\" x 12 Ga.",
+                      "8'",
+                      "2",
+                      "2 x 2 x 1/4"
+                    ],
+                    [
+                      "121\" to 240\"",
+                      "3/8\"",
+                      "----",
+                      "4'",
+                      "2",
+                      "2-1/2x2-1/2x3/16"
+                    ]
+                  ]
+                }
+              ],
+              "children": null
+            },
+            {
+              "index": "b.",
+              "text": "All horizontal medium pressure round ducts shall have duct hangers spaced 10'-0\" maximum, with requirements as follows:",
+              "tables": [
+                {
+                  "title": null,
+                  "headers": [
+                    "Duct\nDiameter",
+                    "Hanger\nSize",
+                    "Minimum\nNo. Hangers",
+                    "Hanger\nRing Size"
+                  ],
+                  "rows": [
+                    [
+                      "Up to 18\"",
+                      "1\" x 16 Ga.",
+                      "2",
+                      "1\" x 16 Ga."
+                    ],
+                    [
+                      "19\" to 36\"",
+                      "1\" x 12 Ga.",
+                      "2",
+                      "1\" x 12 Ga."
+                    ],
+                    [
+                      "37\" to 50\"",
+                      "1-1/2\" x 12 Ga.",
+                      "2",
+                      "1-1/2\" x 12 Ga."
+                    ],
+                    [
+                      "51\" to 84\"",
+                      "1-1/2\" x 12 Ga.",
+                      "2",
+                      "Support Bracing Angle"
+                    ]
+                  ]
+                }
+              ],
+              "children": null
+            },
+            {
+              "index": "c.",
+              "text": "Hanger straps on duct widths of 60 inches and under shall lap under the duct a minimum of one inch (1\") and have a minimum of one fastening screw on the bottom and two on the side.",
+              "children": null
+            },
+            {
+              "index": "d.",
+              "text": "Hanger straps on ducts with widths over 60 inches shall be bolted to duct reinforcing with 3/8\" bolts minimum.",
+              "children": null
+            },
+            {
+              "index": "e.",
+              "text": "Use 3/8\" minimum bolt for securing round duct hanger straps to band straps.",
+              "children": null
+            }
+          ]
+        },
+        {
+          "index": "7",
+          "text": "Where galvanized steel ductwork or joints are welded use \"Everdur\" welding rods.",
+          "children": null
+        },
+        {
+          "index": "2.02",
+          "text": "ROUND LOW PRESSURE DUCT TAPS",
+          "children": [
+            {
+              "index": "A.",
+              "text": "Provide round low pressure, systems operating at a maximum of two inches (2\" inches) water gauge (W.G.) static pressure, duct taps to serve air devices where shown on the drawings and in accordance with details for these taps",
+              "children": null
+            },
+            {
+              "index": "B.",
+              "text": "Duct taps shall consist of spin-in, or spin on, collar type manufactured fittings specifically made for commercial ductwork systems. Spin-in fittings shall be the conical type as shown and detailed on the drawings to include integral manual balance damper with locking device. Fittings shall be fabricated using continuous weld longitudinal seams. No riveted construction allowed.",
+              "children": null
+            },
+            {
+              "index": "C.",
+              "text": "All spin-in fittings shall be made with hot dipped, G-60 or G-90, galvanized steel (per ASTM A 653) and be a minimum of 26 gauge in thickness for all sizes from 4\" to 12\" round. All sizes 14\" to 20\" round shall be a minimum of 24 gauge in thickness. Thicker gauges shall be provided on larger fittings as required per SMACNA and the Mechanical Code, where required.",
+              "children": null
+            },
+            {
+              "index": "D.",
+              "text": "Provide plain or beaded ends for connection of duct work as required for the application. Crimped ends are not allowed.",
+              "children": null
+            },
+            {
+              "index": "E.",
+              "text": "All ductwork systems are called out elsewhere in these specifications to be externally sealed to limit air leakage. These fittings may either be factory sealed (all seams sealed) or be sealed by the contractor in the field.",
+              "children": null
+            },
+            {
+              "index": "F.",
+              "text": "All spin-in fittings shall also include integral manual balance dampers unless indicated otherwise. Damper options shall be as follows:",
+              "children": [
+                {
+                  "index": "1.",
+                  "text": "All manual volume dampers shall be the butterfly type, using a single round damper blade and positive locking regulator damper hardware.",
+                  "children": null
+                },
+                {
+                  "index": "2.",
+                  "text": "Sizes 4\"-12\" round shall have a reinforced damper axis (not a continuous damper shaft) with ¼\" regulator and spring loaded, retractable bearings.",
+                  "children": null
+                },
+                {
+                  "index": "3.",
+                  "text": "Sizes 14\" through 20\" round shall have a minimum 3/8\" continuous damper rod axis with nylon grommets installed at damper sleeve penetrations",
+                  "children": null
+                },
+                {
+                  "index": "4.",
+                  "text": "Provide dampers, which shall include an extended threaded shaft that aligns with a sheet metal stand-off bracket (spot welded to the fitting) with the stand-off distance to be 2\" to clear the thickness of any external duct wrap insulation. Coordinate stand-off dimensions with specified duct insulation thickness (only when thicker than 2\"). Damper handle and wing nut to be fastened at the outside of the stand-off bracket.",
+                  "children": null
+                },
+                {
+                  "index": "5.",
+                  "text": "Provide premium optional balance dampers to include a 2\" stand-off bracket, spot welded to the fitting, to include a 3/8\" square shaft extended to the stand-off bracket, with U-bolt, nylon bushings, locking quadrant and handle.",
+                  "children": null
+                }
+              ]
+            },
+            {
+              "index": "G.",
+              "text": "Acceptable Manufacturers:",
+              "children": [
+                {
+                  "index": "1.",
+                  "text": "Flexmaster or equals by,",
+                  "children": null
+                },
+                {
+                  "index": "2.",
+                  "text": "Crown Company Products,",
+                  "children": null
+                },
+                {
+                  "index": "3.",
+                  "text": "Ductmate,",
+                  "children": null
+                },
+                {
+                  "index": "4.",
+                  "text": "Hercules Industries.",
+                  "children": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": "2.03",
+          "text": "FIRE, SMOKE, AND COMBINATION SMOKE-FIRE DAMPERS",
+          "children": [
+            {
+              "index": "A.",
+              "text": "Contractor shall furnish and install fire, smoke, and combination smoke-fire dampers in air passages, openings, and ductwork wherever shown on the Drawings, and as required by the local authorities having jurisdiction. Installations shall be in accordance with all applicable NFPA standards and the SMACNA Duct Manual. All dampers shall carry the U.L. Label and shall be installed such as to conform to conditions under which the U.L. Label was granted. All dampers shall be constructed and tested in accordance with the latest edition of U.L. Safety Standards 555 or 555S, as applicable. Provide sleeves, typically 12\" in length minimum, for all dampers as required for the installation conditions encountered.",
+              "children": null
+            },
+            {
+              "index": "B.",
+              "text": "Provide customized assembly lengths for applications where the wall thickness or general construction penetrated by the fire/smoke damper assembly requires such. Review architectural plans to confirm these locations when the wall thicknesses appear to be thicker than normal on the mechanical plans.",
+              "children": null
+            },
+            {
+              "index": "C.",
+              "text": "Fire dampers shall be constructed in accordance with the recommendations of the NFPA and shall be of metal gauges required by the class of separation in each case.",
+              "children": [
+                {
+                  "index": "1.",
+                  "text": "Interlocking curtain blade type fire dampers carrying the Underwriters' Label will be acceptable, except at locations where an operating type damper is required to meet local requirements, to meet sequence of operations indicated in Temperature Control Specifications, Section 23 0900, or to meet the limited spaces available.",
+                  "children": null
+                },
+                {
+                  "index": "2.",
+                  "text": "Use Style \"B\" rectangular and style \"CR\" for round dampers such that blades are out of the air stream.",
+                  "children": null
+                },
+                {
+                  "index": "3.",
+                  "text": "For grille installations at fire rated partitions, use Style \"B\" thin line fire dampers or Style \"G\" integral sleeve type for grilles.",
+                  "children": null
+                }
+              ]
+            },
+            {
+              "index": "D.",
+              "text": "Smoke dampers shall be designed for vertical or horizontal applications as encountered in accordance with NFPA 90A and meet the latest requirements of UL 555 S. Smoke dampers shall be installed in, or adjacent to, the smoke barrier; but in no case, more than 24 inches from the smoke barrier. Smoke dampers shall be a Ruskin Model SD35, 36, 37, or SDRS25 as applicable for the application. Frames shall be made of 16 gauge single piece galvanized steel hat shaped channel frames. Blades shall be 6\" wide galvanized steel and be the triple V-groove or air foil type. Provide stainless steel jamb seals, silicone edge type blade seals where required for the classification, stainless steel sleeve bearings and linkages concealed in the frame. Leakage Class shall be Class 1, 2, or 3, as required, to meet the requirements specified elsewhere herein. Provide compatible electric actuator on all dampers, factory installed.",
+              "children": null
+            },
+            {
+              "index": "E.",
+              "text": "Combination fire-smoke dampers shall be Leakage Class 1 dampers with electric, manually resettable, fuse link operated by 120 volt electric actuator furnished with the damper. Fire-smoke dampers shall be Ruskin FSD-60, or equal, with minimum 16 gauge galvanized steel hat channel shaped frames. Fire-smoke dampers shall be increased in size to maintain a minimum of 90 percent free area of the ductwork size indicated on the Drawings thru each fire-smoke damper. Leakage shall be Class 1, 2, or 3, as required, to meet the requirements specified elsewhere herein. Provide compatible electric actuator on all dampers, factory installed.",
+              "children": null
+            },
+            {
+              "index": "F.",
+              "text": "Insulated all metal access panels, secured with sash locks, shall be installed to service all fire, smoke, and combination smoke-fire dampers. Access panels shall be identified with \"FIRE DAMPER\", \"SMOKE DAMPER\", or \"SMOKE-FIRE DAMPER\" stenciled thereon in a visible or conspicuous location. Removable flexible duct shall not be permitted as a means of damper access. Access shall be direct and shall not be obstructed by turning vanes or other duct accessories.",
+              "children": null
+            },
+            {
+              "index": "G.",
+              "text": "General Requirements:",
+              "children": [
+                {
+                  "index": "1.",
+                  "text": "For \"Ductmate\" connections at fire, smoke, or combination smoke-fire dampers, do not use screw fasteners.",
+                  "children": null
+                },
+                {
+                  "index": "2.",
+                  "text": "Use four inch (4\") draw band connections at round duct fire damper connections.",
+                  "children": null
+                },
+                {
+                  "index": "3.",
+                  "text": "Use blade dampers when the blade width exceeds 12 inches.",
+                  "children": null
+                },
+                {
+                  "index": "4.",
+                  "text": "Install vertical or horizontal mount dampers suitable for the application.",
+                  "children": null
+                },
+                {
+                  "index": "5.",
+                  "text": "Dampers shall be suitable for the maximum air system operating pressures expected to be encountered. Medium pressure ductwork is expected to operate at up to six inches (6\") W.G.",
+                  "children": null
+                },
+                {
+                  "index": "6.",
+                  "text": "Use multi-section dampers where damper size openings are larger than single section maximum sizes.",
+                  "children": null
+                },
+                {
+                  "index": "7.",
+                  "text": "Fire, smoke and combination smoke-fire dampers shall be sized to provide for 100 percent of the ductwork size (minimum 95% free area) indicated on the Drawings through each damper.",
+                  "children": null
+                },
+                {
+                  "index": "8.",
+                  "text": "Provide 165 Deg. F. rated fusible links for fire dampers.",
+                  "children": null
+                }
+              ]
+            },
+            {
+              "index": "H.",
+              "text": "Acceptable Manufacturers:",
+              "children": [
+                {
+                  "index": "1.",
+                  "text": "Ruskin, or approved equals by:",
+                  "children": null
+                },
+                {
+                  "index": "2.",
+                  "text": "Greenheck, or",
+                  "children": null
+                },
+                {
+                  "index": "3.",
+                  "text": "Nailor, or",
+                  "children": null
+                },
+                {
+                  "index": "4.",
+                  "text": "Prefco, or",
+                  "children": null
+                },
+                {
+                  "index": "5.",
+                  "text": "National Controlled Air (N.C.A.), or",
+                  "children": null
+                },
+                {
+                  "index": "6.",
+                  "text": "Air Balance, or",
+                  "children": null
+                },
+                {
+                  "index": "7.",
+                  "text": "Pottorff.",
+                  "children": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": "2.04",
+          "text": "FLEXIBLE CONNECTIONS",
+          "children": [
+            {
+              "index": "A.",
+              "text": "Where ducts connect to fans, including roof exhausters, flexible connectors shall be made that are fire-resistant, (up to 200 Deg. F.), waterproof, mildew-resistant and essentially airtight, and shall weigh approximately thirty ounces (30 oz.) per square yard.",
+              "children": null
+            },
+            {
+              "index": "B.",
+              "text": "There shall be a minimum of one-half inch (1/2\") slack in these connections, and a minimum of two and one-half inches (2-1/2\") distance between the edges of the ducts for a total of three inches (3\"). There shall also be a minimum of one inch (1\") of slack for each inch of external static pressure on the fan system for medium pressure systems.",
+              "children": null
+            },
+            {
+              "index": "C.",
+              "text": "Acceptable Manufacturers:",
+              "children": [
+                {
+                  "index": "1.",
+                  "text": "Vent Fabrics \"Ventglas\", or approved equals by:",
+                  "children": null
+                },
+                {
+                  "index": "2.",
+                  "text": "Duro-Dyne.",
+                  "children": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": "2.05",
+          "text": "ACCESS DOORS",
+          "children": [
+            {
+              "index": "A.",
+              "text": "Furnish and install hinged, low leakage access doors in ductwork or plenums to provide access to all fire, smoke and combination fire - smoke dampers, mixed air plenums, automatic dampers, coils, filters, and elsewhere as detailed on the Drawings.",
+              "children": null
+            },
+            {
+              "index": "B.",
+              "text": "Where the ducts are insulated, the access doors shall be double skin doors with a minimum one inch (1\") of insulation in the door. The insulation shall have a minimum R-value of 5.0. Increase the thickness of the insulation as needed to comply. Where the access door is installed in non-insulated ductwork the access door shall be unlined sheet metal of the same gauge thickness as the duct.",
+              "children": null
+            },
+            {
+              "index": "C.",
+              "text": "In no case shall access doors be smaller than eight (8\") by eight inches (8\"). Access doors shall be sized to permit testing or servicing of duct mounted components, such as, for coil cleaning, installation of control devices, resetting of fusible links, filter replacement, etc., as applicable and suitable for the application.",
+              "children": null
+            },
+            {
+              "index": "D.",
+              "text": "Where duct access doors are above a suspended, normally non-readily accessible ceiling, such as plaster, gypsum board or spline type ceilings, Contractor, under this Section of Specifications, shall be responsible for the proper location, and furnishing of, ceiling access doors, or panels, to make duct access doors easily accessed through the ceiling system. Ceiling access doors, or panels, shall be rated, where applicable, to match the fire rating of the ceiling system penetrated. Ceiling access doors, or panels, shall be installed under other Sections of these Specifications. Ceiling access doors, or panels, shall be centered directly beneath duct access doors or immediately adjacent thereto when duct access is through the side of the duct.",
+              "children": null
+            }
+          ]
+        },
+        {
+          "index": "6.",
+          "text": "Use multi-section dampers where damper size openings are larger than single section maximum sizes.",
+          "children": null
+        },
+        {
+          "index": "7.",
+          "text": "Fire, smoke and combination smoke-fire dampers shall be sized to provide for 100 percent of the ductwork size (minimum 95% free area) indicated on the Drawings through each damper.",
+          "children": null
+        },
+        {
+          "index": "8.",
+          "text": "Provide 165 Deg. F. rated fusible links for fire dampers.",
+          "children": null
+        },
+        {
+          "index": "H.",
+          "text": "Acceptable Manufacturers:",
+          "children": [
+            {
+              "index": "1.",
+              "text": "Ruskin, or approved equals by:",
+              "children": null
+            },
+            {
+              "index": "2.",
+              "text": "Greenheck, or",
+              "children": null
+            },
+            {
+              "index": "3.",
+              "text": "Nailor, or",
+              "children": null
+            },
+            {
+              "index": "4.",
+              "text": "Prefco, or",
+              "children": null
+            },
+            {
+              "index": "5.",
+              "text": "National Controlled Air (N.C.A.), or",
+              "children": null
+            },
+            {
+              "index": "6.",
+              "text": "Air Balance, or",
+              "children": null
+            },
+            {
+              "index": "7.",
+              "text": "Pottorff.",
+              "children": null
+            }
+          ]
+        },
+        {
+          "index": "2.06",
+          "text": "TURNING VANES",
+          "children": [
+            {
+              "index": "D.",
+              "text": "Acoustical Turning Vanes shall be used in applications that require quiet operating systems. Mounting rails shall have friction insert tabs that align the vanes automatically. These shall only be required where designated on the Drawings.",
+              "children": null
+            },
+            {
+              "index": "E.",
+              "text": "Vanes shall be either the two inch (2\") or four inch (4\") double wall type vanes depending on the size of the ductwork and shall be factory manufactured only.",
+              "children": null
+            },
+            {
+              "index": "F.",
+              "text": "Approved Manufacturers:",
+              "children": [
+                {
+                  "index": "1.",
+                  "text": "Ductmate Industries PRO-Rail Turning Vanes,",
+                  "children": null
+                },
+                {
+                  "index": "2.",
+                  "text": "Harper Double Wall turning vanes,",
+                  "children": null
+                },
+                {
+                  "index": "3.",
+                  "text": "Or pre-approved equals only.",
+                  "children": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": "2.07",
+          "text": "DUCT LINER",
+          "children": [
+            {
+              "index": "A.",
+              "text": "Where indicated on the Drawings or specified herein, all rectangular ducts; except kitchen grease hood, kitchen dishwasher and fume hood exhaust ducts; shall be lined with Fiberglass mat faced duct liner in the thicknesses, type, and locations as indicated elsewhere herein.",
+              "children": null
+            },
+            {
+              "index": "B.",
+              "text": "Kitchen grease hood exhaust, kitchen dishwasher exhaust, kitchen hood make-up air, and fume hood make-up air and other industrial type exhaust air ducts shall not be lined. Line all other general building exhaust air ducts within 10'-0\" on each side of each in-line exhaust fan with one inch (1\") thick liner. Roof mounted exhaust fan ductwork shall also be lined, one inch (1\") thickness, but only for the first 10'-0\" of ductwork from the roof curb toward the occupied space.",
+              "children": null
+            },
+            {
+              "index": "C.",
+              "text": "All return, transfer, and relief air ducts shall be lined with one inch (1\") thick duct liner.",
+              "children": null
+            },
+            {
+              "index": "D.",
+              "text": "The liner insulation system shall be one and one-half inches (1.5\") in thickness on all conditioned air, heated or cooled, as well as outside air intake ducts, and mixed air plenums to obtain a minimum R-value of 5.0 thereon.",
+              "children": null
+            },
+            {
+              "index": "E.",
+              "text": "All ductwork systems are required to meet the most recent version of the International Energy Conservation Code.",
+              "children": null
+            },
+            {
+              "index": "F.",
+              "text": "All duct liners shall comply with NFPA 90A and 90B and ASTM C 1071, Type I, for ducts and Type II for plenums (rigid liner). Liner shall consist of flexible, matt faced insulation made of inorganic glass fibers bonded by a thermosetting resin with an encapsulant edge coating, and shall be a rotary style duct liner product with a water repellant ingredient on the mat face to help keep moisture from penetrating the air stream surface. Other technical requirements shall include:",
+              "children": [
+                {
+                  "index": "1.",
+                  "text": "Be suitable for temperatures up to 250 Deg. F. per ASTM C 411.",
+                  "children": null
+                },
+                {
+                  "index": "2.",
+                  "text": "Be suitable for air velocities up to 6,000 FPM per ASTM C 1071 for Type I products and 5000 FPM for Type II products.",
+                  "children": null
+                },
+                {
+                  "index": "3.",
+                  "text": "Water vapor sorption shall be less than 3% by weight per ASTM C 1104.",
+                  "children": null
+                },
+                {
+                  "index": "4.",
+                  "text": "Air stream surface mat facing shall be tested with an EPA registered anti-microbial agent to aid in the prevention of fungal and bacterial growth. Mat face, as treated, shall not support the growth of mold, fungi, or bacteria per ASTM C 1338, ASTM G 21 and ASTM G 22.",
+                  "children": null
+                },
+                {
+                  "index": "5.",
+                  "text": "Does not exceed a Flame Spread of 25 and Smoke Developed and Fuel Contributed of 50 per ASTM E 84, NFPA 225, and UL 723.",
+                  "children": null
+                },
+                {
+                  "index": "6.",
+                  "text": "Conductance of 0.24 (R-value of 4.2) for a 1.5 PCF or 2.0 PCF duct liner at a 75 Deg. F. mean temperature per ASTM C177 for a one inch (1\") thick product.",
+                  "children": null
+                },
+                {
+                  "index": "7.",
+                  "text": "Greenguard Compliant (Greenguard Environmental Institute).",
+                  "children": null
+                },
+                {
+                  "index": "8.",
+                  "text": "Noise Reduction Coefficient (NRC) of 0.70 or higher for a one inch (1\") thick product and 0.80 for a two inch (2\") thick product per ASTM C 423, type A mounting.",
+                  "children": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": "2.09",
+          "text": "KITCHEN HOOD EXHAUST DUCTS",
+          "children": [
+            {
+              "index": "A.",
+              "text": "The kitchen hood exhaust duct system shall be constructed of 16 gauge carbon steel with liquid tight continuous external welds at all seams and joints in accordance with NFPA 96 and local codes.",
+              "children": null
+            },
+            {
+              "index": "B.",
+              "text": "The ductwork shall be installed with access doors at every 20 feet on center, as applicable, and at each elbow to facilitate cleaning, as required by code, and as required to provide access to fire protection devices in the duct. Access doors shall be grease tight construction with suitable hinges and latches.",
+              "children": null
+            },
+            {
+              "index": "C.",
+              "text": "The duct shall slope 1/4 inch per foot from the discharge point toward the hood.",
+              "children": null
+            },
+            {
+              "index": "D.",
+              "text": "All changes in direction shall be made with 1-1/2 times the duct width to centerline radius elbows; no turning vanes or mitered fittings will be allowed.",
+              "children": null
+            },
+            {
+              "index": "E.",
+              "text": "The ductwork shall be enclosed in a fire-rated duct enclosure, refer to Architectural Drawings, from the point of ceiling penetration to the outside air. The duct enclosure shall be sealed around the duct at the point of penetration to the outside air. The duct enclosure shall be sealed around the duct at the point of penetration and vented to the exterior through weather-protected openings.",
+              "children": null
+            },
+            {
+              "index": "F.",
+              "text": "Make rigid connections to the hood and fans, transitioning as required, for connection at each piece of equipment. Seal duct connections to fan and hood.",
+              "children": null
+            },
+            {
+              "index": "G.",
+              "text": "Do not internally line grease exhaust ductwork.",
+              "children": null
+            }
+          ]
+        },
+        {
+          "index": "2.10",
+          "text": "DISHWASHER EXHAUST DUCT SYSTEM",
+          "children": [
+            {
+              "index": "A.",
+              "text": "Dishwasher exhaust ducts shall be constructed of 18-8 stainless steel, Type 304, and be installed in accordance with all local codes.",
+              "children": null
+            },
+            {
+              "index": "B.",
+              "text": "Exhaust ducts shall be minimum 20 gauge thick (minimum 0.035 inches thick), when concealed above ceilings, with continuous liquid-tight welded and treated joints and seams, using stainless steel rods, on the interior or exterior of the duct surface. Use 18 gauge thick stainless steel with welded finished joints where exposed. Welded joints shall be at the top edges of the ductwork.",
+              "children": null
+            },
+            {
+              "index": "C.",
+              "text": "Ducts shall slope 1/4\" inch per foot toward the grille, hood or an approved reservoir.",
+              "children": null
+            },
+            {
+              "index": "D.",
+              "text": "All changes in direction shall be made with 1-1/2 times the duct width to centerline radius elbows; no turning vanes or mitered fittings will be allowed.",
+              "children": null
+            },
+            {
+              "index": "E.",
+              "text": "Provide duct access doors every twenty feet (20'), if required, and at each change in direction for duct cleaning purposes. Access doors shall be of water tight construction with suitable hinges and latches.",
+              "children": null
+            },
+            {
+              "index": "F.",
+              "text": "Do not internally line dishwasher exhaust ductwork.",
+              "children": null
+            }
+          ]
+        },
+        {
+          "index": "2.11",
+          "text": "FUME HOOD EXHAUST DUCT SYSTEM",
+          "children": [
+            {
+              "index": "A.",
+              "text": "Fume hood exhaust ductwork shall be constructed of Type 316 stainless steel. This shall include ductwork from the exhaust collar to the discharge point to the outdoors.",
+              "children": null
+            },
+            {
+              "index": "B.",
+              "text": "The first ten feet (10') of duct from the hood, and exposed duct, shall be 20 gauge (minimum 0.0335 inches thick) in thickness. The remaining ductwork shall be 22 gauge in thickness (minimum 0.0273 inches thick).",
+              "children": null
+            },
+            {
+              "index": "C.",
+              "text": "All joints shall be fully welded and heat treated. Alternately, prefabricated round stainless steel duct systems, with approved air tight connections, will be considered where they fit the available space to include using all radius bends.",
+              "children": null
+            },
+            {
+              "index": "D.",
+              "text": "Slope duct 1/4 inches per foot from discharge point back to hood.",
+              "children": null
+            },
+            {
+              "index": "E.",
+              "text": "The ductwork shall be enclosed in a fire-rated duct enclosure, refer to Architectural Drawings, from the point of ceiling penetration to the outside air. The duct enclosure shall be sealed around the duct at the point of penetration to the outside air and vented to the exterior through weather-protected openings.",
+              "children": null
+            },
+            {
+              "index": "F.",
+              "text": "Make rigid connections to the hood and fans, transitioning from duct size indicated on Drawings to full size of hood and fan/curb connection, as required, for connection at each piece of equipment. Seal duct connections to each fan and hood.",
+              "children": null
+            },
+            {
+              "index": "G.",
+              "text": "Do not internally line fume hood exhaust ductwork.",
+              "children": null
+            }
+          ]
+        },
+        {
+          "index": "2.16",
+          "text": "SINGLE DUCT VARIABLE AND CONSTANT AIR VOLUME TERMINALS",
+          "children": [
+            {
+              "index": "A.",
+              "text": "Provide single duct variable and constant air volume terminal boxes of the sizes and types as indicated on the Drawings to meet scheduled capacities.",
+              "children": null
+            },
+            {
+              "index": "B.",
+              "text": "Air terminals shall be certified under the American Refrigeration Institute (ARI) Standard 880 Certification Program and carry the ARI seal.",
+              "children": null
+            },
+            {
+              "index": "C.",
+              "text": "Terminal casings shall be constructed of not less than 24 gauge galvanized steel, mechanically assembled and sealed to form an air-tight casing. Air leakage shall be limited to a maximum 2% at six inches (6\") W.G. internal system static pressure, tested in accordance with ASHRAE Standard 130. Spot welded casings are not acceptable. Internal lining shall be provided and shall consist of a minimum 1/2 inch dual density fiberglass with 4 p.c.f. skin density rated for a maximum air velocity of 4500 FPM. Insulation shall meet all requirements of UL 181 and NFPA 90-A. Raw edges of insulation shall be coated and sealed.",
+              "children": null
+            },
+            {
+              "index": "D.",
+              "text": "Pressure differential reset controller shall maintain set point (air flow rates in CFM) within 5% regardless of system pressure changes (pressure independent). The re-set controllers shall constantly monitor air flow system static and total pressure. Minimum (adjustable to zero flow) and maximum air flow (CFM) settings shall be field adjustable. Flow curve for field balancing shall be permanently affixed to terminal casing. Averaging velocity sensors shall be utilized. Single point differential sensors shall not be acceptable. Terminal unit manufacturer shall include the cost of factory mounting and wiring the DDC controller and electric air damper actuator supplied by the Control Systems Manufacturer as specified under Section 23 09 00, Controls and Instrumentation, in factory furnished metal control enclosure. Unit manufacturers shall furnish and install a 24 volt controls transformer to serve the controller and actuator per the requirements outlined by the manufacturer of these components.",
+              "children": null
+            },
+            {
+              "index": "E.",
+              "text": "The primary air valve assemblies shall be pressure independent and shall reset to any airflow between zero and the maximum catalogued air volume. The air valve assembly shall be a minimum of 22 gauge G60 galvanized steel The primary air valve damper shall be heavy gauge metal, with peripheral gasket, and solid steel shaft, pivoted in self-lubricating bearings. In the full closed position, air leakage past the closed damper shall not exceed 2% of the nominal catalog rating at 3\" W.G. inlet static pressure, when tested in accordance with ASHRAE Standard 130. The airflow sensor shall be of cross configuration located at the inlet of the assembly. The sensor shall have twelve total pressure-sensing ports and a center averaging chamber designed to accurately average the flow across the inlet of the assembly. Sensor shall provide accuracy within 5% with a 90 degree sheet metal elbow located directly at the inlet of the assembly. The airflow sensor shall amplify the sensed air flow signal.",
+              "children": null
+            },
+            {
+              "index": "F.",
+              "text": "Reference \"Temperature Controls\" Section of Specifications, Section 23 09 00 for sequence of operation and related requirements.",
+              "children": null
+            },
+            {
+              "index": "G.",
+              "text": "Acceptable terminal manufacturers:",
+              "children": [
+                {
+                  "index": "1.",
+                  "text": "Envirotech SD, or approved equals only by:",
+                  "children": [
+                    {
+                      "index": "2.",
+                      "text": "Titus.",
+                      "children": null
+                    },
+                    {
+                      "index": "3.",
+                      "text": "Trane.",
+                      "children": null
+                    },
+                    {
+                      "index": "4.",
+                      "text": "Price Industries.",
+                      "children": null
+                    },
+                    {
+                      "index": "5.",
+                      "text": "Nailor.",
+                      "children": null
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": "2.17",
+          "text": "SOUND ATTENUATORS",
+          "children": [
+            {
+              "index": "A.",
+              "text": "Sound attenuators shall be factory fabricated, rectangularly shaped, and designed for duct mounting of sizes as indicated and scheduled on the Drawings.",
+              "children": null
+            },
+            {
+              "index": "B.",
+              "text": "Outer casings shall be made of a minimum 22 gauge galvanized steel in accordance with ASHRAE Guide recommended construction for high pressure rectangular ductwork. Seams shall be lock formed and be mastic filled. Interior partitions shall be made of not less than 26 gauge galvanized perforated steel.",
+              "children": null
+            },
+            {
+              "index": "C.",
+              "text": "Acoustical fill material shall be made of inorganic mineral or glass fiber of sufficient density to obtain the specified acoustic performances. Material shall be inert, vermin and moisture proof. Combustion rating for fill shall not be greater than a 25 flame-spread classification, 15 smoke development rating, and 20 fuel contribution when tested in accordance with ASTM E84 and NFPA Standard 255, or U.L. Standard No. 723.",
+              "children": null
+            },
+            {
+              "index": "D.",
+              "text": "Attenuators shall be rated in accordance with ASTM specification E477. Ratings shall include Dynamic Insertion Loss (DIL) and Self Noise (SN) power levels for both forward and reverse flow at airflow entering face velocities of 2,000 FPM. Static pressure losses shall not exceed that scheduled on the Plans.",
+              "children": null
+            },
+            {
+              "index": "E.",
+              "text": "Acceptable Manufacturers:",
+              "children": [
+                {
+                  "index": "1.",
+                  "text": "Industrial Acoustics Company (IAC), or approved equals by:",
+                  "children": [
+                    {
+                      "index": "2.",
+                      "text": "Vibracoustics.",
+                      "children": null
+                    },
+                    {
+                      "index": "3.",
+                      "text": "Kinetics Noise Control, Inc.",
+                      "children": null
+                    },
+                    {
+                      "index": "4.",
+                      "text": "Commercial Acoustics.",
+                      "children": null
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": "2.18",
+          "text": "OUTSIDE AIR INTAKE AND RELIEF AIR/EXHAUST OUTLET HOODS",
+          "children": [
+            {
+              "index": "A.",
+              "text": "Furnish and install outside air intakes and relief air outlets of sizes as scheduled or shown on the plans. Face velocities shall generally not exceed 1000 FPM for outlets and 500 FPM for intakes. Air pressure drop shall not exceed 0.15 In. W.G. in all cases.",
+              "children": null
+            },
+            {
+              "index": "B.",
+              "text": "Hoods shall be of all welded and lock formed galvanized steel or all aluminum construction. Furnish with aluminum bird screen and a removable sloping top insulated on the bottom with mastic insulation and coated with an anti-condensate coating. Hoods shall be hinged for access to ductwork and shall be fastened closed.",
+              "children": null
+            },
+            {
+              "index": "C.",
+              "text": "Furnish 14 inch high roof curbs for both outlets and intakes made of 16 gauge spot welded galvanized steel and insulated on the inside of the curb with 2\" thick fiberglass board for thermal insulation and to prevent condensation. Provide wood nailer for fastening.",
+              "children": null
+            },
+            {
+              "index": "D.",
+              "text": "Provide a 2\" wide neoprene rubber pad continuous around the curb for mounting of intake to provide a weather seal and to damper wind born vibration. Secure hoods with stainless steel screws 8\" on centers.",
+              "children": null
+            },
+            {
+              "index": "E.",
+              "text": "Acceptable hood manufacturers:",
+              "children": [
+                {
+                  "index": "1.",
+                  "text": "Penn \"Airette\", or approved equals by:",
+                  "children": null
+                },
+                {
+                  "index": "2.",
+                  "text": "Greenheck.",
+                  "children": null
+                },
+                {
+                  "index": "3.",
+                  "text": "Loren Cook.",
+                  "children": null
+                },
+                {
+                  "index": "4.",
+                  "text": "Acme.",
+                  "children": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": "2.19",
+          "text": "ELECTRIC DUCT HEATERS",
+          "children": [
+            {
+              "index": "A.",
+              "text": "Electric duct heaters shall be of the sizes and types as scheduled, and as shown on the Drawings, with the electrical characteristics indicated.",
+              "children": null
+            },
+            {
+              "index": "B.",
+              "text": "All duct heaters shall be designed for installation in ductwork and where internal liner is indicated, be compatible with that system. Elements shall be open coil type constructed of 80% nickel - 20% chromium resistance wire, insulated by floating ceramic bushings. Bushings shall be recessed into casing and secured on supporting brackets. Casing shall be galvanized steel and made to be the slip-in type for horizontal air flow.",
+              "children": null
+            },
+            {
+              "index": "C.",
+              "text": "Provide all electric heating coils completely factory wired with automatic reset thermal cutouts for primary over temperature protection with load-carrying manual reset thermal cutouts, factory wired in series with each heater stage, for secondary protection. Include overcurrent cutouts and sub-circuit fusing in casing control box assembly. Provide air flow proving switches, quiet (mercury) contactors, and a normally open, one (1) psig differential P.E. switch for each heater. Control boxes shall be recessed when installed in internally lined ducts, and shall have a solid cover.",
+              "children": null
+            },
+            {
+              "index": "D.",
+              "text": "Where exact discharge air temperature control is required, furnish SCR controllers for variable heat output with discharge thermostat suitable for desired set point for each such heater.",
+              "children": [
+                {
+                  "index": "1.",
+                  "text": "Acceptable Manufacturers:",
+                  "children": [
+                    {
+                      "index": "a.",
+                      "text": "Indeeco, or approved equals by;",
+                      "children": null
+                    },
+                    {
+                      "index": "b.",
+                      "text": "Brasch.",
+                      "children": null
+                    },
+                    {
+                      "index": "c.",
+                      "text": "Warren.",
+                      "children": null
+                    },
+                    {
+                      "index": "d.",
+                      "text": "Chromalox.",
+                      "children": null
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": "2.20",
+          "text": "LINED SPIRAL DUCT",
+          "children": [
+            {
+              "index": "A.",
+              "text": "Lined spiral duct shall be United McGill Acoustic-K27 duct or equivalent. Utilize duct-duct slip joint connector, conical reducing tees, and 5 gore elbows (60 Deg. and 90 Deg.) for offsets and end runs.",
+              "children": null
+            },
+            {
+              "index": "B.",
+              "text": "Inner duct liner shall be perforated 28 gauge galvanized steel with 1.5\" thick [1.0\" thick allowed if ductwork is exposed in a conditioned space], 1.5 pound density, fiberglass insulation sandwiched between it and the outer duct. The outer duct shall be spiral seam construction, and be a minimum of 24 gauge galvanized steel.",
+              "children": null
+            },
+            {
+              "index": "C.",
+              "text": "In lieu of the perforated steel and factory installed insulation liner, an extra heavy density liner, field installed, may be used as an equivalent to the 1.5\" thick Johns Manville Spiracoustic Plus. This system shall have a minimum R-value of 5.0 at 75 Deg. F Mean Temperature, with a noise reduction coefficient of 0.80. The airstream surface shall be coated and be suitable for mechanical cleaning.",
+              "children": null
+            },
+            {
+              "index": "D.",
+              "text": "Externally seal all duct connections, transverse and longitudinal, with a sealant being listed and labeled in accordance the requirements of U.L. 181A or U.L. 181B such as Foster 32-19 duct sealant.",
+              "children": null
+            }
+          ]
+        },
+        {
+          "index": "2.21",
+          "text": "AIR FILTERS",
+          "children": [
+            {
+              "index": "A.",
+              "text": "Provide appropriately sized and number of air filters for each piece of individual air handling equipment to include, but not be limited to, the following:",
+              "children": [
+                {
+                  "index": "1.",
+                  "text": "Air Handling Units.",
+                  "children": null
+                },
+                {
+                  "index": "2.",
+                  "text": "Fan Coil Units.",
+                  "children": null
+                },
+                {
+                  "index": "3.",
+                  "text": "Packaged Rooftop A/C Units.",
+                  "children": null
+                },
+                {
+                  "index": "4.",
+                  "text": "Heating and Ventilating Units.",
+                  "children": null
+                },
+                {
+                  "index": "5.",
+                  "text": "Make-Up or Supply Air Units.",
+                  "children": null
+                },
+                {
+                  "index": "6.",
+                  "text": "Fan Powered Terminal Units, series and parallel fan arrangement type.",
+                  "children": null
+                },
+                {
+                  "index": "7.",
+                  "text": "Filter Return Air Grilles serving ducted return air systems where scheduled.",
+                  "children": null
+                },
+                {
+                  "index": "8.",
+                  "text": "Elsewhere as required to protect air type heat exchangers, such as warm air furnaces, or coil surfaces, such as duct mounted direct expansion coils.",
+                  "children": null
+                }
+              ]
+            },
+            {
+              "index": "B.",
+              "text": "Medium efficiency air filters shall generally be two inches (2\") thick, unless indicated otherwise and shall be the pleated media, disposable type, listed by Underwriters Laboratories as Class 2, with the following features:",
+              "children": [
+                {
+                  "index": "1.",
+                  "text": "Air filters shall be rated in accordance with the most recent version of ASHRAE Standards 52.1 and 52.2, test methods as indicated herein, and shall conform to Section 7.4 of ARI Standard 850.",
+                  "children": null
+                },
+                {
+                  "index": "2.",
+                  "text": "Filter media enclosing frame shall be constructed of rigid, heavy duty, high wet-strength resistant, \"beverage\" board with diagonal support members on the air entering and air exiting sides. Expanded diamond grid media support, integral with frame, shall be chemically bonded to filter media at each pleat, to insure pleat spacing and stability. Pleated media shall be bonded to the inside of the frame to eliminate air bypass.",
+                  "children": null
+                },
+                {
+                  "index": "3.",
+                  "text": "Filter media shall be high performance, non-woven, reinforced cotton-poly, synthetic blend fabric formed in a V-shape.",
+                  "children": null
+                },
+                {
+                  "index": "4.",
+                  "text": "Filters shall have the following performance data:",
+                  "tables": [
+                    {
+                      "title": null,
+                      "headers": [
+                        "THICKNESS",
+                        "SQUARE FEET\nMEDIA AREA TO\nONE SQUARE\nFOOT FACE\nAREA",
+                        "MINIMUM\nPLEATS PER\nLINEAL FOOT",
+                        "INITIAL AIR\nRESISTANCE\n(INCHES W.G.)",
+                        "RESISTANCE\nBASED ON\nAIR FLOW\nOF"
+                      ],
+                      "rows": [
+                        [
+                          "One Inch (1\")",
+                          "2.4",
+                          "16",
+                          "0.25 (350 FPM)",
+                          "1400 CFM"
+                        ],
+                        [
+                          "Two Inch (2\")",
+                          "4.3",
+                          "15",
+                          "0.28 (500 FPM)",
+                          "1500 CFM"
+                        ],
+                        [
+                          "Four Inch (4\")",
+                          "6.9",
+                          "11",
+                          "0.27 (500 FPM)",
+                          "1500 CFM"
+                        ]
+                      ]
+                    }
+                  ],
+                  "children": null
+                },
+                {
+                  "index": "5.",
+                  "text": "Filters shall be suitable for operation with varying velocities of up to 500 feet per minute (FPM) for 2\" and 4\" filters and 350 FPM for 1\" filters.",
+                  "children": null
+                },
+                {
+                  "index": "6.",
+                  "text": "Filters shall have a minimum efficiency of 30% with an average arrestance of 90 to 92% minimum dust holding capacity which shall be no less than 170 grams as tested in accordance with ASHRAE Standard 52.1. Filters shall also have a MERV rating of 8 as tested in accordance with ASHRAE Standard 52.2-2007.",
+                  "children": null
+                },
+                {
+                  "index": "7.",
+                  "text": "Acceptable Manufacturers:",
+                  "children": [
+                    {
+                      "index": "a.",
+                      "text": "Camfil Farr, Inc., Model Aeropleat IV, or approved equals by:",
+                      "children": null
+                    },
+                    {
+                      "index": "b.",
+                      "text": "Environmental Filter Corporation.",
+                      "children": null
+                    },
+                    {
+                      "index": "c.",
+                      "text": "Eco-Air.",
+                      "children": null
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "index": "C.",
+              "text": "All filters shall be standard sizes that are readily and locally available, in stock, through multiple over the counter sources without requiring special order. Standard acceptable sizes shall be 16\" x 20\" and 16\" x 25\".",
+              "children": null
+            }
+          ]
+        },
+        {
+          "index": "2.22",
+          "text": "MIXED AIR BLENDERS",
+          "children": [
+            {
+              "index": "A.",
+              "text": "Furnish and install air blenders in the mixed air plenums of the air handling units of the size and type as shown on the Drawings.",
+              "children": null
+            },
+            {
+              "index": "B.",
+              "text": "Air blenders shall be rated for the total air handling unit air flow rate scheduled with the maximum air pressure drop of 0.12 inches W.G. Use multiple blenders where needed to fit the limited spaces available.",
+              "children": null
+            },
+            {
+              "index": "C.",
+              "text": "Air blenders shall be factory built and tested.",
+              "children": null
+            },
+            {
+              "index": "D.",
+              "text": "Air blenders shall be installed in strict accordance with the manufacturer's recommendations, and as shown on the Drawings.",
+              "children": null
+            },
+            {
+              "index": "E.",
+              "text": "Units shall be static devices, completely fixed, with no moving parts.",
+              "children": null
+            },
+            {
+              "index": "F.",
+              "text": "Air blenders shall be fabricated of minimum 0.08 inch thick aluminum and be all welded construction.",
+              "children": null
+            },
+            {
+              "index": "G.",
+              "text": "The maximum standard deviation of the mixed, discharge airstream, resulting from the mixing of two airstreams, shall be 6.0 Deg. F.",
+              "children": null
+            },
+            {
+              "index": "H.",
+              "text": "Provide holding frame and safeing as specified elsewhere herein. Blank off all air flow around blender to be in accordance with SMACNA blank-off standards.",
+              "children": null
+            },
+            {
+              "index": "I.",
+              "text": "Acceptable Manufacturers:",
+              "children": [
+                {
+                  "index": "1.",
+                  "text": "Blender Products, Inc., or approved equal by:",
+                  "children": null
+                },
+                {
+                  "index": "2.",
+                  "text": "Kees, Inc.",
+                  "children": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": "2.23",
+          "text": "ADHESIVES AND SEALANTS",
+          "children": [
+            {
+              "index": "A.",
+              "text": "All adhesives and sealants used on this project must have a Volatile Organic Compound (VOC) content less than that listed in the current South Coast Air Quality Management District (SCAQMD) Rule 1168, and all sealants and fillers must meet or exceed the requirements of the Bay Area Air Quality Management District Regulation 8, Rule 51.",
+              "children": null
+            },
+            {
+              "index": "B.",
+              "text": "All adhesives and sealants shall meet the most current Leadership in Energy and Environmental Design (LEED™) requirements.",
+              "children": null
+            }
+          ]
+        },
+        {
+          "index": "2.24",
+          "text": "FIBERGLASS DUCTBOARD",
+          "children": [
+            {
+              "index": "A.",
+              "text": "Fiberglass duct board of any type is not allowed on this project without exception.",
+              "children": null
+            }
+          ]
+        },
+        {
+          "index": "2.25",
+          "text": "ELECTRONIC BALANCING DAMPERS",
+          "children": [
+            {
+              "index": "A.",
+              "text": "Where balance dampers are to be located above a hard ceiling, or in any inaccessible location, the contractor shall use electronic balancing dampers controlled with an Electronic Balancing Damper Positioner (EBDP) which opens and closes the damper and provides a visual indication of the damper position with a LCD meter.",
+              "children": null
+            },
+            {
+              "index": "B.",
+              "text": "Each Remote Damper Assembly shall consist of a commercial quality damper actuated by a 12V DC motor with position feedback, a plenum rated cable with RJ-25 connectors on each end, termination options to control the damper from either a plenum, wall or ceiling location, and a hand held damper positioner that provides DC voltage to open and close the damper while displaying the damper position with the LCD position indicator meter.",
+              "children": null
+            },
+            {
+              "index": "C.",
+              "text": "Each damper shall be either a round, rectangular, or High Efficiency Takeoff type damper, as applicable to the installation. Round dampers shall consist of a 20 gauge galvanized steel shell and blade with ½\" plated steel damper shafts, and 12V DC Motor with position feedback. Rectangular dampers shall consist of a 20 gauge aluminum frame and blade, stainless steel slide, 18 gauge galvanized steel mounting plate for slip in installation, and 12V DC motor with position feedback. High efficiency takeoff dampers shall consist of a galvanized steel takeoff with 20 gauge blade and ½\" steel shafts, and 12V DC motor with position feedback. Dampers shall include oil impregnated bronze bushings. Damper actuators shall use less than 0.5 watts of power (20 mA), have a torque capability of 16 inch-pounds (maximum), and rotate the damper from 0 - 90 degrees in 12 seconds of less. Feedback shall occur via a proportional voltage signal. Provide low leakage damper blade seals.",
+              "children": null
+            },
+            {
+              "index": "D.",
+              "text": "Electric Cables shall be plenum rated cable, have modular connectors and be available in lengths up to 1,000 feet. Length of individual cables shall be field verified to insure no field splicing of cables is required. One modular connector shall be attached to each motor and the other end shall include a RJ-25 modular connector that would be installed inside a plenum or at a wall or ceiling receptacle, to be coordinated with the architectural drawings (acceptable locations). Ceiling connections shall be the concealed type similar to Young Regulator Company (YRC) TP - 301. Wall connections shall be the suitable for 1- 6 ports and be similar to YRC TP-Wall.",
+              "children": null
+            },
+            {
+              "index": "E.",
+              "text": "The Positioner (EBDP) shall be used to control all remote electronic balance dampers installed on site by use of ceiling or wall mounted receptacles, a plenum connection or a combination of these options. The Positioner shall be self-contained and be a hand held device. Each positioner shall be provided with a high capacity long life lithium battery which shall be easily replaced in the field. Provide one (1) Positioner for each site or building to include one (1) spare battery for each positioner furnished. Positioner shall use a modular RJ-25 connector that plugs into the modular connector served by the 12V DC motor. The positioner battery shall drive the damper motor open and closed. The positioner shall also house the LCD display that provides precise damper position indication throughout the range of movement via a proportional voltage feedback signal from the motor.",
+              "children": null
+            },
+            {
+              "index": "F.",
+              "text": "Acceptable Manufacturers:",
+              "children": [
+                {
+                  "index": "1.",
+                  "text": "Young Regulator.",
+                  "children": null
+                },
+                {
+                  "index": "2.",
+                  "text": "Greenheck.",
+                  "children": null
+                },
+                {
+                  "index": "3.",
+                  "text": "Metropolitan Air Technology (MAT).",
+                  "children": null
+                },
+                {
+                  "index": "4.",
+                  "text": "Or other approved equals.",
+                  "children": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": "3.04",
+          "text": "DUCT LEAKAGE TESTING",
+          "children": [
+            {
+              "index": "A.",
+              "text": "Ductwork leakage testing shall be performed on all ductwork systems designed for static pressures of 1.0 inch W.G. and higher, or, designed for a net static pressure of 0.75 inch W.G. across filters serving all Air Handling Units and Air Conditioning Units. Duct systems connected directly to fan discharges designed to produce a net static pressure exceeding 0.75 inch W.G. shall be tested per these specifications. Duct systems that operate under natural draft conditions shall not be included in these tests.",
+              "children": null
+            },
+            {
+              "index": "B.",
+              "text": "Duct leakage testing shall be in accordance with the Sheet Metal and Air Conditioning Contractors National Association (SMACNA) HVAC Air Duct Leakage Test Manual, 3rd Edition, latest revision, and the International Energy Conservation Code (IECC) adopted by the jurisdiction having authority. Where conflicts arise, requirements of the IECC shall govern.",
+              "children": null
+            },
+            {
+              "index": "C.",
+              "text": "Where ductwork test pressures exceed the allowable limit of pressure class duct utilized. Use a United McGill Corporation LTK-S (small) or LTK-L (large) Leakage Test Kit with accessories as required to perform the test. This shall include a calibrated orifice tube with certified calibration chart, fan, and two U-tube manometers with connecting tubing.",
+              "children": null
+            },
+            {
+              "index": "D.",
+              "text": "Tests shall be performed as soon as possible after the first section of duct work to be tested is installed to evaluate the quality of the installation early in the process to allow corrective actions to be taken before the entire installation is completed.",
+              "children": null
+            },
+            {
+              "index": "E.",
+              "text": "Cap all open ends of duct systems to be tested for testing purposes. Make temporary openings for test equipment as required. Patch these to match new installation conditions when tests are complete and accepted per criteria stated herein. Generally, follow United McGill's procedures as published in their document titled \"System Pressure Testing for Leaks\", or the SMACNA Manual referred to herein.",
+              "children": null
+            },
+            {
+              "index": "F.",
+              "text": "All ducts shall have been sealed as specified, during installation, and shall be sealed as a Seal Class \"A\" per SMACNA.",
+              "children": null
+            },
+            {
+              "index": "G.",
+              "text": "Leaks that whistle or are excessive, as determined by the Owner's Representative, shall be repaired and the test repeated until such are eliminated.",
+              "children": null
+            },
+            {
+              "index": "H.",
+              "text": "Maximum leakage rate of each low pressure rated system (under 3.0 Inches W.G.) shall not exceed 5% of the design operating air volume; or, whichever is most restrictive, be equal to a rate of leakage (CL) of 12.0, or less, in accordance with the following equation (derived from the International Energy Conservation Code, 2021, and modified): Leakage Rate ≤ 12.0 = F/P0.65 F = Measured Leakage Rate in CFM per 100 square feet of duct surface. P = Test Static Pressure, In. W.G.",
+              "children": null
+            },
+            {
+              "index": "I.",
+              "text": "Provide duct leakage test report summary for submission and review by the Owner's Representative. At least one test, preferably the first to occur, shall be witnessed by the Testing, Adjusting, and Balancing (TAB) Agent. Test Report Summaries shall include the following:",
+              "children": [
+                {
+                  "index": "1.",
+                  "text": "Cut sheets on test equipment used along with calibration sheet for orifice tubes used.",
+                  "children": null
+                },
+                {
+                  "index": "2.",
+                  "text": "Drawing or diagram depicting portion of duct system tested. Indicate square footage of duct work in test section.",
+                  "children": null
+                },
+                {
+                  "index": "3.",
+                  "text": "Indicate test pressure used in test, versus, construction class of duct installed.",
+                  "children": null
+                },
+                {
+                  "index": "4.",
+                  "text": "Note allowed leakage in CFM for test section.",
+                  "children": null
+                },
+                {
+                  "index": "5.",
+                  "text": "Indicate actual leakage recorded during the test.",
+                  "children": null
+                },
+                {
+                  "index": "6.",
+                  "text": "All tests shall be repeated until the sections tested all pass the test per the criteria stated herein.",
+                  "children": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": "3.05",
+          "text": "KITCHEN HOOD EXHAUST DUCTS",
+          "children": [
+            {
+              "index": "A.",
+              "text": "Prior to the concealment of any portion of the grease exhaust duct system, including the duct joint connections to the fan and corresponding hood, these systems shall be tested as specified herein.",
+              "children": null
+            },
+            {
+              "index": "B.",
+              "text": "Prior to the concealment of any portion of the grease duct system a light test shall also be performed on all field or shop welded or brazed joints in the system to include hood-to-duct connections. The light test shall involve passing a lamp with a power rating of no less than 100 watts through the entire length of duct work. The lamp shall be exposed and fully open to allow light to emit equally in all directions.",
+              "children": null
+            },
+            {
+              "index": "C.",
+              "text": "Systems may be tested in Sections, if necessary, provided that all joints are tested. Provide duct light test report summary (suitable video tape confirmation is acceptable) for submission and review by Owners Representative.",
+              "children": null
+            },
+            {
+              "index": "D.",
+              "text": "Testing shall comply with Section 5.06.3.2.5 of the applicable version (Code approved by local jurisdiction) of the International Mechanical Code (IMC).",
+              "children": null
+            }
+          ]
+        },
+        {
+          "index": "3.06",
+          "text": "AUTOMATIC CONTROL DAMPERS",
+          "children": [
+            {
+              "index": "A.",
+              "text": "Refer to Section 23 09 00, Controls and Instrumentation.",
+              "children": null
+            },
+            {
+              "index": "B.",
+              "text": "Install all temperature control modulating dampers under this section of the specifications, furnished in Section 23 09 00.",
+              "children": null
+            }
+          ]
+        },
+        {
+          "index": "3.07",
+          "text": "FILTERS",
+          "children": [
+            {
+              "index": "A.",
+              "text": "No air moving equipment may be operated at any time without filters being fully installed in equipment.",
+              "children": null
+            },
+            {
+              "index": "B.",
+              "text": "Provide a minimum of three (3) spare sets of two inch (2\") thick, medium efficiency, pleated media filters for all air handling and fan coil units, as well as for filter return air grilles where scheduled, in addition to manufacturer furnished filters specified elsewhere herein. Where other sections of these specifications require one inch (1\") or four inch (4\") thick filters, or other types of filters, provide spare sets of matching thickness and type.",
+              "children": null
+            },
+            {
+              "index": "C.",
+              "text": "Additionally replace filters during construction as directed by the Owner's Representative.",
+              "children": null
+            },
+            {
+              "index": "D.",
+              "text": "Install one (1) new complete set of filters, as directed by the Test and Balance (TAB) Firm, just prior to performance of TAB work.",
+              "children": null
+            },
+            {
+              "index": "E.",
+              "text": "Install one (1) new set of filters at \"Substantial Completion\" of the project.",
+              "children": null
+            },
+            {
+              "index": "F.",
+              "text": "Where the minimum number of filter sets are not used for the aforementioned purposes, provide the left over filters to the Owner for maintenance stock.",
+              "children": null
+            },
+            {
+              "index": "G.",
+              "text": "Document, in writing, when each filter change-out occurs.",
+              "children": null
+            }
+          ]
+        }
+      ]
+    },
+    "part2": {
+      "partItems": [
+        {
+          "index": "2.01",
+          "text": "DUCTWORK",
+          "children": [
+            {
+              "index": "A.",
+              "text": "General:",
+              "children": [
+                {
+                  "index": "1.",
+                  "text": "All ductwork shown on the Drawings, specified or required for the heating, ventilating, and air conditioning systems, shall be constructed and erected in a first-class workmanlike manner by trained and skilled sheet metal workers.",
+                  "children": null
+                },
+                {
+                  "index": "2.",
+                  "text": "All ducts shall be erected in the general locations shown on the Drawings, but must conform to all structural and finish conditions of the building. Before fabricating any ductwork, Contractor shall check the physical conditions of the job site, and shall make all necessary changes in cross sections, offsets, etc., whether they are specifically indicated or not.",
+                  "children": null
+                },
+                {
+                  "index": "3.",
+                  "text": "Before starting shop drawings or fabrication of any ductwork, the Contractor must have an approved reflected ceiling plan with which he can coordinate location of air outlets, lights, tile patterns, etc.",
+                  "children": null
+                },
+                {
+                  "index": "4.",
+                  "text": "The sizes of ducts indicated on the Drawings are the required net internal air stream dimensions, and where ducts are lined, the sheet metal sizes shall be increased three inches (3\") in both dimensions to accommodate the linings (1-1/2\" thick lining, unless indicated otherwise). Assume all rectangular ducts are lined unless noted otherwise.",
+                  "children": null
+                },
+                {
+                  "index": "5.",
+                  "text": "Ductwork shall be classified, for construction standards, as follows:",
+                  "children": [
+                    {
+                      "index": "a.",
+                      "text": "Medium pressure from variable air volume supply fan (AHU) discharge up to the variable air volume terminals. This ductwork shall be constructed to withstand up to six inch (6\") W.G. standards.",
+                      "children": null
+                    },
+                    {
+                      "index": "b.",
+                      "text": "All other ductwork for constant volume air handling equipment and all constant and variable air volume air handling unit return, relief and outside air intake ductwork are operating at pressures up to two inches (2\") W.G., classified as low pressure ductwork, and shall be constructed to two inch (2\") W.G. standards.",
+                      "children": null
+                    },
+                    {
+                      "index": "c.",
+                      "text": "All exhaust ductwork, except grease or other special exhaust systems specified elsewhere herein, all ductwork downstream of variable air volume terminals, all constant volume ductwork (supply and return) served by packaged rooftop units, split direct expansion (supply, return and outside air) A/C units, all ductwork served by fan coil units, and all transfer air ducts shall be constructed to meet one inch (1\") W.G. standards.",
+                      "children": null
+                    },
+                    {
+                      "index": "d.",
+                      "text": "All large centralized exhaust duct systems serving multiple floors and a large number of outlets, more than 10, shall be constructed to meet two inches (2\") construction standards. This duct work shall also be pressure tested (positive air pressure) at two inches (2\"). Leakage shall be limited to no more than 5% maximum.",
+                      "children": null
+                    }
+                  ]
+                },
+                {
+                  "index": "6.",
+                  "text": "Except as noted otherwise, ducts, plenums, and casings shall be constructed of new lock forming quality galvanized prime grade steel sheets. The gauges of metal to be used, duct construction details, and the construction and bracing of joints shall be in accordance with the latest edition of the published standards of the ASHRAE Handbook or in accordance with the latest editions of Sheet Metal and Air Conditioning Contractors' National Association (SMACNA) \"Duct Construction Standards Manual, Metal and Flexible\".",
+                  "children": null
+                },
+                {
+                  "index": "7.",
+                  "text": "Plenum chambers shall be constructed of 18 gauge sheets thoroughly braced with 1-1/2 inch angle irons. All duct panels in rectangular galvanized steel ducts which are 12 inches and wider and which are not lined shall be cross broken.",
+                  "children": null
+                },
+                {
+                  "index": "8.",
+                  "text": "Make square elbows where shown or required, with factory fabricated double thickness turning vanes. Job fabricated vanes will not be acceptable. Except as otherwise specified or indicated on the drawings, make all other changes in direction with rounded elbows having a centerline radius equal to 1-1/2 times the width of the duct in the plane of the bend.",
+                  "children": null
+                },
+                {
+                  "index": "9.",
+                  "text": "Make transformations in duct shape or dimension with gradual slopes on all sides. Normally, make increases in dimension in the direction of air flow, with a maximum slope of one inch (1\") in seven inches (7\") on any side. Where conditions prevent the normal slope specified above, a maximum slope of one inch (1\") in four inches (4\") will be allowed only where conditions necessitate.",
+                  "children": null
+                },
+                {
+                  "index": "10.",
+                  "text": "Where a transition must be made with less slope than that noted above, install single thickness guide vanes to insure proper air flow, and to minimize air pressure drop. Transitions that require less slope than that noted above shall be noted on Shop Drawings, and require review and approval by the Engineer prior to installation.",
+                  "children": null
+                },
+                {
+                  "index": "11.",
+                  "text": "Ducts shall be routed in conjunction with all types of pipes, electrical conduits, ceiling hangers, etc., so as to avoid interferences insofar as possible. When duct penetrations are unavoidable, provide streamline-shaped sleeves around such material penetrations, made airtight at duct surfaces, except that such sleeves are not required at tie rods. When the Contractor believes such penetrations are unavoidable, notify the Owner's Representative for approval prior to commencing with such work. Otherwise all such penetrations are not expected to occur and are not allowed. Such penetrations will not be allowed for the convenience of, or lack of coordination by, the Contractor. Where obstructions necessitate, are approved by the Owner's Representative, and are of a size exceeding 10% of the total duct area, the duct shall be transformed to maintain the same original duct area.",
+                  "children": null
+                },
+                {
+                  "index": "12.",
+                  "text": "Where each duct passes through a fan room wall, it shall be wrapped with not less than 1/2\" thick closed cell neoprene tightly fitted to the outer surface of the duct all around and sealed. In lieu of this method, completely fill the annular space between the duct and penetration by packing with fibrous insulation and seal the perimeter of the penetration around the duct, on both sides of the penetration, with a flexible non-hardening sealant, to be fire rated when applicable.",
+                  "children": null
+                },
+                {
+                  "index": "13.",
+                  "text": "All outlets or grilles in ceilings shall be supported rigidly from ceiling construction with suitable adapters or bucks installed as necessary and as shown to ensure outlets and grilles will be accurately trued up with ceiling.",
+                  "children": null
+                },
+                {
+                  "index": "14.",
+                  "text": "Ductwork shall be fabricated in a manner to prevent the seam or joints being cut for the installation of grilles or diffusers.",
+                  "children": null
+                },
+                {
+                  "index": "15.",
+                  "text": "All sheet metal ductwork shall be securely hung from the building construction. All ducts shall be hung adjacent to the seam in the duct and shall be secured in a suitable manner to both the duct and the building construction. All vertical riser ducts shall be supported at each floor with angle iron secured to the ducts and set on the structure members. These angles shall be the same size as specified for bracing.",
+                  "children": null
+                },
+                {
+                  "index": "16.",
+                  "text": "All holes in ducts for damper rods and other necessary devices shall be either drilled or machine punched (not pin punched), and shall not be any larger than necessary. All duct openings shall be provided with sheet metal caps if the openings are to be left unconnected for any length of time. All panels of uninsulated ducts twelve inches (12\") and larger shall be cross broken. In general, sheet metal screws shall not be used in duct construction unless the point of the screw is in the air stream unless specifically indicated otherwise elsewhere herein.",
+                  "children": null
+                },
+                {
+                  "index": "17.",
+                  "text": "Manual dampers shall be installed as shown on the Drawings and as required to afford complete control of the air flow in the various duct systems. In rectangular supply ducts, a splitter damper shall be installed at each point where a branch is taken off and additional volume dampers shall be installed where shown or required to achieve the final air balance. No splitter dampers shall be installed in medium pressure ductwork, unless specifically shown on Drawings.",
+                  "children": null
+                },
+                {
+                  "index": "18.",
+                  "text": "Splitter dampers and volume dampers of the \"butterfly\" type, installed in rectangular ducts, shall be constructed of 16 gauge galvanized steel riveted or welded to square operating rods. Dampers shall have brass, bronze, or approved plastic bearings. The length of any splitter damper blade shall be 1-1/2 times the width of the smaller split in the duct, but shall be not less than twelve inches (12\"). Where splitter dampers exceed 12 inches in height two",
+                  "children": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": "D.",
+          "text": "Round Flexible Insulated Ductwork:",
+          "children": [
+            {
+              "index": "1.",
+              "text": "All round flexible insulated ducts, low and high pressure type, shall be factory fabricated and insulated as manufactured by Thermaflex or Flexmaster USA, Inc. Flexible ducts shall be equal to Thermaflex factory insulated type \"M-KC\" or Flexmaster \"Type 3M\".",
+              "children": null
+            },
+            {
+              "index": "2.",
+              "text": "Flexible duct thermal conductance shall be based on a 75 Deg. F. mean temperature and an aged condition (not out of the box value). Flexible duct insulation shall be a minimum nominal two inches (2.0\") in thickness with a minimum 0.75 lb. density. The completed duct assembly shall have a minimum R-value of 6.0. To verify compliance with the Energy Conservation Code in effect, the minimum R-value of 6.0 will need to be documented on the outside of the jacket to allow field verification of compliance with this requirement.",
+              "children": null
+            },
+            {
+              "index": "3.",
+              "text": "The core liner of the flexible duct system shall be a tri-laminate aluminum foil, made with fiberglass and aluminized polyester, or a PVC coated fiberglass cloth. The outer liner shall be a polyester reinforced aluminized foil jacket.",
+              "children": null
+            },
+            {
+              "index": "4.",
+              "text": "Flexible ducts shall be U.L. Listed in accordance with U.L. 181 as a Class I insulated air duct, and shall comply with NFPA Standard 90A and 90B. Flexible ducts shall have a maximum flame spread of 25 and maximum smoke developed rating of 50.",
+              "children": null
+            },
+            {
+              "index": "5.",
+              "text": "Flexible ducts shall be suitable for operating temperatures of -20 up to 250 Deg. F.",
+              "children": null
+            },
+            {
+              "index": "6.",
+              "text": "Flexible ducts shall be suitable for negative pressures of minus one inch W.G. in sizes up to 16\" in diameter; and positive pressures up to 10 inches W.G. for sizes up to 16\" in diameter. Maximum operating duct velocity rating shall be a minimum of 4,500-5,500 feet per minute.",
+              "children": null
+            },
+            {
+              "index": "7.",
+              "text": "Maximum vapor transmission rating shall be 0.05 Perms as rated in accordance with ASTM-E-96.",
+              "children": null
+            },
+            {
+              "index": "8.",
+              "text": "Unless otherwise noted, the maximum length of flexible duct shall be limited to five feet (5').",
+              "children": null
+            },
+            {
+              "index": "9.",
+              "text": "Securement of flexible ducts to air devices shall consist of sliding the duct onto the air device collar or connector and securing it with plenum rated nylon or teflon panduit band on the inner liner which shall be U.L rated for the application. Fold insulated outer vapor barrier jacket liner over the first band and secure with a second plenum rated panduit band. Make connection vapor tight with a vapor barrier seal using polyester reinforced aluminized duct tape that is two inches (2\") wide, wrapped 2 times around the duct, or by the use of a fiberglass mesh wrapped in a similar fashion and coated with a vapor barrier coating, Foster's Vapor Safe 95-90 or 95-96 mastic or Childers CP-38. Coating must adhere to MIL-PRF-19565C with a permeance rating of less than 0.02 perms per ASTM-E-96, procedure B. No cloth backed duct tape is allowed. All fasteners, adhesives, and duct tape used shall be U.L. rated for the application. All duct tapes used shall be acrylic based.",
+              "children": null
+            }
+          ]
+        },
+        {
+          "index": "2.04",
+          "text": "FLEXIBLE CONNECTIONS",
+          "children": [
+            {
+              "index": "A.",
+              "text": "Where ducts connect to fans, including roof exhausters, flexible connectors shall be made that are fire-resistant, (up to 200 Deg. F.), waterproof, mildew-resistant and essentially airtight, and shall weigh approximately thirty ounces (30 oz.) per square yard.",
+              "children": null
+            },
+            {
+              "index": "B.",
+              "text": "There shall be a minimum of one-half inch (1/2\") slack in these connections, and a minimum of two and one-half inches (2-1/2\") distance between the edges of the ducts for a total of three inches (3\"). There shall also be a minimum of one inch (1\") of slack for each inch of external static pressure on the fan system for medium pressure systems.",
+              "children": null
+            },
+            {
+              "index": "C.",
+              "text": "Acceptable Manufacturers:",
+              "children": [
+                {
+                  "index": "1.",
+                  "text": "Vent Fabrics \"Ventglas\", or approved equals by:",
+                  "children": null
+                },
+                {
+                  "index": "2.",
+                  "text": "Duro-Dyne.",
+                  "children": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": "2.05",
+          "text": "ACCESS DOORS",
+          "children": [
+            {
+              "index": "A.",
+              "text": "Furnish and install hinged, low leakage access doors in ductwork or plenums to provide access to all fire, smoke and combination fire - smoke dampers, mixed air plenums, automatic dampers, coils, filters, and elsewhere as detailed on the Drawings.",
+              "children": null
+            },
+            {
+              "index": "B.",
+              "text": "Where the ducts are insulated, the access doors shall be double skin doors with a minimum one inch (1\") of insulation in the door. The insulation shall have a minimum R-value of 5.0. Increase the thickness of the insulation as needed to comply. Where the access door is installed in non-insulated ductwork the access door shall be unlined sheet metal of the same gauge thickness as the duct.",
+              "children": null
+            },
+            {
+              "index": "C.",
+              "text": "In no case shall access doors be smaller than eight (8\") by eight inches (8\"). Access doors shall be sized to permit testing or servicing of duct mounted components, such as, for coil cleaning, installation of control devices, resetting of fusible links, filter replacement, etc., as applicable and suitable for the application.",
+              "children": null
+            },
+            {
+              "index": "D.",
+              "text": "Where duct access doors are above a suspended, normally non-readily accessible ceiling, such as plaster, gypsum board or spline type ceilings, Contractor, under this Section of Specifications, shall be responsible for the proper location, and furnishing of, ceiling access doors, or panels, to make duct access doors easily accessed through the ceiling system. Ceiling access doors, or panels, shall be rated, where applicable, to match the fire rating of the ceiling system penetrated. Ceiling access doors, or panels, shall be installed under other Sections of these Specifications. Ceiling access doors, or panels, shall be centered directly beneath duct access doors or immediately adjacent thereto when duct access is through the side of the duct.",
+              "children": null
+            },
+            {
+              "index": "E.",
+              "text": "In rectangular grease exhaust ducts, install access doors every twenty feet (20') maximum, center to center, and at all 90 degree elbows, when the total developed length exceeds forty feet (40'). Install access doors at every other floor level for vertical grease exhaust duct risers.",
+              "children": null
+            },
+            {
+              "index": "F.",
+              "text": "All access doors shall be fully double gasketed, door to frame and frame to duct, and include a sash type or compression latches for sizes under eighteen inches (18\") by eighteen inches (18\"). Use one (1) sash type latch per twelve inches (12\") of height or width. Access doors 18\" x 18\" and larger shall have quarter turn handle latches. Provide one handle per 24\" section, height or width, of door. As an example, provide two (2) handle type latches for a 48\" tall access door.",
+              "children": null
+            },
+            {
+              "index": "G.",
+              "text": "Provide a minimum of two (2) heavy loose pin hinges for each access door unless indicated otherwise herein. Piano style hinges will be an allowed substitute.",
+              "children": null
+            },
+            {
+              "index": "H.",
+              "text": "Where the installation conditions prohibit suitable access with hinged access doors, then non-hinged access doors may be used in conjunction with a corrosion resistant cable or chain, of suitable length, attached to the access door and duct.",
+              "children": null
+            },
+            {
+              "index": "I.",
+              "text": "For duct systems constructed to 2 inches W.G standards, or less, provide standard access doors meeting all requirements specified herein, which have a tested air leakage rating of less than 4.0 CFM at a test pressure of 2 inches W.G., and as manufactured by:",
+              "children": [
+                {
+                  "index": "1.",
+                  "text": "Ventlok with hinges and No. 90 or No. 99 latches (less than 18\" x 18\"), or No. 100 or No. 140 latches (18\" x 18\" and larger), as applicable, or approved equals by:",
+                  "children": null
+                },
+                {
+                  "index": "2.",
+                  "text": "Ductmate, or",
+                  "children": null
+                },
+                {
+                  "index": "3.",
+                  "text": "Duro Dyne DDIAD-0806, or",
+                  "children": null
+                },
+                {
+                  "index": "4.",
+                  "text": "NCA Manufacturing ADH-T-1, or",
+                  "children": null
+                },
+                {
+                  "index": "5.",
+                  "text": "Pottorff HAD or CAD, or",
+                  "children": null
+                },
+                {
+                  "index": "6.",
+                  "text": "Nailor 08SH with HP Seal, or 0890, or",
+                  "children": null
+                },
+                {
+                  "index": "7.",
+                  "text": "Cesco Products HDG, or",
+                  "children": null
+                },
+                {
+                  "index": "8.",
+                  "text": "Ward Sandwich Style Access Doors, DSA or DDA, for round ductwork.",
+                  "children": null
+                }
+              ]
+            },
+            {
+              "index": "J.",
+              "text": "For duct systems constructed over 2 inches W.G., up to 6 inches W.G. standards, provide high pressure low leakage access doors meeting all requirements specified herein, which have a tested air leakage rating of less than 1.0 CFM at a test pressure of 6.0 Inches W.G. and as manufactured by:",
+              "children": [
+                {
+                  "index": "1.",
+                  "text": "Ventlok similar to that noted above, or their Twist-In Door (insulated), or approved equals by:",
+                  "children": null
+                },
+                {
+                  "index": "2.",
+                  "text": "Ductmate \"Sandwich\" (Rectangular ducts), or Ductmate \"Metu\" (Round ducts), or",
+                  "children": null
+                },
+                {
+                  "index": "3.",
+                  "text": "Ward Duct Connector Industries Type 'F' (Rectangular ducts) or Type 'R' (Round Ducts), or",
+                  "children": null
+                },
+                {
+                  "index": "4.",
+                  "text": "Nailor 0820-1 or 0895, or",
+                  "children": null
+                },
+                {
+                  "index": "5.",
+                  "text": "Pottorff OAD.",
+                  "children": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": "2.06",
+          "text": "TURNING VANES",
+          "children": [
+            {
+              "index": "A.",
+              "text": "Turning vanes shall be Harper double wall turning vanes fabricated from the same material as the duct.",
+              "children": null
+            },
+            {
+              "index": "B.",
+              "text": "Turning vane front and back panels shall be securely locked together with adequate crimping to prevent twisting of vane. Vanes shall be capable of withstanding 250 pounds of tensile load when secured according to the manufacturer's instructions.",
+              "children": null
+            },
+            {
+              "index": "C.",
+              "text": "Rails for mounting vanes shall have self-locking, friction fit tabs designed to facilitate proper alignment of vanes. Tab spacing shall be as specified in Figure 4-3 of the 2005 SMACNA Manual, \"HVAC Duct Construction Standards, Metal & Flexible\", Third Edition standard. Rail systems with non-compliant tab spacing shall not be accepted.",
+              "children": null
+            },
+            {
+              "index": "D.",
+              "text": "Acoustical Turning Vanes shall be used in applications that require quiet operating systems. Mounting rails shall have friction insert tabs that align the vanes automatically. These shall only be required where designated on the Drawings.",
+              "children": null
+            },
+            {
+              "index": "E.",
+              "text": "Vanes shall be either the two inch (2\") or four inch (4\") double wall type vanes depending on the size of the ductwork and shall be factory manufactured only.",
+              "children": null
+            },
+            {
+              "index": "F.",
+              "text": "Approved Manufacturers:",
+              "children": [
+                {
+                  "index": "1.",
+                  "text": "Ductmate Industries PRO-Rail Turning Vanes,",
+                  "children": null
+                },
+                {
+                  "index": "2.",
+                  "text": "Harper Double Wall turning vanes,",
+                  "children": null
+                },
+                {
+                  "index": "3.",
+                  "text": "Or pre-approved equals only.",
+                  "children": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": "2.07",
+          "text": "DUCT LINER",
+          "children": [
+            {
+              "index": "A.",
+              "text": "Where indicated on the Drawings or specified herein, all rectangular ducts; except kitchen grease hood, kitchen dishwasher and fume hood exhaust ducts; shall be lined with Fiberglass mat faced duct liner in the thicknesses, type, and locations as indicated elsewhere herein.",
+              "children": null
+            },
+            {
+              "index": "B.",
+              "text": "Kitchen grease hood exhaust, kitchen dishwasher exhaust, kitchen hood make-up air, and fume hood make-up air and other industrial type exhaust air ducts shall not be lined. Line all other general building exhaust air ducts within 10'-0\" on each side of each in-line exhaust fan with one inch (1\") thick liner. Roof mounted exhaust fan ductwork shall also be lined, one inch (1\") thickness, but only for the first 10'-0\" of ductwork from the roof curb toward the occupied space.",
+              "children": null
+            },
+            {
+              "index": "C.",
+              "text": "All return, transfer, and relief air ducts shall be lined with one inch (1\") thick duct liner.",
+              "children": null
+            },
+            {
+              "index": "D.",
+              "text": "The liner insulation system shall be one and one-half inches (1.5\") in thickness on all conditioned air, heated or cooled, as well as outside air intake ducts, and mixed air plenums to obtain a minimum R-value of 5.0 thereon.",
+              "children": null
+            },
+            {
+              "index": "E.",
+              "text": "All ductwork systems are required to meet the most recent version of the International Energy Conservation Code.",
+              "children": null
+            },
+            {
+              "index": "F.",
+              "text": "All duct liners shall comply with NFPA 90A and 90B and ASTM C 1071, Type I, for ducts and Type II for plenums (rigid liner). Liner shall consist of flexible, matt faced insulation made of inorganic glass fibers bonded by a thermosetting resin with an encapsulant edge coating, and shall be a rotary style duct liner product with a water repellant ingredient on the mat face to help keep moisture from penetrating the air stream surface. Other technical requirements shall include:",
+              "children": [
+                {
+                  "index": "1.",
+                  "text": "Be suitable for temperatures up to 250 Deg. F. per ASTM C 411.",
+                  "children": null
+                },
+                {
+                  "index": "2.",
+                  "text": "Be suitable for air velocities up to 6,000 FPM per ASTM C 1071 for Type I products and 5000 FPM for Type II products.",
+                  "children": null
+                },
+                {
+                  "index": "3.",
+                  "text": "Water vapor sorption shall be less than 3% by weight per ASTM C 1104.",
+                  "children": null
+                },
+                {
+                  "index": "4.",
+                  "text": "Air stream surface mat facing shall be tested with an EPA registered anti-microbial agent to aid in the prevention of fungal and bacterial growth. Mat face, as treated, shall not support the growth of mold, fungi, or bacteria per ASTM C 1338, ASTM G 21 and ASTM G 22.",
+                  "children": null
+                },
+                {
+                  "index": "5.",
+                  "text": "Does not exceed a Flame Spread of 25 and Smoke Developed and Fuel Contributed of 50 per ASTM E 84, NFPA 225, and UL 723.",
+                  "children": null
+                },
+                {
+                  "index": "6.",
+                  "text": "Conductance of 0.24 (R-value of 4.2) for a 1.5 PCF or 2.0 PCF duct liner at a 75 Deg. F. mean temperature per ASTM C177 for a one inch (1\") thick product.",
+                  "children": null
+                },
+                {
+                  "index": "7.",
+                  "text": "Greenguard Compliant (Greenguard Environmental Institute).",
+                  "children": null
+                },
+                {
+                  "index": "8.",
+                  "text": "Noise Reduction Coefficient (NRC) of 0.70 or higher for a one inch (1\") thick product and 0.80 for a two inch (2\") thick product per ASTM C 423, type A mounting.",
+                  "children": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": "G.",
+          "text": "All duct liners shall be able to be cleaned in accordance with the North American Insulation Manufacturers Association (NAIMA) \"Cleaning Fibrous Glass Insulated Air Duct Systems Recommended Practices\".",
+          "children": null
+        },
+        {
+          "index": "H.",
+          "text": "Liner shall be applied to the inside of rectangular ducts and plenums with fire-resistant adhesive, Fosters 85-60, 85-65, or Childers CP-127, Hardcast \"Seal-Tack\" or Ward \"Premium Duct Liner Adhesive\", or approved equals only, complying with ASTM C 916, completely coating the clean sheet metal. All uncut joints in the insulation shall be \"buttered\" and firmly butted tightly to the adjoining uncut liner using the same fire resistant adhesive.",
+          "children": null
+        },
+        {
+          "index": "I.",
+          "text": "Where a cut is made in the insulation for duct taps, etc., the \"raw\" edge shall be accurately and evenly cut and shall be thoroughly coated with a water based fire resistant adhesive. Where tears in the insulation occur coat such with the same adhesive (duct liner protective coating). Adhesives shall be Design Polymerics Duct liner Protective Coating (2510/2515/2540/2545), Ductmate Super Liner Seal (SLS), or approved equals only.",
+          "children": null
+        },
+        {
+          "index": "2.13",
+          "text": "TEST OPENINGS",
+          "children": [
+            {
+              "index": "A.",
+              "text": "Furnish and install in the return air duct and in the discharge duct of each fan unit a Ventlok No. 699 instrument test hole. Furnish multiple test holes for multi-zone or dual duct units, one for each zone duct.",
+              "children": null
+            },
+            {
+              "index": "B.",
+              "text": "The test hole shall be installed in the equipment room as far from the unit as possible but before the first elbow away from the unit.",
+              "children": null
+            }
+          ]
+        },
+        {
+          "index": "2.14",
+          "text": "THERMOMETERS",
+          "children": [
+            {
+              "index": "A.",
+              "text": "Furnish and install in the discharge of each air handling unit, an insertion, dial type thermometer, minimum four inches (4\") in diameter. Furnish multiple thermometers for multi-zone or dual duct units, one for each zone duct.",
+              "children": null
+            },
+            {
+              "index": "B.",
+              "text": "Thermometers shall include an extension neck, and chrome-plated flanged connection with gasket for air tight seal. Provision shall be made to encompass the insulation on the ductwork.",
+              "children": null
+            },
+            {
+              "index": "C.",
+              "text": "Acceptable Manufacturers:",
+              "children": [
+                {
+                  "index": "1.",
+                  "text": "Weksler, or approved equals by:",
+                  "children": null
+                },
+                {
+                  "index": "2.",
+                  "text": "Mueller.",
+                  "children": null
+                },
+                {
+                  "index": "3.",
+                  "text": "Trerice.",
+                  "children": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": "2.15",
+          "text": "FAN POWERED VARIABLE AIR VOLUME TERMINALS",
+          "children": [
+            {
+              "index": "A.",
+              "text": "Furnish and install fan powered variable air volume terminals of the sizes and types as indicated to meet scheduled capacities.",
+              "children": null
+            },
+            {
+              "index": "B.",
+              "text": "Terminal units shall have their performance certified in accordance with the most recent American Refrigeration Institute (ARI) Standard 880 Certification Program and display the ARI seal on the unit.",
+              "children": null
+            },
+            {
+              "index": "C.",
+              "text": "Terminal units shall be ETL listed. Terminals with an electric heat coil shall be listed as an assembly and have a single point electrical connection. The heater will be interlocked with the fan to prevent the operation of the heater when the fan is not running.",
+              "children": null
+            },
+            {
+              "index": "D.",
+              "text": "Terminal unit casings shall be constructed of not less than 22 gauge galvanized steel for units with casings 36\", or smaller, in any dimension; and 20 gauge for units larger than 36\" in any dimension. Casings shall be galvanized steel, mechanically assembled and sealed to form an air tight casing with a maximum air leakage of 2% at 6 inches (6\") W.G. internal pressure, tested per ASHRAE Standard 130. Spot welded casings are not acceptable. Interior walls of the casing shall be lined with 0.75 inch thick dual-density fiberglass with four (4) p.c.f. skin density rated for a maximum airflow velocity of 4500 fpm. Insulation and adhesives shall meet all requirements of UL 181 and NFPA 90-A. Raw edges exposed to the airstream shall be coated and sealed. Access openings shall be provided and be large enough for removal of the unit fan assembly or the largest single item contained therein from the bottom side of the terminal. Configuration of fan assembly and primary air volume valve assembly shall be such that the terminal unit shall have one discharge opening for all functions, no multiple openings, unless no stratification of the cooling or heating air streams occurs at the discharge.",
+              "children": null
+            },
+            {
+              "index": "E.",
+              "text": "Primary air control valve assemblies shall be pressure independent and shall reset to any airflow between zero and the maximum catalogued air volume. The primary air valve damper blade shall be heavy gauge galvanized steel with a continuous peripheral gasket. Air valve assembly body shall be not less than 22 gauge in thickness. The air volume control damper blade shall be bolted or welded to a continuous shaft which rotates in self-lubricating bearings. Damper blade shall close against a closed-cell gasket seat, and be factory preloaded to insure a tight seal. Blade shall not deflect at inlet pressures up to 6 inches W.G. In full closed position, air leakage past the closed damper shall not exceed 2% of the nominal catalog rating of 3\" W.G. inlet static pressure, when tested in accordance with ASHRAE Standard 130. Blade shall fail to the normally open position.",
+              "children": null
+            }
+          ]
+        }
+      ]
+    },
+    "part3": {
+      "partItems": [
+        {
+          "index": "9.",
+          "text": "Make transformations in duct shape or dimension with gradual slopes on all sides. Normally, make increases in dimension in the direction of air flow, with a maximum slope of one inch (1\") in seven inches (7\") on any side. Where conditions prevent the normal slope specified above, a maximum slope of one inch (1\") in four inches (4\") will be allowed only where conditions necessitate.",
+          "children": null
+        },
+        {
+          "index": "10.",
+          "text": "Where a transition must be made with less slope than that noted above, install single thickness guide vanes to insure proper air flow, and to minimize air pressure drop. Transitions that require less slope than that noted above shall be noted on Shop Drawings, and require review and approval by the Engineer prior to installation.",
+          "children": null
+        },
+        {
+          "index": "11.",
+          "text": "Ducts shall be routed in conjunction with all types of pipes, electrical conduits, ceiling hangers, etc., so as to avoid interferences insofar as possible. When duct penetrations are unavoidable, provide streamline-shaped sleeves around such material penetrations, made airtight at duct surfaces, except that such sleeves are not required at tie rods. When the Contractor believes such penetrations are unavoidable, notify the Owner's Representative for approval prior to commencing with such work. Otherwise all such penetrations are not expected to occur and are not allowed. Such penetrations will not be allowed for the convenience of, or lack of coordination by, the Contractor. Where obstructions necessitate, are approved by the Owner's Representative, and are of a size exceeding 10% of the total duct area, the duct shall be transformed to maintain the same original duct area.",
+          "children": null
+        },
+        {
+          "index": "12.",
+          "text": "Where each duct passes through a fan room wall, it shall be wrapped with not less than 1/2\" thick closed cell neoprene tightly fitted to the outer surface of the duct all around and sealed. In lieu of this method, completely fill the annular space between the duct and penetration by packing with fibrous insulation and seal the perimeter of the penetration around the duct, on both sides of the penetration, with a flexible non-hardening sealant, to be fire rated when applicable.",
+          "children": null
+        },
+        {
+          "index": "13.",
+          "text": "All outlets or grilles in ceilings shall be supported rigidly from ceiling construction with suitable adapters or bucks installed as necessary and as shown to ensure outlets and grilles will be accurately trued up with ceiling.",
+          "children": null
+        },
+        {
+          "index": "14.",
+          "text": "Ductwork shall be fabricated in a manner to prevent the seam or joints being cut for the installation of grilles or diffusers.",
+          "children": null
+        },
+        {
+          "index": "15.",
+          "text": "All sheet metal ductwork shall be securely hung from the building construction. All ducts shall be hung adjacent to the seam in the duct and shall be secured in a suitable manner to both the duct and the building construction. All vertical riser ducts shall be supported at each floor with angle iron secured to the ducts and set on the structure members. These angles shall be the same size as specified for bracing.",
+          "children": null
+        },
+        {
+          "index": "16.",
+          "text": "All holes in ducts for damper rods and other necessary devices shall be either drilled or machine punched (not pin punched), and shall not be any larger than necessary. All duct openings shall be provided with sheet metal caps if the openings are to be left unconnected for any length of time. All panels of uninsulated ducts twelve inches (12\") and larger shall be cross broken. In general, sheet metal screws shall not be used in duct construction unless the point of the screw is in the air stream unless specifically indicated otherwise elsewhere herein.",
+          "children": null
+        },
+        {
+          "index": "17.",
+          "text": "Manual dampers shall be installed as shown on the Drawings and as required to afford complete control of the air flow in the various duct systems. In rectangular supply ducts, a splitter damper shall be installed at each point where a branch is taken off and additional volume dampers shall be installed where shown or required to achieve the final air balance. No splitter dampers shall be installed in medium pressure ductwork, unless specifically shown on Drawings.",
+          "children": null
+        },
+        {
+          "index": "18.",
+          "text": "Splitter dampers and volume dampers of the \"butterfly\" type, installed in rectangular ducts, shall be constructed of 16 gauge galvanized steel riveted or welded to square operating rods. Dampers shall have brass, bronze, or approved plastic bearings. The length of any splitter damper blade shall be 1-1/2 times the width of the smaller split in the duct, but shall be not less than twelve inches (12\"). Where splitter dampers exceed 12 inches in height two (2) pull rods shall be used. Splitter dampers 12 inches (12\") in height or less shall have one (1) pull rod.",
+          "children": null
+        },
+        {
+          "index": "19.",
+          "text": "Butterfly damper blades in round ducts shall be the full width of the duct in which they are installed. Dampers shall be constructed of a minimum 22 gauge metal. Dampers over twelve inches (12\") in diameter shall be constructed of 20 gauge metal, have a continuous rod with end bearings opposite the damper handle, and a quadrant type locking handle.",
+          "children": null
+        },
+        {
+          "index": "20.",
+          "text": "The operating rods of all dampers shall be fitted with Young Regulators and the operating head shall be securely fastened in place so as to be accessible in the finished building unless shown otherwise. Operators shall be attached to duct where regulator occurs above a lay-in ceiling.",
+          "children": null
+        },
+        {
+          "index": "21.",
+          "text": "Use a Ventlok No. 555 locking quadrant on accessible concealed splitter dampers.",
+          "children": null
+        },
+        {
+          "index": "22.",
+          "text": "Where locking quadrants are installed on externally insulated ductwork a hat channel extension shall be used to match the same height as the insulation thickness.",
+          "children": null
+        },
+        {
+          "index": "23.",
+          "text": "Where dampers occur above or behind plaster or other inaccessible ceilings, walls, chases or furrings, provide a Bowden Cable Remote Control System to allow proper air balance. The remote regulator shall be the concealed type with adjustable cover plate equal to Young Regulator Company Type 315 with maximum 2-1/2\" diameter cover plate and required accessories. In lieu of the manual remote control cable system provide an electronically operated remote control balance damper powered by a hand held controller using battery power to stroke the low voltage damper motor located at the balance damper, similar to the Young Regulator, Model EBD.",
+          "children": null
+        },
+        {
+          "index": "24.",
+          "text": "Young Regulator bearings shall also be provided on the opposite end of each operating rod.",
+          "children": null
+        },
+        {
+          "index": "25.",
+          "text": "Behind each ceiling supply outlet, provide and install a turning vane or approved equalizing grid, where noted or scheduled. Where adjustable air pick-ups are indicated at points branch ducts meet trunk ducts, they shall be Titus AG-45 or approved equal with operator adjustable from the duct exterior.",
+          "children": null
+        },
+        {
+          "index": "26.",
+          "text": "Rectangular opposed blade volume dampers shall be as manufactured by American Warming and Ventilating or Ruskin. Blades shall not exceed 48 inches in length or twelve inches (12\") in width, and shall be the opposed interlocking blade type. The blades shall be of not less than No. 16 gauge steel supported on one-half inch (1/2\") diameter rustproofed axles. Axle bearings shall be the self-lubricating ferrule type.",
+          "children": null
+        },
+        {
+          "index": "B.",
+          "text": "Medium Pressure Ductwork:",
+          "children": [
+            {
+              "index": "1.",
+              "text": "Rectangular medium pressure ducts shall be constructed of the following gauges:",
+              "children": null,
+              "tables": [
+                {
+                  "title": null,
+                  "headers": [
+                    "Largest\nDimension of\nDuct",
+                    "Gauge\nof Metal",
+                    "Maximum\nReinforcement\nSpacing"
+                  ],
+                  "rows": [
+                    [
+                      "Up thru 22\"",
+                      "24",
+                      "4'-0\""
+                    ],
+                    [
+                      "23\" thru 30\"",
+                      "24",
+                      "3'-0\""
+                    ],
+                    [
+                      "31\" thru 36\"",
+                      "24",
+                      "2'-6\""
+                    ],
+                    [
+                      "37\" thru 48\"",
+                      "22",
+                      "2'-6\""
+                    ],
+                    [
+                      "49\" thru 60\"",
+                      "22",
+                      "2'-0\""
+                    ],
+                    [
+                      "61\" thru 72\"",
+                      "20",
+                      "2'-0\""
+                    ],
+                    [
+                      "73\" and Up",
+                      "18",
+                      "2'-0\""
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "index": "2.",
+              "text": "The above rectangular ducts shall be constructed in accordance with the requirements of Section 1 of the most recent edition of SMACNA \"HVAC Duct Construction Standards Manual, Metal and Flexible\". However, the gauge thickness of the ductwork shall meet that as scheduled above. Reinforcing method shall be in accordance with the most current SMACNA standards for the duct classification being constructed taking into account the duct dimensions and gauge thickness; without tie rods through 60 inch sizes and using tie rods 61 inches and over to keep reinforcing angles to 2\" maximum.",
+              "children": null
+            },
+            {
+              "index": "3.",
+              "text": "Sealant (MMM EC-800, Hardcast \"Iron-Grip 601\", Childers CP-146, Foster 32-18, or Polymer Adhesive Sealant Systems, Inc. \"Air Seal No. 11\") shall be used at all joints on rectangular or round ducts in shop and field fabrication and shall be installed:",
+              "children": [
+                {
+                  "index": "a.",
+                  "text": "In the joint prior to closing to provide a positive seal for slide-on round or oval joints.",
+                  "children": null
+                },
+                {
+                  "index": "b.",
+                  "text": "Externally seal all longitudinal and transverse duct joints after these joints are closed.",
+                  "children": null
+                },
+                {
+                  "index": "c.",
+                  "text": "Where \"Ductmate\" joints are used seal external to joints after the joint is closed as needed to repair all audible leaks and to comply with the leakage test requirements. Use double sealant at corners of these joints.",
+                  "children": null
+                },
+                {
+                  "index": "d.",
+                  "text": "All sealants shall be U.L. listed and labeled in accordance with U.L. 181 for duct sealant.",
+                  "children": null
+                }
+              ]
+            },
+            {
+              "index": "4.",
+              "text": "Round medium pressure duct construction, gauges and reinforcing shall be in accordance with Section 3 of the most recent edition of SMACNA \"HVAC Duct Construction Standards Manual, Metal and Flexible\". Straight ducts and fittings shall be of the same manufacturer. Spiral wound ducts shall be used up to 48\" in diameter and shall be as manufactured by United Sheet Metal Company or approved equals. Joints shall be joined by approved couplings secured by sheet metal screws and sealant. Ninety degree branch take-offs shall be made with conical tees. Take-off fittings shall be welded to fittings or to the main duct. All welds shall be cleaned and coated with rust-inhibiting paint. Elbows shall be stamped smooth type, or 5 or 3 piece gore type, with either type having a center line radius of 1-1/2 times the duct diameter. Ducts shall be constructed with four-ply reinforcing spiral lock seams. Fittings shall be as manufactured by United Sheet Metal Company, Ward, or approved equals only.",
+              "children": null
+            },
+            {
+              "index": "5.",
+              "text": "Flat oval medium pressure ducts, if used, shall be spiral flat oval or welded flat oval as manufactured by United Sheet Metal Company with gauges and reinforcing as recommended by the manufacturer for medium pressure duty. The ducts may, also, be shop fabricated of completely welded construction of the following gauges with no reinforcing:",
+              "children": null,
+              "tables": [
+                {
+                  "title": null,
+                  "headers": [
+                    "Minor Axis of Duct",
+                    "Gauge of Metal"
+                  ],
+                  "rows": [
+                    [
+                      "6\" to 10\"",
+                      "24"
+                    ],
+                    [
+                      "11\" to 16\"",
+                      "22"
+                    ],
+                    [
+                      "17\" to 24\"",
+                      "20"
+                    ],
+                    [
+                      "25\" to 36\"",
+                      "18"
+                    ],
+                    [
+                      "37\" and Up",
+                      "16"
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "index": "6.",
+              "text": "Medium pressure duct supports:",
+              "children": [
+                {
+                  "index": "a.",
+                  "text": "All horizontal medium pressure rectangular ducts shall have duct hanger requirements as follows:",
+                  "children": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": "2.02",
+          "text": "ROUND LOW PRESSURE DUCT TAPS",
+          "children": [
+            {
+              "index": "A.",
+              "text": "Provide round low pressure, systems operating at a maximum of two inches (2\" inches) water gauge (W.G.) static pressure, duct taps to serve air devices where shown on the drawings and in accordance with details for these taps",
+              "children": null
+            },
+            {
+              "index": "B.",
+              "text": "Duct taps shall consist of spin-in, or spin on, collar type manufactured fittings specifically made for commercial ductwork systems. Spin-in fittings shall be the conical type as shown and detailed on the drawings to include integral manual balance damper with locking device. Fittings shall be fabricated using continuous weld longitudinal seams. No riveted construction allowed.",
+              "children": null
+            },
+            {
+              "index": "C.",
+              "text": "All spin-in fittings shall be made with hot dipped, G-60 or G-90, galvanized steel (per ASTM A 653) and be a minimum of 26 gauge in thickness for all sizes from 4\" to 12\" round. All sizes 14\" to 20\" round shall be a minimum of 24 gauge in thickness. Thicker gauges shall be provided on larger fittings as required per SMACNA and the Mechanical Code, where required.",
+              "children": null
+            },
+            {
+              "index": "D.",
+              "text": "Provide plain or beaded ends for connection of duct work as required for the application. Crimped ends are not allowed.",
+              "children": null
+            },
+            {
+              "index": "E.",
+              "text": "All ductwork systems are called out elsewhere in these specifications to be externally sealed to limit air leakage. These fittings may either be factory sealed (all seams sealed) or be sealed by the contractor in the field.",
+              "children": null
+            },
+            {
+              "index": "F.",
+              "text": "All spin-in fittings shall also include integral manual balance dampers unless indicated otherwise. Damper options shall be as follows:",
+              "children": [
+                {
+                  "index": "1.",
+                  "text": "All manual volume dampers shall be the butterfly type, using a single round damper blade and positive locking regulator damper hardware.",
+                  "children": null
+                },
+                {
+                  "index": "2.",
+                  "text": "Sizes 4\"-12\" round shall have a reinforced damper axis (not a continuous damper shaft) with ¼\" regulator and spring loaded, retractable bearings.",
+                  "children": null
+                },
+                {
+                  "index": "3.",
+                  "text": "Sizes 14\" through 20\" round shall have a minimum 3/8\" continuous damper rod axis with nylon grommets installed at damper sleeve penetrations",
+                  "children": null
+                },
+                {
+                  "index": "4.",
+                  "text": "Provide dampers, which shall include an extended threaded shaft that aligns with a sheet metal stand-off bracket (spot welded to the fitting) with the stand-off distance to be 2\" to clear the thickness of any external duct wrap insulation. Coordinate stand-off dimensions with specified duct insulation thickness (only when thicker than 2\"). Damper handle and wing nut to be fastened at the outside of the stand-off bracket.",
+                  "children": null
+                },
+                {
+                  "index": "5.",
+                  "text": "Provide premium optional balance dampers to include a 2\" stand-off bracket, spot welded to the fitting, to include a 3/8\" square shaft extended to the stand-off bracket, with U-bolt, nylon bushings, locking quadrant and handle.",
+                  "children": null
+                }
+              ]
+            },
+            {
+              "index": "G.",
+              "text": "Acceptable Manufacturers:",
+              "children": [
+                {
+                  "index": "1.",
+                  "text": "Flexmaster or equals by,",
+                  "children": null
+                },
+                {
+                  "index": "2.",
+                  "text": "Crown Company Products,",
+                  "children": null
+                },
+                {
+                  "index": "3.",
+                  "text": "Ductmate,",
+                  "children": null
+                },
+                {
+                  "index": "4.",
+                  "text": "Hercules Industries.",
+                  "children": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": "2.03",
+          "text": "FIRE, SMOKE, AND COMBINATION SMOKE-FIRE DAMPERS",
+          "children": [
+            {
+              "index": "A.",
+              "text": "Contractor shall furnish and install fire, smoke, and combination smoke-fire dampers in air passages, openings, and ductwork wherever shown on the Drawings, and as required by the local authorities having jurisdiction. Installations shall be in accordance with all applicable NFPA standards and the SMACNA Duct Manual. All dampers shall carry the U.L. Label and shall be installed such as to conform to conditions under which the U.L. Label was granted. All dampers",
+              "children": null
+            }
+          ]
+        },
+        {
+          "index": "J.",
+          "text": "On ducts over twenty-four inches (24\") in width or depth, the liner shall further be secured with mechanical fasteners. Fasteners shall be Graham or Gemco weld pins. \"Stick Clips\", \"Sheet Metal Clips\", or other fasteners secured to the ducts by adhesive are not allowed. Fasteners shall be placed on a maximum spacing of eighteen inches (18\") and shall be pointed up with fire-resistant adhesive. Fasteners shall not compress the insulation more than 1/8\".",
+          "children": null
+        },
+        {
+          "index": "K.",
+          "text": "Liner shall be accurately cut with all cut ends thoroughly coated with an approved liner edge coating adhesive so that when the duct section is installed, the liner shall make a firmly butted and tightly sealed joint. Provide metal nosings securely installed over transversely oriented liner edges facing the air stream at all fan discharges, at access doors, and at any interval of lined duct preceded by unlined duct. This adhesive type shall be Duro Dyne \"Dyn-O-Coat\", or equal. This shall be an aerosol which is quick drying, flexible and tack free. Treat all exposed edges, butt seams, and inadvertent tears.",
+          "children": null
+        },
+        {
+          "index": "L.",
+          "text": "Where rectangular ducts are lined and adjoins externally insulated rectangular ducts, the two insulations shall be overlapped not less than twenty-four inches (24\").",
+          "children": null
+        },
+        {
+          "index": "3.01",
+          "text": "INSTALLATION",
+          "children": [
+            {
+              "index": "A.",
+              "text": "Install all ductwork and equipment as indicated on the Drawings in full accordance with these specifications including foundations, hangers, supports, etc.",
+              "children": null
+            },
+            {
+              "index": "B.",
+              "text": "Seal all ductwork as specified, pressure test and repair leaks.",
+              "children": null
+            },
+            {
+              "index": "C.",
+              "text": "Install one inch (1\") wide by 18\" long orange (brightly colored) plastic strip tape (no adhesives) at each manual air balance damper located for easy visibility from normal intended above ceiling access points to clearly identify location of these ampers.",
+              "children": null
+            },
+            {
+              "index": "D.",
+              "text": "Install all air intake, relief and exhaust air hoods on continuous neoprene strips set level on top of wood nailers of the specified roof curbs. Hoods shall be secured at 8\" O.C. to the curbs with corrosion resistant screws if not secured by other fasteners as specified. Flash and counterflash to prevent water leakage through the overall roofing system.",
+              "children": null
+            },
+            {
+              "index": "E.",
+              "text": "Install all duct mounted components such as heating coils, electric or water type, sound attenuators, air terminals, etc. in accordance with the manufacturer's recommendations.",
+              "children": null
+            },
+            {
+              "index": "F.",
+              "text": "Should defects or installation deficiencies become apparent, or are observed, after the systems have been in operation, the deficient components shall be removed and replaced or reinforced as directed by the Owner's Representative.",
+              "children": null
+            }
+          ]
+        },
+        {
+          "index": "3.02",
+          "text": "CLEANING OF DUCT SYSTEMS",
+          "children": [
+            {
+              "index": "A.",
+              "text": "Before the grilles or diffusers are installed, all fans and air conditioning units shall be operated and all debris and foreign matter shall be removed from the ducts.",
+              "children": null
+            },
+            {
+              "index": "B.",
+              "text": "The air conditioning units shall be thoroughly cleaned, and the drain pans shall be thoroughly cleaned and flushed out with a hose; the filters shall be thoroughly cleaned and the grilles shall then be installed.",
+              "children": null
+            },
+            {
+              "index": "C.",
+              "text": "Insure all duct openings are capped and sealed during construction when additions are not being made.",
+              "children": null
+            }
+          ]
+        },
+        {
+          "index": "3.03",
+          "text": "STATIC PRESSURE DUCT TESTING - MEDIUM PRESSURE SYSTEMS",
+          "children": [
+            {
+              "index": "A.",
+              "text": "All medium pressure (constructed and rated at 3.0 inches water column or higher) ducts, new and existing where re-used, shall be pressure tested by the Contractor, witnessed by the Testing, Adjusting, and Balancing (TAB) firm, according to the most current version of the SMACNA HVAC Air Duct Leakage Test Manual test procedures where the Construction Class is designated to be 3.0\" W.G. and higher.",
+              "children": null
+            },
+            {
+              "index": "B.",
+              "text": "Design pressure for testing medium pressure ductwork shall be six inches (6\") of water gauge, unless indicated otherwise herein.",
+              "children": null
+            }
+          ]
+        }
+      ]
+    }
+  }

@@ -1,0 +1,741 @@
+{
+    "section": "27 15 00",
+    "name": "HORIZONTAL CABLING REQUIREMENTS",
+    "part1": {
+      "partItems": [
+        {
+          "index": "1.1",
+          "text": "SECTION INCLUDES",
+          "children": [
+            {
+              "index": "A.",
+              "text": "This section describes the products and execution requirements relating to furnishing and installing horizontal communications cabling and termination components and related subsystems as part of a cabling plant. The cabling plant consists of copper cabling.",
+              "children": null
+            }
+          ]
+        },
+        {
+          "index": "1.2",
+          "text": "RELATED WORK",
+          "children": [
+            {
+              "index": "A.",
+              "text": "Section 27 05 00 - Basic Communications Systems Requirements",
+              "children": null
+            },
+            {
+              "index": "B.",
+              "text": "Section 27 17 20 - Structured Cabling System Warranty",
+              "children": null
+            }
+          ]
+        },
+        {
+          "index": "1.3",
+          "text": "QUALITY ASSURANCE",
+          "children": [
+            {
+              "index": "A.",
+              "text": "Refer to Section 27 05 00 for relevant standards and plenum or non-plenum cable requirements.",
+              "children": null
+            },
+            {
+              "index": "B.",
+              "text": "The channel shall be required to meet the performance requirements indicated herein. The manufacturer shall warranty the performance of their system to the required performance (and not just to the Standard, should the required performance exceed the Standard).",
+              "children": null
+            },
+            {
+              "index": "C.",
+              "text": "Specific components of the channel shall be required, at a minimum, to meet the Standard component requirements for that particular component.",
+              "children": null
+            },
+            {
+              "index": "D.",
+              "text": "The installing contractor must be certified by the manufacturer of the structured cabling system.",
+              "children": null
+            }
+          ]
+        },
+        {
+          "index": "1.4",
+          "text": "SUBMITTALS",
+          "children": [
+            {
+              "index": "A.",
+              "text": "Under the provisions of Section 27 05 00 and Division 1, prior to the start of work the Contractor shall submit:",
+              "children": [
+                {
+                  "index": "1.",
+                  "text": "Manufacturer's data covering all products proposed, including construction, materials, ratings and all other parameters identified in Part 2 - Products, below.",
+                  "children": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "part2": {
+      "partItems": [
+        {
+          "index": "2.1",
+          "text": "HORIZONTAL CABLE",
+          "tables": [
+            {
+              "title": "TABLE:",
+              "headers": [
+                "Test Parameter",
+                "100 MHz",
+                "250 Mhz"
+              ],
+              "rows": [
+                [
+                  "Attenuation:",
+                  "22.0 dB",
+                  "36.9 dB"
+                ],
+                [
+                  "NEXT:",
+                  "35.3 dB",
+                  "31.3 dB"
+                ],
+                [
+                  "PS NEXT:",
+                  "32.3 dB",
+                  "28.3 dB"
+                ],
+                [
+                  "ACR:",
+                  "13.3 dB",
+                  "-5.5 dB"
+                ],
+                [
+                  "PS ACR:",
+                  "N/A",
+                  "-8.5 dB"
+                ]
+              ]
+            },
+            {
+              "title": "TABLE:",
+              "headers": [
+                "Test Parameter",
+                "100 MHz",
+                "250 Mhz"
+              ],
+              "rows": [
+                [
+                  "Attenuation:",
+                  "22.0 dB",
+                  "36.9 dB"
+                ],
+                [
+                  "NEXT:",
+                  "35.3 dB",
+                  "31.3 dB"
+                ],
+                [
+                  "PS NEXT:",
+                  "32.3 dB",
+                  "28.3 dB"
+                ],
+                [
+                  "ACR:",
+                  "13.3 dB",
+                  "-5.5 dB"
+                ],
+                [
+                  "PS ACR:",
+                  "N/A",
+                  "-8.5 dB"
+                ]
+              ]
+            },
+            {
+                "title": "TABLE:",
+                "headers": [
+                  "Test Parameter",
+                  "100 MHz",
+                  "250 Mhz"
+                ],
+                "rows": [
+                  [
+                    "ELFEXT:",
+                    "23.8 dB",
+                    "18.8 dB"
+                  ],
+                  [
+                    "PS ELFEXT:",
+                    "20.8 dB",
+                    "15.8 dB"
+                  ],
+                  [
+                    "Return Loss:",
+                    "20.1 dB",
+                    "17.3 dB"
+                  ],
+                  [
+                    "Propagation Delay:",
+                    "548 ns",
+                    "N/A"
+                  ],
+                  [
+                    "Delay Skew:",
+                    "50 ns",
+                    "25 ns"
+                  ]
+                ]
+              }
+          ],
+          "children": [
+            {
+              "index": "A.",
+              "text": "CAT 6A Cable:",
+              "children": [
+                {
+                  "index": "1.",
+                  "text": "The horizontal cable requirements must be met, as well as the following channel requirements.",
+                  "children": null
+                },
+                {
+                  "index": "2.",
+                  "text": "CAT 6A cable shall terminate on rack-mounted modular patch panels in their respective communication equipment room as indicated on the drawings.",
+                  "children": null
+                },
+                {
+                  "index": "3.",
+                  "text": "Cable shall exceed transmission requirements listed in ANSI/TIA/EIA-568-C.2. Performance tests shall be conducted using swept frequency testing through 500 MHz for the channel. All numbers given are for a 4-connection channel. Discrete frequency testing results at 500 MHz is not acceptable.",
+                  "children": null
+                },
+                {
+                  "index": "4.",
+                  "text": "Performance tests shall be conducted using swept frequency testing through 500 MHz for the channel. All numbers given are for a 4-connection channel. Discrete frequency testing results at 500 MHz is not acceptable.",
+                  "children": null
+                },
+                {
+                  "index": "5.",
+                  "text": "Performance data shall be provided by third-party independent testing laboratories only. Testing data shall be submitted on the third-party testing laboratory letterhead. Test data will only be accepted if it displays testing as a channel. Electrical characteristics of the performance of the cable itself will not satisfy this requirement.",
+                  "children": null
+                },
+                {
+                  "index": "6.",
+                  "text": "The structured cabling and connectivity may be provided by the same company. For the purpose of this specification that shall mean that the cabling and connectivity must be marketed, branded, supported, warranted, and distributed by the same company. Specifically, ally or partnerships between cabling manufacturers and connectivity manufacturers do not meet this requirement unless otherwise listed in Section 27 17 20 as an acceptable manufacturer. Specifically, products made by others through an OEM relationship are acceptable if the products are marketed, branded, supported, warranted, and distributed by the same company.",
+                  "children": null
+                },
+                {
+                  "index": "7.",
+                  "text": "The 4-connector channel performance margins in the table below shall be guaranteed margins above ANSI/TIA/EIA-568-C.2:",
+                  "tables": [
+                    
+                    {
+                      "title": "TABLE:",
+                      "headers": [
+                        "Test Parameter",
+                        "100 MHz",
+                        "150 Mhz"
+                      ],
+                      "rows": [
+                        [
+                          "Attenuation:",
+                          "24.0 dB",
+                          "30.1 dB"
+                        ],
+                        [
+                          "NEXT:",
+                          "30.1 dB",
+                          "28.5 dB"
+                        ],
+                        [
+                          "PS NEXT:",
+                          "27.1 dB",
+                          "25.5 dB"
+                        ],
+                        [
+                          "ACR:",
+                          "6.1 dB",
+                          "-1.5 dB"
+                        ],
+                        [
+                          "PS ACR:",
+                          "3.1 dB",
+                          "-4.5 dB"
+                        ],
+                        [
+                          "ELFEXT:",
+                          "17.4 dB",
+                          "16.3 dB"
+                        ],
+                        [
+                          "PS ELFEXT:",
+                          "14.4 dB",
+                          "13.3 dB"
+                        ],
+                        [
+                          "Return Loss:",
+                          "10.0 dB",
+                          "8.2 dB"
+                        ]
+                      ]
+                    }
+                  ],
+                  "children": null
+                },
+                {
+                  "index": "8.",
+                  "text": "The jacket color for CAT 6A cable shall be white for voice applications and blue for data applications.",
+                  "children": null
+                },
+                {
+                  "index": "9.",
+                  "text": "Basis of Design:",
+                  "children": [
+                    {
+                      "index": "a.",
+                      "text": "CommSCope.",
+                      "children": null
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": "2.2",
+          "text": "CONNECTORS/COUPLERS/ADAPTERS",
+          "children": [
+            {
+              "index": "A.",
+              "text": "Refer to Section 27 11 00 for requirements and 27 13 00 for requirements.",
+              "children": null
+            }
+          ]
+        },
+        {
+          "index": "2.3",
+          "text": "FACEPLATES/JACKS",
+          "children": [
+            {
+              "index": "A.",
+              "text": "Cat 6A Jacks:",
+              "children": [
+                {
+                  "index": "1.",
+                  "text": "CAT 6A horizontal cable shall each be terminated at its designated work area location on RJ-45 modular jacks. These modular jack assemblies shall snap into a modular mounting frame. The combined modular jack assembly is referred to as an information outlet.",
+                  "children": null
+                },
+                {
+                  "index": "2.",
+                  "text": "The same orientation and positioning of modular jacks shall be utilized throughout the installation. Prior to installation, the Contractor shall submit the proposed configuration for each information outlet type for review by the Architect/Engineer.",
+                  "children": null
+                },
+                {
+                  "index": "3.",
+                  "text": "Information outlet faceplates shall incorporate recessed designation strips at the top and bottom of the frame for identifying labels. Designation strips shall be fitted with clear plastic covers.",
+                  "children": null
+                },
+                {
+                  "index": "4.",
+                  "text": "Where standalone CAT 6A only modular jacks are identified, the information outlet faceplate shall be configured as to allow for the addition of one (1) additional modular jack (CAT 3, CAT 5E, or CAT 6) to be installed to supplement each such modular jack as defined by this project. The installation of these supplemental modular jacks is NOT part of this project.",
+                  "children": null
+                },
+                {
+                  "index": "5.",
+                  "text": "Any unused modular jack positions on an information outlet faceplate shall be fitted with a removable blank inserted into the opening.",
+                  "children": null
+                },
+                {
+                  "index": "6.",
+                  "text": "All modular jacks will be fitted with a dust cover. Modular jacks shall incorporate a dust cover that fits over and/or into the modular jack opening. The dust cover shall be designed to remain with the modular jack assembly when the modular jack is in use. No damage to the modular jack pinning shall result from insertion or removal of these covers. Dust covers that result in deformation of the modular jack pinning, will not be accepted.",
+                  "children": null
+                },
+                {
+                  "index": "7.",
+                  "text": "The information outlet faceplate shall be constructed of high impact plastic (except where noted otherwise). The information outlet faceplate color shall:",
+                  "children": [
+                    {
+                      "index": "a.",
+                      "text": "Match the receptacle color used for other utilities in the building, or",
+                      "children": null
+                    },
+                    {
+                      "index": "b.",
+                      "text": "When installed in surface raceway (if applicable), match the color of that raceway.",
+                      "children": null
+                    }
+                  ]
+                },
+                {
+                  "index": "8.",
+                  "text": "Different faceplate and frame designs for locations, which include optical fiber cabling relative to those, that terminate only copper cabling are acceptable. Information outlets that incorporate optical fiber shall be compliant with the above requirements plus:",
+                  "children": [
+                    {
+                      "index": "a.",
+                      "text": "Be a low-profile assembly.",
+                      "children": null
+                    },
+                    {
+                      "index": "b.",
+                      "text": "Incorporate a mechanism for storage of cable and fiber slack needed for termination.",
+                      "children": null
+                    },
+                    {
+                      "index": "c.",
+                      "text": "Position the optical fiber couplings to face downward or at a downward angle to prevent contamination.",
+                      "children": null
+                    },
+                    {
+                      "index": "d.",
+                      "text": "Incorporate a shroud that protects the optical fiber couplings from impact damage.",
+                      "children": null
+                    }
+                  ]
+                },
+                {
+                  "index": "9.",
+                  "text": "All information outlets and the associated modular jacks shall be of the same manufacturer throughout the project.",
+                  "children": null
+                },
+                {
+                  "index": "10.",
+                  "text": "The CAT 6A modular jacks shall be non-keyed 8-pin modular jacks.",
+                  "children": null
+                },
+                {
+                  "index": "11.",
+                  "text": "The interface between the modular jack and the horizontal cable shall be an angled insulation displacement type contact and shall provide separation for ANEXT suppression. Termination components shall be designed to maintain the horizontal cable's pair twists as closely as possible to the point of mechanical termination.",
+                  "children": null
+                },
+                {
+                  "index": "12.",
+                  "text": "CAT 6A modular jacks shall be pinned per T-568A.",
+                  "children": null
+                },
+                {
+                  "index": "13.",
+                  "text": "CAT 6A termination hardware shall, as a minimum, meet all the mechanical and electrical performance requirements of the following standards:",
+                  "children": [
+                    {
+                      "index": "a.",
+                      "text": "ANSI/TIA/EIA-568-B.2-10",
+                      "children": null
+                    },
+                    {
+                      "index": "b.",
+                      "text": "IEEE 802.af (PoE)",
+                      "children": null
+                    },
+                    {
+                      "index": "c.",
+                      "text": "IEEE 802.an 10GBASE-T",
+                      "children": null
+                    },
+                    {
+                      "index": "d.",
+                      "text": "ISO/IEC 60603-7",
+                      "children": null
+                    },
+                    {
+                      "index": "e.",
+                      "text": "ISO 11801 Class E Compliant",
+                      "children": null
+                    },
+                    {
+                      "index": "f.",
+                      "text": "FCC PART 68.5 SUBPART F",
+                      "children": null
+                    }
+                  ]
+                },
+                {
+                  "index": "14.",
+                  "text": "The color for CAT 6A jacks shall be white for voice applications and blue for data applications. Alternately, a color-coded bezel or icon may be used to identify the CAT 6A modular jack.",
+                  "children": null
+                },
+                {
+                  "index": "15.",
+                  "text": "Pach Cords: Patch Cords shall be factory made, 4-pair 36 inch, 72 inch and 120 inch in lengths terminted with 8-position modular plug at each end. Provide patch cord for each data jack.",
+                  "children": null
+                }
+              ]
+            }
+          ],
+          "tables": [
+            {
+              "title": null,
+              "headers": [
+                "Electrical Value\n(1 - 500 MHz)",
+                "Minimum Margin"
+              ],
+              "rows": [
+                [
+                  "Insertion Loss:",
+                  "3%"
+                ],
+                [
+                  "NEXT:",
+                  "2 dB"
+                ],
+                [
+                  "PS NEXT:",
+                  "3 dB"
+                ],
+                [
+                  "PSA NEXT:",
+                  "3 dB"
+                ],
+                [
+                  "PSA NEXT (Average):",
+                  null
+                ],
+                [
+                  "ACR-F:",
+                  "2 dB"
+                ],
+                [
+                  "PS ACR-F:",
+                  "3 dB"
+                ],
+                [
+                  "PSA ACR-F:",
+                  "3 dB"
+                ],
+                [
+                  "PSA ACR-F (Average):",
+                  "3 dB"
+                ],
+                [
+                  "Return Loss:",
+                  "2 dB"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "index": "2.4",
+          "text": "COPPER WORK AREA CORDS",
+          "children": [
+            {
+              "index": "A.",
+              "text": "RJ-45:",
+              "children": [
+                {
+                  "index": "1.",
+                  "text": "Provide the same quantity of Category 6A copper work area cords as copper patch panel cords specified in Section 27 11 00. Copper work area cords shall be equipped with an 8-pin modular RJ-45 connector on each end.",
+                  "children": null
+                },
+                {
+                  "index": "2.",
+                  "text": "Work area cords shall be 120 incg in length.",
+                  "children": null
+                },
+                {
+                  "index": "3.",
+                  "text": "Manufacturer of copper patch cable shall be the same as the manufacturer of the horizontal copper cable.",
+                  "children": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "part3": {
+      "partItems": [
+        {
+          "index": "3.1",
+          "text": "CABLE INSTALLATION REQUIREMENTS",
+          "children": [
+            {
+              "index": "A.",
+              "text": "Horizontal Cabling:",
+              "children": [
+                {
+                  "index": "1.",
+                  "text": "The maximum horizontal cable drop length for Data UTP shall not exceed 295 feet (90 meters) in order to meet data communications performance specifications. This length is measured from the termination panel in the wiring closet to the outlet and must include any slack required for the installation and termination. The Contractor is responsible for installing horizontal cabling in a fashion so as to avoid unnecessarily long runs. Any area that cannot be reached within the above constraints should be identified and reported to the Architect/Engineer prior to installation. Changes to the contract documents shall be approved by the Architect/Engineer.",
+                  "children": null
+                },
+                {
+                  "index": "2.",
+                  "text": "All cable shall be free of tension at both ends. In cases where the cable must bear some stress, Kellum grips may be used to spread the strain over a longer length of cable.",
+                  "children": null
+                },
+                {
+                  "index": "3.",
+                  "text": "Manufacturer's minimum bend radius specifications shall be observed in all instances.",
+                  "children": null
+                },
+                {
+                  "index": "4.",
+                  "text": "Horizontal cabling installed as open cabling shall be supported at a maximum of 5' between supports. Refer to the specifications for required cable supports.",
+                  "children": null
+                },
+                {
+                  "index": "5.",
+                  "text": "Horizontal cabling installed as open cable or in cable tray shall be bundled at not less than 10' intervals with hook-and-loop tie wraps. The use of plastic cable ties is strictly prohibited.",
+                  "children": null
+                },
+                {
+                  "index": "6.",
+                  "text": "The maximum conduit fill for horizontal cabling shall not exceed 40% regardless of conduit length.",
+                  "children": null
+                },
+                {
+                  "index": "7.",
+                  "text": "Cable sheaths shall be protected from damage from sharp edges. Where a cable passes over a sharp edge, a bushing or grommet shall be used to protect the cable.",
+                  "children": null
+                }
+              ]
+            },
+            {
+              "index": "B.",
+              "text": "A coil of 3 feet in each cable shall be placed in the ceiling at the last support (e.g., J-hook, bridle ring, etc.) before the cables enter a fishable wall, conduit, surface raceway or box. At any location where cables are installed into movable partition walls or modular furniture via a service pole, approximately 15-feet of slack shall be left in each horizontal cable under 250 feet in length to allow for change in the office layout without re-cabling. These \"service loops\" shall be secured at the last cable support before the cable leaves the ceiling and shall be coiled from 100% to 200% of the cable recommended minimum bend radius.",
+              "children": [
+                {
+                  "index": "1.",
+                  "text": "Category 6A cables shall not be mixed with any other category cable in any bundle. Bundles of Category 6A cable shall maintain a 0.5\" separation from bundles of cables containing different categories (e.g., Cat 6, Cat 5E).",
+                  "children": null
+                },
+                {
+                  "index": "2.",
+                  "text": "To reduce or eliminate EMI, the following minimum separation distances from 480V power lines shall be adhered to:",
+                  "children": [
+                    {
+                      "index": "a.",
+                      "text": "Twelve (12) inches from power lines of less than 5-kVa.",
+                      "children": null
+                    },
+                    {
+                      "index": "b.",
+                      "text": "Eighteen (18) inches from high-voltage lighting (including fluorescent).",
+                      "children": null
+                    },
+                    {
+                      "index": "c.",
+                      "text": "Thirty-nine (39) inches from power lines of 5-kVa or greater.",
+                      "children": null
+                    },
+                    {
+                      "index": "d.",
+                      "text": "Thirty-nine (39) inches from transformers and motors.",
+                      "children": null
+                    }
+                  ]
+                },
+                {
+                  "index": "3.",
+                  "text": "Information outlets shown on floor plans with the subscript \"W\" are intended to be used for wall mounted telephones. Back boxes for wall mounted telephones shall not be located within 12\" vertically, or horizontally, from any light switches, power receptacles, nurse call devices, thermostats, or any other architectural element that would otherwise prevent the installation of a wall mounted telephone on the mating lugs.",
+                  "children": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": "3.2",
+          "text": "CABLE TERMINATION REQUIREMENTS",
+          "children": [
+            {
+              "index": "A.",
+              "text": "Cable Termination - CAT 3 Voice Horizontal Cabling:",
+              "children": [
+                {
+                  "index": "1.",
+                  "text": "Voice pairs shall terminate on wall-mounted 110-type termination blocks at the entrance room, main equipment room and/or telecommunications rooms.",
+                  "children": null
+                },
+                {
+                  "index": "2.",
+                  "text": "If the \"last\" Horizontal termination block is greater than 50% utilized, one additional block shall be provided for future use.",
+                  "children": null
+                },
+                {
+                  "index": "3.",
+                  "text": "The Contractor shall furnish and install cable management hardware (e.g., D-rings and cable guides) to neatly and securely route the cable from the nearest cable tray to the cable termination hardware.",
+                  "children": null
+                },
+                {
+                  "index": "4.",
+                  "text": "The height of the voice termination field shall not exceed 6 feet (72 inches) above floor level to facilitate cable maintenance.",
+                  "children": null
+                },
+                {
+                  "index": "5.",
+                  "text": "Cables shall be fed from below the termination hardware in a manner that will facilitate growth.",
+                  "children": null
+                },
+                {
+                  "index": "6.",
+                  "text": "Horizontal troughs incorporating split plastic distribution rings shall be provided by the Contractor to accommodate routing of jumpers. Troughs shall be positioned at the top of and between each column of termination blocks. Rings shall be positioned between the backbone and horizontal blocks for vertical routing of jumpers and/or cross-connect wiring.",
+                  "children": null
+                },
+                {
+                  "index": "7.",
+                  "text": "Termination of horizontal voice cabling shall be accomplished by using 4-pair (e.g., C4-type) clips. The 25th of each row on the 110-type termination block located in the telecommunication room shall not be used for termination of horizontal voice cable.",
+                  "children": null
+                },
+                {
+                  "index": "8.",
+                  "text": "Termination of backbone voice cabling shall be accomplished by using 5-pair (e.g., C5-type) clips.",
+                  "children": null
+                },
+                {
+                  "index": "9.",
+                  "text": "The Contractor shall ensure that the twists in each cable pair are preserved to within 1.0 inch of the termination for all voice UTP cables. The cable jacket shall be removed only to the extent required to make the termination.",
+                  "children": null
+                },
+                {
+                  "index": "10.",
+                  "text": "A jumper wire spool holder shall be installed at the main equipment room. Two full 1000-foot (305 meter) spools of 24 AWG one-pair jumper wire, one spool each of white-blue/blue and white-green/green, shall be supplied with the holder. The spool holders shall be assemblies designed for that purpose.",
+                  "children": null
+                }
+              ]
+            },
+            {
+              "index": "B.",
+              "text": "Cable Terminations - Data UTP:",
+              "children": [
+                {
+                  "index": "1.",
+                  "text": "Modular patch panels shall be designed and installed in a fashion as to allow future horizontal cabling to be terminated on the panel without disruption to existing connections.",
+                  "children": null
+                },
+                {
+                  "index": "2.",
+                  "text": "At information outlets and modular patch panels, the Contractor shall ensure that the twists in each cable pair are preserved to within 0.5-inch of the termination for data cables. The cable jacket shall be removed only to the extent required to make the termination.",
+                  "children": null
+                }
+              ]
+            },
+            {
+              "index": "C.",
+              "text": "Cable Terminations - Shielded (T1):",
+              "children": [
+                {
+                  "index": "1.",
+                  "text": "Shielded cabling shall be terminated on 110-type termination blocks. The blocks shall be wall-mounted at all locations.",
+                  "children": null
+                },
+                {
+                  "index": "2.",
+                  "text": "Blocks shall be sized to provide for a minimum 20% growth in capacity relative to the initial installation.",
+                  "children": null
+                },
+                {
+                  "index": "3.",
+                  "text": "Consistency shall be maintained throughout the installation relative to conductor sequence on the blocks. Building ground and cable shield drain wire shall be terminated immediately to the left of each two data pairs on the cross-connect fields.",
+                  "children": null
+                },
+                {
+                  "index": "4.",
+                  "text": "Designation labels shall be color-coded YELLOW to identify the cabling as a Network Connection. Pairs shall be identified on the labels numerically. Ground and shield shall be identified for each pair.",
+                  "children": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
