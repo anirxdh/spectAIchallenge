@@ -87,7 +87,7 @@ def extract_pages_from_pdf(pdf_path: str) -> List[str]:
 
 # --- Chunking Logic ---
 
-def make_chunks(pages: List[str], chunk_size: int = 5, overlap: int = 1) -> List[List[str]]:
+def make_chunks(pages: List[str], chunk_size: int = 4, overlap: int = 1) -> List[List[str]]:
     """
     Splits list of pages into overlapping chunks.
     """
@@ -360,7 +360,7 @@ def merge_json_chunks(chunks: List[Dict[str, Any]]) -> Dict[str, Any]:
 
 # --- Main Entry Point for FastAPI ---
 
-def parse_pdf_to_json_chunked(pdf_path: str, chunk_size: int = 5, overlap: int = 1) -> Dict[str, Any]:
+def parse_pdf_to_json_chunked(pdf_path: str, chunk_size: int = 4, overlap: int = 1) -> Dict[str, Any]:
     """
     Main pipeline: extract pages, chunk, process each chunk, merge, return output.
     """

@@ -111,7 +111,7 @@ def extract_tables_by_page(pdf_path: str) -> List[List[dict]]:
 
 # --- Chunking Logic ---
 
-def make_chunks(pages: List[dict], chunk_size: int = 3, overlap: int = 1) -> List[List[dict]]:
+def make_chunks(pages: List[dict], chunk_size: int = 5, overlap: int = 1) -> List[List[dict]]:
     """
     Splits list of page dicts (each with 'text' and 'tables') into overlapping chunks.
     """
@@ -161,10 +161,6 @@ def build_prompt(chunk_pages: List[dict], chunk_num: int, total_chunks: int) -> 
     - **Generalize:** The output should follow the schema pattern exactly, but section numbers, part names, indices, and headings may vary in each document. Handle any number or label as found in the text, and include any section, part, or subitem you find, regardless of names or order.
     - If a part or section is missing in the document, output it as an empty array or `null` as appropriate.
     - Only output valid JSON, with no explanations, markdown, or extra text.
-    - When a major bullet or section (like '7.' or '8.') is immediately followed by sub-bullets (like 'a.', 'b.'), output the main bullet as an object with a 'children' array, each sub-bullet as its own child. Never flatten sub-bullets into the parent text. Show this with an explicit example in the prompt.
-    - If there are any tables present, add them as a "tables" field (see schema below). Use the headers and rows as shown. Do not omit or summarize tables.
-    - If a table is related to a heading or subsection (e.g., "2.1 HORIZONTAL CABLE"), place the tables array inside the same object as "index": "2.1".
-	- Do not attach all tables at the root. Only attach a table to the nearest relevant section/subsection.
 
 
     **Schema Example:**
@@ -205,7 +201,9 @@ def build_prompt(chunk_pages: List[dict], chunk_num: int, total_chunks: int) -> 
     }}
     }}
 
-    - Use the following format for each table:
+    - If there are any tables present, add them as a "tables" field (see schema below). Use the headers and rows as shown. Do not omit or summarize tables.
+    - If a table is related to a heading or subsection (e.g., "2.1 HORIZONTAL CABLE"), place the tables array inside the same object as "index": "2.1".
+	- Do not attach all tables at the root. Only attach a table to the nearest relevant section/subsection. Use the following format for each table:
 
     **Table Example:**
 
@@ -225,13 +223,14 @@ def build_prompt(chunk_pages: List[dict], chunk_num: int, total_chunks: int) -> 
     }}
 
     **Instructions for Output:**
-    - Only return the JSON object matching the schema pattern above. Do **NOT** include any extra commentary, explanation.
+    - Only return the JSON object matching the schema pattern above. Do **NOT** include any extra commentary, explanation, or markdown formatting.
     - For all "children", if there are no further sub-items, set the field to `null`.
     - If a section, part, or child does not exist in the document, output an empty array or `null` as appropriate.
     - Remove all unnecessary line breaks (`\\n`) that do not indicate a new list item, bullet, or paragraph.
     - Do **not** introduce extra spaces after periods or between words. Use a single space after each period.
     - Preserve paragraph separation only where a real new item/section begins (such as bullets, numbered lists, or headings).
     - Output all text fields as continuous, clean sentences, not split with `\\n` unless a new item/bullet is starting.
+    - When a major bullet or section (like '7.' or '8.') is immediately followed by sub-bullets (like 'a.', 'b.'), output the main bullet as an object with a 'children' array, each sub-bullet as its own child. Never flatten sub-bullets into the parent text. Show this with an explicit example in the prompt.
     - “If a section header appears near the start or end of the chunk and seems incomplete, extract it with whatever content is available; do not skip it.”
 
     PDF Text (Chunk {chunk_num} of {total_chunks}):
@@ -404,7 +403,7 @@ def merge_json_chunks(chunks: List[Dict[str, Any]]) -> Dict[str, Any]:
 
 # --- Main Entry Point for FastAPI ---
 
-def parse_pdf_to_json_chunked(pdf_path: str, chunk_size: int = 3, overlap: int = 1) -> Dict[str, Any]:
+def parse_pdf_to_json_chunked(pdf_path: str, chunk_size: int = 5, overlap: int = 1) -> Dict[str, Any]:
     """
     Main pipeline: extract pages, chunk, process each chunk, merge, return output.
     """
