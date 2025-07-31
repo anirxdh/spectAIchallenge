@@ -5,7 +5,7 @@ import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { useState } from 'react';
 
 interface JsonViewerProps {
-  data: any;
+  data: Record<string, unknown> | unknown | null;
   title?: string;
 }
 

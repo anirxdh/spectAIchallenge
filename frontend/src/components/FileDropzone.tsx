@@ -11,6 +11,21 @@ interface FileDropzoneProps {
   isLoading?: boolean;
 }
 
+const truncateFilename = (filename: string, maxLength: number = 24): string => {
+  if (filename.length <= maxLength) {
+    return filename;
+  }
+  
+  // Remove .pdf extension for better truncation
+  const nameWithoutExt = filename.replace(/\.pdf$/i, '');
+  
+  if (nameWithoutExt.length <= maxLength) {
+    return filename; // Return original if it fits after removing extension consideration
+  }
+  
+  return nameWithoutExt.substring(0, maxLength) + '...';
+};
+
 export default function FileDropzone({ 
   onFileSelect, 
   selectedFile, 
@@ -83,12 +98,12 @@ export default function FileDropzone({
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
         <motion.div 
-          className="bg-card border border-border rounded-lg p-6"
+          className="bg-card border border-border rounded-lg p-4 sm:p-6"
           whileHover={{ scale: 1.02 }}
           transition={{ type: "spring", stiffness: 300, damping: 30 }}
         >
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-2 sm:space-x-4">
               <motion.div 
                 className="p-3 bg-primary/10 border border-primary/20 rounded-lg"
                 animate={{ 
@@ -105,12 +120,12 @@ export default function FileDropzone({
               </motion.div>
               <div className="flex-1">
                 <motion.p 
-                  className="text-lg font-semibold text-card-foreground font-mono truncate"
+                  className="text-sm sm:text-lg font-semibold text-card-foreground font-mono"
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.2 }}
                 >
-                  {selectedFile.name}
+                  {truncateFilename(selectedFile.name)}
                 </motion.p>
                 <motion.p 
                   className="text-sm text-muted-foreground font-mono"
@@ -159,7 +174,7 @@ export default function FileDropzone({
         onDragLeave={handleDragLeave}
         onDrop={handleDrop}
         className={`
-          relative border-2 border-dashed rounded-lg p-20 text-center cursor-pointer 
+          relative border-2 border-dashed rounded-lg p-8 sm:p-12 lg:p-20 text-center cursor-pointer 
           transition-all duration-200 ease-in-out
           ${isDragOver 
             ? 'border-primary bg-primary/5' 
@@ -176,7 +191,7 @@ export default function FileDropzone({
         <motion.div className="relative z-10">
           <motion.div 
             className={`
-              inline-flex items-center justify-center w-24 h-24 border-2 rounded-lg mb-8
+              inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 border-2 rounded-lg mb-4 sm:mb-6 lg:mb-8
               transition-all duration-200 ease-in-out
               ${isDragOver 
                 ? 'border-primary bg-primary text-primary-foreground' 
@@ -197,13 +212,13 @@ export default function FileDropzone({
           >
             <Upload className={`
               transition-all duration-200 ease-in-out
-              ${isDragOver ? 'h-12 w-12' : 'h-10 w-10'}
+              ${isDragOver ? 'h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12' : 'h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10'}
             `} />
           </motion.div>
           
           <motion.h3 
             className={`
-              text-3xl font-bold mb-4 transition-all duration-200 font-mono
+              text-xl sm:text-2xl lg:text-3xl font-bold mb-2 sm:mb-3 lg:mb-4 transition-all duration-200 font-mono
               ${isDragOver ? 'text-primary' : 'text-foreground'}
             `}
             animate={{ 
@@ -227,7 +242,7 @@ export default function FileDropzone({
           
           <motion.p 
             className={`
-              text-lg mb-8 transition-all duration-200 font-mono
+              text-sm sm:text-base lg:text-lg mb-4 sm:mb-6 lg:mb-8 transition-all duration-200 font-mono
               ${isDragOver ? 'text-card-foreground' : 'text-muted-foreground'}
             `}
             animate={{ opacity: isDragOver ? 1 : 0.8 }}
@@ -242,7 +257,12 @@ export default function FileDropzone({
               >
                 {isDragOver 
                   ? 'Release to upload your file' 
-                  : 'Drag and drop your PDF file here, or click to browse'
+                  : (
+                    <>
+                      <span className="hidden sm:inline">Drag and drop your PDF file here, or click to browse</span>
+                      <span className="sm:hidden">Tap to select your PDF file</span>
+                    </>
+                  )
                 }
               </motion.span>
             </AnimatePresence>

@@ -3,11 +3,10 @@
 import { motion } from 'framer-motion';
 
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
   text?: string;
 }
 
-export default function LoadingSpinner({ size = 'md', text }: LoadingSpinnerProps) {
+export default function LoadingSpinner({ text }: LoadingSpinnerProps) {
   return (
     <div className="flex flex-col items-center justify-center space-y-4">
       {/* Animated Text */}
