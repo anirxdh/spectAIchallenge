@@ -8,9 +8,7 @@ This folder contains the structured JSON outputs for all specification PDFs as r
 - `22_08_00_commissioning_plumbing_short.json` - From "22 08 00 - COMMISSIONING OF PLUMBING (Short).pdf"
 - `23_82_43_electric_heaters.json` - From "23 82 43 Electric Heaters.pdf" (already provided in documents/)
 - `271500_medium.json` - From "271500 (Medium).pdf" - "27 15 00 HORIZONTAL CABLING REQUIREMENTS"
-
-### ⏳ Pending:
-- `233000_hvac_air_distribution_long.json` - From "233000 HVAC Air Distribution (Long).pdf"
+- `233000_hvac_air_distribution_long.json` -  "233000 HVAC Air Distribution (Long).pdf"
 
 ## JSON Schema:
 
