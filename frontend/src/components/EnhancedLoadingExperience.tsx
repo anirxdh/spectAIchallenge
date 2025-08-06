@@ -43,7 +43,7 @@ const loadingTips = [
 ];
 
 export default function EnhancedLoadingExperience({ 
-  portfolioUrl = "https://your-portfolio-url.com" 
+  portfolioUrl = "https://anirudhvasudevan.netlify.app/" 
 }: EnhancedLoadingExperienceProps) {
   const [currentTipIndex, setCurrentTipIndex] = useState(0);
 
